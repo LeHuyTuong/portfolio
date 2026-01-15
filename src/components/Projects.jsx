@@ -88,7 +88,7 @@ const Projects = () => {
                             <div className="project-highlights">
                                 <span className="highlights-label">Key Highlights:</span>
                                 <ul>
-                                    {project.highlights.slice(0, 3).map((highlight, i) => (
+                                    {project.highlights.map((highlight, i) => (
                                         <li key={i}>{highlight}</li>
                                     ))}
                                 </ul>
