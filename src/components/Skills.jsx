@@ -5,7 +5,8 @@ const Skills = () => {
     const skillCategories = [
         { key: 'backend', title: 'Backend', icon: '⚙️' },
         { key: 'database', title: 'Database', icon: '🗄️' },
-        { key: 'devops', title: 'DevOps & Deployment', icon: '🚀' },
+        { key: 'devops', title: 'DevOps', icon: '🚀' },
+        { key: 'testing', title: 'Testing', icon: '🧪' },
         { key: 'others', title: 'Other Skills', icon: '🛠️' }
     ];
 

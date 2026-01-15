@@ -53,31 +53,34 @@ export const skills = {
     { name: "Spring Boot", highlight: true },
     { name: "REST API" },
     { name: "JPA/Hibernate" },
-    { name: "Spring Security" },
     { name: "Servlet/JSP" },
     { name: "Validation" }
   ],
   database: [
     { name: "MySQL", highlight: true },
     { name: "MS SQL Server", highlight: true },
-    { name: "JPA/Hibernate" }
+    { name: "PostgreSQL" }
   ],
   devops: [
+    { name: "Git", highlight: true },
     { name: "Docker", highlight: true },
     { name: "Docker Compose" },
     { name: "Nginx" },
-    { name: "Linux VPS" },
-    { name: "Git" },
-    { name: "SSL/HTTPS" }
+    { name: "Linux VPS" }
+  ],
+  testing: [
+    { name: "JUnit 5", highlight: true },
+    { name: "Mockito", highlight: true },
+    { name: "Postman" },
+    { name: "Swagger" }
   ],
   others: [
-    { name: "Payment Integration", highlight: true },
-    { name: "VNPay/PayPal/Stripe" },
+    { name: "Jira", highlight: true },
+    { name: "Payment Integration" },
     { name: "Rate Limiting" },
     { name: "Excel/PDF Export" },
-    { name: "Postman" },
-    { name: "Swagger" },
-    { name: "Cron Jobs" }
+    { name: "Cron Jobs" },
+    { name: "Exception Handling" }
   ]
 };
 
@@ -89,19 +92,21 @@ export const projects = [
     title: "CarbonX",
     displayName: "Carbon Credit Marketplace For EV Owners",
     role: "Backend Developer",
-    period: "Sep 2025 - Nov 2025",
+    period: "Sep 2025 - Dec 2025",
     problem: "Need a transparent carbon credit marketplace for electric vehicle owners",
     solution: "Spring Boot system with wallet transactions, marketplace module, and payment integration",
-    challenge: "Building wallet transaction flows (deposit/withdraw/payout) for 2 user types",
+    challenge: "Coordinating tasks with team using Jira and managing Git workflow across multiple branches",
     highlights: [
-      "Built wallet transaction flows (deposit/withdraw/payout) for 2 user types",
+      "Coordinated tasks using Jira and managed Git workflow (main/test/demo), resolved merge conflicts",
+      "Collaborated with frontend to integrate REST APIs and support data flow for UI",
+      "Built wallet transaction flows (deposit/withdraw/payout) for 2 user types with validation",
       "Developed marketplace module: list credits, orders, profit-sharing",
-      "Implemented scheduled daily price recalculation using cron job + SQL",
-      "Integrated reporting APIs: PDF statements & Excel exports",
-      "Added basic rate limiting to protect critical endpoints",
-      "Containerized with Docker Compose, deployed on Linux VPS with SSL"
+      "Implemented KYC user management (CRUD, status handling) for verification flow",
+      "Scheduled daily price recalculation using cron job + SQL based on usage data",
+      "Integrated PDF statements & Excel exports with rate limiting for critical endpoints",
+      "Containerized backend + frontend + DB + Nginx using Docker Compose, deployed on Linux VPS with SSL"
     ],
-    technologies: ["Java 17", "Spring Boot", "JPA/Hibernate", "MySQL", "Docker", "Nginx", "PayPal", "Stripe"],
+    technologies: ["Java 17", "Spring Boot", "JPA/Hibernate", "MySQL", "Docker", "Nginx", "Jira", "Git", "PayPal", "Stripe"],
     github: "https://github.com/LeHuyTuong/Carbon-Credit-Marketplace",
     demo: "https://carbonx.io.vn/home",
     featured: true
@@ -111,20 +116,20 @@ export const projects = [
     category: "star",
     categoryLabel: "⭐ Solo Project",
     title: "Card Issuing System",
-    displayName: "Debit Card Issuing & Ledger Core",
+    displayName: "Banking Logic & Unit Testing Lab",
     role: "Solo Developer",
     period: "Dec 2025 - Jan 2026",
-    problem: "Build a production-grade backend simulation of card issuing with banking standards",
-    solution: "Modular Monolith with DDD-inspired architecture, immutable ledger, state machines",
-    challenge: "Implementing idempotency keys to prevent duplicate card issuance on retries",
+    problem: "Practice building core backend logic for banking features with proper testing",
+    solution: "Spring Boot system focusing on card management, ledger, and comprehensive unit testing",
+    challenge: "Applying JUnit 5 and Mockito to cover various business scenarios in Service Layer",
     highlights: [
-      "Built immutable ledger: append-only records, balance derived from SQL aggregation",
-      "Implemented card lifecycle state machine (CREATED → ACTIVE → BLOCKED)",
-      "Added idempotency key mechanism for safe retries",
-      "Async audit logging with @Async and REQUIRES_NEW propagation",
-      "Modular Monolith structure: customer/, card/, ledger/, transaction/"
+      "Built core backend logic for card management and ledger with data accuracy focus",
+      "Applied JUnit 5 and Mockito to cover Service Layer with various business scenarios",
+      "Implemented centralized exception handling for transaction traceability",
+      "Designed strict backend system with focus on error prevention",
+      "Gained understanding of unit testing importance in professional development"
     ],
-    technologies: ["Java 17", "Spring Boot 3.2", "JPA/Hibernate", "MySQL", "JUnit 5", "Mockito"],
+    technologies: ["Java 17", "Spring Boot", "Spring Data JPA", "JUnit 5", "Mockito"],
     github: "https://github.com/LeHuyTuong/Card-Issuing-System",
     demo: null,
     featured: true
