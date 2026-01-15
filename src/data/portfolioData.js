@@ -5,14 +5,13 @@ export const personalInfo = {
   name: "Le Huy Tuong",
   title: "Backend Developer",
   tagline: "Fresher Java Backend | Spring Boot & REST API Development",
-  subtitle: "Seeking Backend Fresher role to grow expertise in REST API design, database optimization, and secure backend architecture",
+  subtitle: "Seeking Java Fresher position to grow in scalable backend design, database systems, and real-world software development processes",
   email: "lehuytuong2005@gmail.com",
   phone: "+84 372 728 768",
   location: "Thu Duc, Ho Chi Minh City, Vietnam",
-  bio: `Software Engineering student at FPT University specializing in backend development 
-  with the Java & Spring Boot ecosystem. Built REST APIs with Spring Boot for wallet transactions 
-  and booking flows; implemented validation, exception handling, and basic rate limiting; 
-  deployed with Docker Compose + Nginx on Linux VPS (SSL).`,
+  bio: `Backend-oriented Software Engineering student specializing in Java and Spring Boot. 
+  Hands-on experience building RESTful APIs, transactional workflows, and SQL-based systems. 
+  Deployed with Docker Compose + Nginx on Linux VPS with SSL.`,
   resumeUrl: "/resume.pdf",
   social: {
     github: "https://github.com/LeHuyTuong",
