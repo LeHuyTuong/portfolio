@@ -106,7 +106,7 @@ export const projects = [
       "Containerized backend + frontend + DB + Nginx using Docker Compose, deployed on Linux VPS with SSL"
     ],
     technologies: ["Java 17", "Spring Boot", "JPA/Hibernate", "MySQL", "Docker", "Nginx", "Jira", "Git", "PayPal", "Stripe"],
-    github: "https://github.com/LeHuyTuong/Carbon-Credit-Marketplace",
+    github: null,
     demo: "https://carbonx.io.vn/home",
     featured: true
   },
@@ -129,7 +129,7 @@ export const projects = [
       "Gained understanding of unit testing importance in professional development"
     ],
     technologies: ["Java 17", "Spring Boot", "Spring Data JPA", "JUnit 5", "Mockito"],
-    github: "https://github.com/LeHuyTuong/Card-Issuing-System",
+    github: null,
     demo: null,
     featured: true
   },
@@ -151,7 +151,7 @@ export const projects = [
       "Compared response time and memory usage during manual test"
     ],
     technologies: ["Java 17", "Spring Boot", "Thymeleaf", "MS SQL Server", "VNPay"],
-    github: "https://github.com/LeHuyTuong/Train-Ticket-Office",
+    github: null,
     demo: null,
     featured: false
   },
@@ -174,7 +174,7 @@ export const projects = [
       "Deployed with Docker on Linux VPS"
     ],
     technologies: ["Java 17", "Spring Boot", "React 18", "MySQL", "Spring Security", "JWT", "Stripe"],
-    github: "https://github.com/LeHuyTuong/-E-Commerce",
+    github: null,
     demo: null,
     featured: false
   }
