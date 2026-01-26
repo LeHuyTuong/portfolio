@@ -1,4 +1,5 @@
 import './styles/index.css';
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BankingMindset from './components/BankingMindset';
@@ -19,6 +20,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
