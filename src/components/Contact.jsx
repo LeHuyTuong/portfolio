@@ -15,8 +15,7 @@ const Contact = () => {
                     <div className="contact-info">
                         <h3>Contact Information</h3>
                         <p className="info-description">
-                            I'm always open to discussing Backend Developer opportunities
-                            and interesting projects.
+                            Feel free to reach out for collaboration or networking!
                         </p>
 
                         <div className="info-items">
@@ -44,13 +43,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="info-item">
-                                <div className="info-icon">💼</div>
-                                <div className="info-content">
-                                    <span className="info-label">Status</span>
-                                    <span className="status-available">Open to opportunities</span>
-                                </div>
-                            </div>
+
                         </div>
 
                         <div className="contact-social">

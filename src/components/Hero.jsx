@@ -13,10 +13,7 @@ const Hero = () => {
 
             <div className="hero-container">
                 <div className="hero-content">
-                    <div className="hero-badge">
-                        <span className="badge-dot"></span>
-                        Available for opportunities
-                    </div>
+
 
                     <h1 className="hero-title">
                         Hi, I'm

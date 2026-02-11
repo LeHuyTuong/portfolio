@@ -84,6 +84,11 @@
     animation: pulse 2s ease-in-out infinite;
 }
 
+.badge-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
 .hero-title {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     line-height: 1.2;

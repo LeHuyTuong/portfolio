@@ -342,7 +342,7 @@ export const education = [
     id: 1,
     school: "FPT University",
     degree: "Bachelor of Software Engineering",
-    period: "2021 - 2025",
+    period: "2023 - Present",
     description: "Focused on backend development and enterprise systems",
     achievements: [
       "Specialized in Java and Spring Boot ecosystem",
