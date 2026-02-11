@@ -14,13 +14,13 @@ const Footer = () => {
                             <span className="logo-dot">.</span>
                         </span>
                         <p className="footer-tagline">
-                            Java Backend Developer với tư duy Fintech
+                            Java Backend Developer | Learning & Building
                         </p>
                     </div>
 
                     <div className="footer-links">
                         <a href="#home">Home</a>
-                        <a href="#mindset">Mindset</a>
+                        <a href="#mindset">About</a>
                         <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>
                     </div>
@@ -46,8 +46,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p>
-                        © {currentYear} {personalInfo.name}.
-                        <span className="footer-credit"> Built with React & ❤️</span>
+                        © 2026 {personalInfo.name}. Built with curiosity and code ❤️
                     </p>
                 </div>
             </div>

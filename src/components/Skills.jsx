@@ -2,13 +2,7 @@ import { skills } from '../data/portfolioData';
 import './Skills.css';
 
 const Skills = () => {
-    const skillCategories = [
-        { key: 'backend', title: 'Backend', icon: '⚙️' },
-        { key: 'database', title: 'Database', icon: '🗄️' },
-        { key: 'devops', title: 'DevOps', icon: '🚀' },
-        { key: 'testing', title: 'Testing', icon: '🧪' },
-        { key: 'others', title: 'Other Skills', icon: '🛠️' }
-    ];
+    // Dynamic keys from portfolioData
 
     return (
         <section id="skills" className="section skills-section">
@@ -20,15 +14,14 @@ const Skills = () => {
                 </div>
 
                 <div className="skills-grid">
-                    {skillCategories.map((category) => (
-                        <div key={category.key} className="skill-category">
+                    {Object.entries(skills).map(([category, skillList]) => (
+                        <div key={category} className="skill-category">
                             <div className="category-header">
-                                <span className="category-icon">{category.icon}</span>
-                                <h3>{category.title}</h3>
+                                <h3>{category}</h3>
                             </div>
 
                             <div className="skills-tags">
-                                {skills[category.key]?.map((skill) => (
+                                {skillList.map((skill) => (
                                     <span
                                         key={skill.name}
                                         className={`skill-tag ${skill.highlight ? 'highlight' : ''}`}

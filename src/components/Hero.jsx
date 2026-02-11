@@ -1,5 +1,6 @@
-import { personalInfo } from '../data/portfolioData';
+import { personalInfo, stats } from '../data/portfolioData';
 import './Hero.css';
+import './HeroStats.css';
 
 const Hero = () => {
     return (
@@ -25,6 +26,23 @@ const Hero = () => {
                     <p className="hero-tagline">{personalInfo.tagline}</p>
 
                     <p className="hero-subtitle">{personalInfo.subtitle}</p>
+
+                    <div className="hero-stats">
+                        <div className="stat-item">
+                            <span className="stat-number">{stats.javaProjects}</span>
+                            <span className="stat-label">{stats.labels.java}</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number">{stats.phpProjects}</span>
+                            <span className="stat-label">{stats.labels.companies}</span>
+                        </div>
+                        <div className="stat-divider"></div>
+                        <div className="stat-item">
+                            <span className="stat-number">{stats.enterpriseProjects}</span>
+                            <span className="stat-label">{stats.labels.total}</span>
+                        </div>
+                    </div>
 
                     <div className="hero-cta">
                         <a href="#projects" className="btn btn-primary">

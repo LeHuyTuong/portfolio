@@ -21,7 +21,7 @@ const Projects = () => {
                 <div className="section-header">
                     <span className="section-label">Portfolio</span>
                     <h2>Featured <span className="gradient-text">Projects</span></h2>
-                    <p>Projects showcasing my journey in backend development</p>
+                    <p>Projects where I learned the most</p>
                 </div>
 
                 <div className="project-filters">
@@ -83,6 +83,12 @@ const Projects = () => {
                                     <span className="detail-label">⚡ Challenge:</span>
                                     <p>{project.challenge}</p>
                                 </div>
+                                {project.whatILearned && (
+                                    <div className="detail-item what-learned">
+                                        <span className="detail-label">🎓 What I Learned:</span>
+                                        <p>{project.whatILearned}</p>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="project-highlights">

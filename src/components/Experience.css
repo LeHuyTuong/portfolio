@@ -1,0 +1,208 @@
+.experience-section {
+    background-color: var(--bg-color-2);
+    /* Assuming a slightly different background for contrast */
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    padding: 2rem 0;
+}
+
+/* The vertical line */
+.timeline-line {
+    position: absolute;
+    left: 200px;
+    /* Separates date from content */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            rgba(59, 130, 246, 0.1),
+            var(--primary-color),
+            rgba(59, 130, 246, 0.1));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* The Dot */
+.timeline-dot {
+    position: absolute;
+    left: 194px;
+    /* Center on the 2px line at 200px (200 - 12/2 - 1px border? adjust visually) */
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid var(--bg-color);
+    /* Creates a gap effect */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    z-index: 2;
+    margin-top: 1.5rem;
+    /* Align with card header roughly */
+}
+
+/* Date Section (Left) */
+.timeline-date {
+    width: 180px;
+    padding-right: 20px;
+    text-align: right;
+    margin-top: 1.25rem;
+    flex-shrink: 0;
+}
+
+.timeline-date span {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* Content Section (Right) */
+.timeline-content {
+    flex-grow: 1;
+    padding-left: 50px;
+}
+
+.exp-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.exp-company {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.exp-company:hover {
+    color: var(--primary-color);
+}
+
+.exp-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.details-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.details-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.details-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.exp-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 14px;
+        margin-top: 5px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-date {
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    .exp-card {
+        padding: 1.5rem;
+    }
+}

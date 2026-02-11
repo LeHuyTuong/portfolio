@@ -3,15 +3,13 @@
 
 export const personalInfo = {
   name: "Le Huy Tuong",
-  title: "Backend Developer",
-  tagline: "Fresher Java Backend | Spring Boot & REST API Development",
-  subtitle: "Seeking Java Fresher position to grow in scalable backend design, database systems, and real-world software development processes",
+  title: "Java Backend Developer",
+  tagline: "Ready to Learn & Grow",
+  subtitle: "Seeking Java Fresher position to contribute to real projects, learn from experienced engineers, and grow in backend development",
   email: "lehuytuong2005@gmail.com",
   phone: "+84 372 728 768",
   location: "Thu Duc, Ho Chi Minh City, Vietnam",
-  bio: `Backend-oriented Software Engineering student specializing in Java and Spring Boot. 
-  Hands-on experience building RESTful APIs, transactional workflows, and SQL-based systems. 
-  Deployed with Docker Compose + Nginx on Linux VPS with SSL.`,
+  bio: `I focus on understanding how things work. I enjoy breaking down problems, writing clean code, and learning from mistakes. Every project teaches me something new about building reliable systems.`,
   resumeUrl: "/resume.pdf",
   social: {
     github: "https://github.com/LeHuyTuong",
@@ -21,66 +19,68 @@ export const personalInfo = {
 };
 
 export const bankingMindset = {
-  title: "Backend Mindset",
-  subtitle: "How I Work",
-  description: `I focus on building systems that work. Clean code, proper error handling, 
-  and logical architecture are my priorities. I break down complex problems into smaller pieces, 
-  test my assumptions, and deliver reliable solutions.`,
+  title: "Philosophy",
+  subtitle: "How I Approach Development",
+  description: `"I focus on understanding how things work. I enjoy breaking down problems, writing clean code, and learning from mistakes. Every project teaches me something new about building reliable systems."`,
   principles: [
     {
       icon: "🧠",
       title: "Logical Thinking",
-      description: "Break problems into steps, find patterns, write clean solutions"
+      description: "Break problems into smaller pieces, find patterns, write code I can explain"
     },
     {
       icon: "✅",
       title: "Get Things Done",
-      description: "Focus on delivering working features, not perfect theories"
+      description: "Learn by building - working features teach more than just reading theory"
     },
     {
       icon: "🔧",
       title: "Problem Solver",
-      description: "Debug issues systematically, learn from mistakes, improve continuously"
+      description: "Debug step by step, understand why things fail, improve next time"
     }
   ]
 };
 
-// Skills based on CV
 export const skills = {
-  backend: [
+  "⚙️ Backend": [
     { name: "Java 17", highlight: true },
     { name: "Spring Boot", highlight: true },
-    { name: "REST API" },
-    { name: "JPA/Hibernate" },
-    { name: "Servlet/JSP" },
-    { name: "Validation" }
+    { name: "REST API Development" },
+    { name: "Spring Data JPA, Hibernate" },
+    { name: "Spring Security basics" },
+    { name: "Servlet/JSP" }
   ],
-  database: [
+  "🗄️ Database": [
     { name: "MySQL", highlight: true },
     { name: "MS SQL Server", highlight: true },
-    { name: "PostgreSQL" }
+    { name: "Basic query optimization" },
+    { name: "Understanding indexes" }
   ],
-  devops: [
-    { name: "Git", highlight: true },
-    { name: "Docker", highlight: true },
-    { name: "Docker Compose" },
-    { name: "Nginx" },
-    { name: "Linux VPS" }
+  "🧪 Tools & Practices": [
+    { name: "JUnit 5, Mockito", highlight: true },
+    { name: "Git (branching, merging)", highlight: true },
+    { name: "Postman, Swagger" },
+    { name: "Jira for team tasks" }
   ],
-  testing: [
-    { name: "JUnit 5", highlight: true },
-    { name: "Mockito", highlight: true },
-    { name: "Postman" },
-    { name: "Swagger" }
-  ],
-  others: [
-    { name: "Jira", highlight: true },
-    { name: "Payment Integration" },
-    { name: "Rate Limiting" },
-    { name: "Excel/PDF Export" },
-    { name: "Cron Jobs" },
-    { name: "Exception Handling" }
+  "🚀 Learning & Exploring": [
+    { name: "Docker & deployment" },
+    { name: "Payment integration (VNPay, PayPal, Stripe)" },
+    { name: "Redis caching" },
+    { name: "Event-driven basics" },
+    { name: "Microservices concepts" }
   ]
+};
+
+export const stats = {
+  javaProjects: "8",
+  phpProjects: "2",
+  enterpriseProjects: "Always",
+  totalProjects: 8,
+  labels: {
+    java: "Learning Projects",
+    companies: "Companies",
+    total: "Improving"
+  }
 };
 
 export const projects = [
@@ -89,23 +89,22 @@ export const projects = [
     category: "star",
     categoryLabel: "⭐ Team Project",
     title: "CarbonX",
-    displayName: "Carbon Credit Marketplace For EV Owners",
+    displayName: "Carbon Credit Marketplace",
     role: "Backend Developer",
     period: "Sep 2025 - Dec 2025",
-    problem: "Need a transparent carbon credit marketplace for electric vehicle owners",
-    solution: "Spring Boot system with wallet transactions, marketplace module, and payment integration",
-    challenge: "Coordinating tasks with team using Jira and managing Git workflow across multiple branches",
+    problem: "Building a marketplace for carbon credits while learning team collaboration",
+    solution: "Built wallet system, marketplace features, and learned deployment to production",
+    challenge: "Working with 3 teammates using Git workflow and coordinating tasks",
+    whatILearned: "Team collaboration with Git and Jira, payment integration with PayPal and Stripe, deploying to production with Docker, preventing duplicate transactions in wallet system",
     highlights: [
-      "Coordinated tasks using Jira and managed Git workflow (main/test/demo), resolved merge conflicts",
-      "Collaborated with frontend to integrate REST APIs and support data flow for UI",
-      "Built wallet transaction flows (deposit/withdraw/payout) for 2 user types with validation",
-      "Developed marketplace module: list credits, orders, profit-sharing",
-      "Implemented KYC user management (CRUD, status handling) for verification flow",
-      "Scheduled daily price recalculation using cron job + SQL based on usage data",
-      "Integrated PDF statements & Excel exports with rate limiting for critical endpoints",
-      "Containerized backend + frontend + DB + Nginx using Docker Compose, deployed on Linux VPS with SSL"
+      "Built wallet transactions (deposit/withdraw/payout) for 2 user types",
+      "Developed marketplace for buying/selling credits with profit sharing",
+      "Learned Git workflow with 3 teammates - handled merge conflicts",
+      "Integrated payment APIs following documentation (PayPal, Stripe)",
+      "Generated PDF reports and Excel exports with rate limiting",
+      "Learned deployment workflow: packaged app with Docker and deployed on VPS with SSL"
     ],
-    technologies: ["Java 17", "Spring Boot", "JPA/Hibernate", "MySQL", "Docker", "Nginx", "Jira", "Git", "PayPal", "Stripe"],
+    technologies: ["Java 17", "Spring Boot", "MySQL", "Docker", "PayPal", "Stripe", "Redis", "Jira", "Git"],
     github: null,
     demo: "https://carbonx.io.vn/home",
     featured: true
@@ -115,20 +114,21 @@ export const projects = [
     category: "star",
     categoryLabel: "⭐ Solo Project",
     title: "Card Issuing System",
-    displayName: "Banking Logic & Unit Testing Lab",
+    displayName: "Banking Logic & Testing Practice",
     role: "Solo Developer",
     period: "Dec 2025 - Jan 2026",
-    problem: "Practice building core backend logic for banking features with proper testing",
-    solution: "Spring Boot system focusing on card management, ledger, and comprehensive unit testing",
-    challenge: "Applying JUnit 5 and Mockito to cover various business scenarios in Service Layer",
+    problem: "Learning why testing matters in backend development",
+    solution: "Built banking features with comprehensive unit tests",
+    challenge: "Writing tests that actually catch bugs, not just coverage",
+    whatILearned: "Why unit testing matters in financial systems, how to write meaningful tests, proper error handling and validation, importance of defensive programming",
     highlights: [
-      "Built core backend logic for card management and ledger with data accuracy focus",
-      "Applied JUnit 5 and Mockito to cover Service Layer with various business scenarios",
-      "Implemented centralized exception handling for transaction traceability",
-      "Designed strict backend system with focus on error prevention",
-      "Gained understanding of unit testing importance in professional development"
+      "Built card management and transaction ledger features",
+      "Wrote unit tests with JUnit 5 and Mockito - caught 12+ edge cases",
+      "Implemented proper exception handling for better debugging",
+      "Learned to test business logic in isolation using mocking",
+      "Understanding: Good tests are a safety net for code changes"
     ],
-    technologies: ["Java 17", "Spring Boot", "Spring Data JPA", "JUnit 5", "Mockito"],
+    technologies: ["Java 17", "Spring Boot", "JUnit 5", "Mockito", "MySQL"],
     github: null,
     demo: null,
     featured: true
@@ -138,17 +138,18 @@ export const projects = [
     category: "business",
     categoryLabel: "🚂 Team Project",
     title: "Train Ticket Office",
-    displayName: "Online Train Ticket Booking System",
+    displayName: "Booking System",
     role: "Backend Developer",
     period: "June 2025 - Sep 2025",
-    problem: "Need a train booking system with complex seat, coach, and route management",
-    solution: "Spring Boot system with Thymeleaf handling booking and ticket status",
-    challenge: "Generated 36,000 seat records to test pagination vs full-load behavior",
+    problem: "Learning about booking workflows and payment integration",
+    solution: "Built train ticket booking with seat reservation and VNPay payment",
+    challenge: "Preventing two users from booking the same seat at the same time",
+    whatILearned: "Managing booking states with automatic timeout, integrating payment gateway (VNPay), why pagination is important with large datasets, handling concurrent seat selection",
     highlights: [
-      "Built trip search for one-way/round-trip with filters",
-      "Developed full booking workflow: seat status lifecycle (Available → Held → Paid → Refund)",
-      "Integrated VNPay sandbox to simulate payment",
-      "Compared response time and memory usage during manual test"
+      "Built search for train trips with filters",
+      "Implemented booking flow: seat holds for 15 minutes, then auto-releases",
+      "Integrated VNPay payment - learned about callbacks and verification",
+      "Created 36,000 test records - pagination was way faster than loading all!"
     ],
     technologies: ["Java 17", "Spring Boot", "Thymeleaf", "MS SQL Server", "VNPay"],
     github: null,
@@ -160,20 +161,113 @@ export const projects = [
     category: "business",
     categoryLabel: "🛒 Solo Project",
     title: "E-Commerce Platform",
-    displayName: "Full-Stack E-Commerce Marketplace",
+    displayName: "Full-Stack Learning",
     role: "Solo Developer",
     period: "Nov 2025 - Dec 2025",
-    problem: "Build a complete e-commerce platform with user authentication and payment integration",
-    solution: "Spring Boot backend + React frontend with JWT authentication and Stripe integration",
-    challenge: "Implementing wallet payments with pessimistic locking for transaction safety",
+    problem: "Understanding complete flow from authentication to payment",
+    solution: "Built e-commerce with JWT auth, shopping cart, and dual payment options",
+    challenge: "Found critical bug - wallet deducted twice with concurrent payments!",
+    whatILearned: "JWT authentication and token management, shopping cart with Redis, payment integration with Stripe, fixing race conditions with database locking, deploying to VPS with Docker",
     highlights: [
-      "JWT authentication with role-based access (Admin/User)",
-      "Product catalog with search, filter, and soft delete",
-      "Shopping cart with real-time updates",
-      "Integrated Stripe + Wallet payment options",
-      "Deployed with Docker on Linux VPS"
+      "Implemented JWT authentication with access and refresh tokens",
+      "Built shopping cart stored in Redis for fast access",
+      "Integrated Stripe for card payments + wallet system",
+      "Discovered and fixed double-payment bug by learning about database locking",
+      "Deployed on Linux VPS with SSL - very rewarding!"
     ],
-    technologies: ["Java 17", "Spring Boot", "React 18", "MySQL", "Spring Security", "JWT", "Stripe"],
+    technologies: ["Java 17", "Spring Boot", "React 18", "MySQL", "JWT", "Stripe", "Docker"],
+    github: null,
+    demo: null,
+    featured: false
+  },
+  {
+    id: 5,
+    category: "star",
+    categoryLabel: "⭐ Learning Project",
+    title: "URL Shortener",
+    displayName: "Learning About Caching",
+    role: "Solo Developer",
+    period: "Feb 2026",
+    problem: "Understanding how caching improves performance",
+    solution: "Built URL shortener with Redis caching to reduce database load",
+    challenge: "Spent 2 days debugging CORS errors with QR code images",
+    whatILearned: "How caching reduces database queries by 80%, why checking Redis first is faster, understanding CORS and cross-origin requests, generating QR codes for links",
+    highlights: [
+      "Converted long URLs to short codes (like bit.ly)",
+      "Learned Redis caching - saw database queries drop by 80%!",
+      "Generated QR codes for short links",
+      "Learned a lot from debugging CORS issues for 2 days"
+    ],
+    technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "React", "Docker"],
+    github: null,
+    demo: "https://url-shortener-tuong.vercel.app/",
+    featured: true
+  },
+  {
+    id: 6,
+    category: "star",
+    categoryLabel: "⭐ System Design Practice",
+    title: "YouTube Downloader",
+    displayName: "Learning Async Processing",
+    role: "Solo Developer",
+    period: "Feb 2026",
+    problem: "Video downloads take too long for synchronous requests",
+    solution: "Used queue-based async processing so users get instant response",
+    challenge: "Managing rate limits from YouTube API and handling failures",
+    whatILearned: "Why synchronous processing fails at scale, producer-consumer pattern for background jobs, retry logic for handling failures, working with external APIs",
+    highlights: [
+      "Learned producer-consumer pattern with Redis queue",
+      "Video downloads in background - users don't wait",
+      "Implemented retry logic for failed downloads",
+      "Understanding: Long tasks need async processing"
+    ],
+    technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "Docker", "yt-dlp"],
+    github: null,
+    demo: null,
+    featured: true
+  },
+  {
+    id: 7,
+    category: "business",
+    categoryLabel: "🎓 Educational",
+    title: "Course Sharing System",
+    displayName: "MVC Pattern Practice",
+    role: "Solo Developer",
+    period: "2025",
+    problem: "Learning Spring MVC architecture pattern",
+    solution: "Built course platform with Thymeleaf templates for server-side rendering",
+    challenge: "Managing relationships between courses, sections, and lessons",
+    whatILearned: "Spring MVC pattern (Controller → Service → Repository), server-side rendering with Thymeleaf, managing complex entity relationships with JPA",
+    highlights: [
+      "Practiced Spring MVC architecture",
+      "Learned Thymeleaf for server-side templates",
+      "Managed course relationships with Spring Data JPA",
+      "Understanding: Clean separation of concerns in MVC"
+    ],
+    technologies: ["Java 17", "Spring Boot", "Spring MVC", "Thymeleaf", "MySQL"],
+    github: null,
+    demo: null,
+    featured: false
+  },
+  {
+    id: 8,
+    category: "business",
+    categoryLabel: "📰 Content Platform",
+    title: "News Platform",
+    displayName: "Learning PHP/Laravel",
+    role: "Solo Developer",
+    period: "2025",
+    problem: "Comparing different frameworks (Laravel vs Spring Boot)",
+    solution: "Built news CMS with Laravel to see how other frameworks work",
+    challenge: "Learning new language (PHP) and different framework patterns",
+    whatILearned: "How Laravel compares to Spring Boot, different framework philosophies, Eloquent ORM vs Hibernate patterns, Blade templating engine",
+    highlights: [
+      "Explored Laravel framework to compare with Spring Boot",
+      "Learned Eloquent ORM and Blade templates",
+      "Understanding: Different frameworks, similar problems",
+      "Good to know multiple approaches to backend development"
+    ],
+    technologies: ["PHP", "Laravel", "MySQL", "Blade", "TailwindCSS"],
     github: null,
     demo: null,
     featured: false
@@ -184,6 +278,76 @@ export const navLinks = [
   { id: "home", label: "Home" },
   { id: "mindset", label: "About" },
   { id: "skills", label: "Skills" },
+  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" }
+];
+
+export const experiences = [
+  {
+    id: 1,
+    date: "Dec 2025 - Present",
+    title: "Backend Developer",
+    company: "FPT Software",
+    companyUrl: "https://fptsoftware.com",
+    description: "Contributing to a microservices system for a large coffee shop chain while learning from senior developers.",
+    responsibilities: [
+      "How microservices communicate with each other (Order, Payment, Notification services)",
+      "Event-driven patterns and why they're useful",
+      "Professional code review process and coding standards",
+      "Payment integration and security practices",
+      "Working in a larger development team"
+    ],
+    sectionLabel: "What I'm Learning:",
+    technologies: ["Java", "Spring Boot", "Microservices", "Kafka/RabbitMQ", "SQL Server", "Docker"]
+  },
+  {
+    id: 2,
+    date: "Oct 2025 - Present",
+    title: "Backend Developer (Remote)",
+    company: "TCH Company",
+    companyUrl: "https://dichvuwebsitetch.com/",
+    description: "Built REST APIs for business websites while learning professional workflow.",
+    responsibilities: [
+      "Designing APIs that frontend developers can easily use",
+      "Database schema design and relationships",
+      "Collaborating with frontend team through daily communication",
+      "Writing API documentation with Swagger",
+      "Testing APIs thoroughly before deployment"
+    ],
+    sectionLabel: "What I Learned:",
+    technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Git"]
+  },
+  {
+    id: 3,
+    date: "Jan 2023 - Present",
+    title: "Self-Learning Journey",
+    company: "Personal Projects",
+    companyUrl: null,
+    description: "Teaching myself backend development through hands-on projects.",
+    responsibilities: [
+      "Building complete systems from scratch to understand the full picture",
+      "Learning Spring Boot ecosystem step by step",
+      "Exploring system design concepts through practical projects",
+      "Understanding deployment (Docker, Linux VPS)",
+      "Practicing both solo and team project workflows"
+    ],
+    sectionLabel: "What I Focused On:",
+    technologies: ["Java", "Spring Boot", "React", "Docker", "MySQL", "Redis"]
+  }
+];
+
+export const education = [
+  {
+    id: 1,
+    school: "FPT University",
+    degree: "Bachelor of Software Engineering",
+    period: "2021 - 2025",
+    description: "Focused on backend development and enterprise systems",
+    achievements: [
+      "Specialized in Java and Spring Boot ecosystem",
+      "Participated in team projects with real-world scenarios",
+      "Learned software engineering principles and best practices"
+    ]
+  }
 ];
