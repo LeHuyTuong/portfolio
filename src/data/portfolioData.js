@@ -42,32 +42,33 @@ export const bankingMindset = {
 };
 
 export const skills = {
-  "⚙️ Backend": [
-    { name: "Java 17", highlight: true },
+  "⚙️ Programming": [
+    { name: "Java", highlight: true },
+    { name: "C#", highlight: true },
+    { name: "SQL" }
+  ],
+  "🧰 Backend Frameworks": [
     { name: "Spring Boot", highlight: true },
-    { name: "REST API Development" },
-    { name: "Spring Data JPA, Hibernate" },
-    { name: "Spring Security basics" },
-    { name: "Servlet/JSP" }
+    { name: "ASP.NET Core", highlight: true },
+    { name: "REST APIs" },
+    { name: "JPA/Hibernate" }
   ],
-  "🗄️ Database": [
+  "🗄️ Databases": [
     { name: "MySQL", highlight: true },
-    { name: "MS SQL Server", highlight: true },
-    { name: "Basic query optimization" },
-    { name: "Understanding indexes" }
+    { name: "SQL Server", highlight: true },
+    { name: "Redis" }
   ],
-  "🧪 Tools & Practices": [
-    { name: "JUnit 5, Mockito", highlight: true },
-    { name: "Git (branching, merging)", highlight: true },
-    { name: "Postman, Swagger" },
-    { name: "Jira for team tasks" }
+  "🏗️ Architecture": [
+    { name: "Microservices", highlight: true },
+    { name: "Transactions" },
+    { name: "Concurrency Control" },
+    { name: "Idempotency" },
+    { name: "Rate Limiting" }
   ],
-  "🚀 Learning & Exploring": [
-    { name: "Docker & deployment" },
-    { name: "Payment integration (VNPay, PayPal, Stripe)" },
-    { name: "Redis caching" },
-    { name: "Event-driven basics" },
-    { name: "Microservices concepts" }
+  "🧪 Tools & DevOps": [
+    { name: "Docker & Docker Compose", highlight: true },
+    { name: "Git" },
+    { name: "Linux" }
   ]
 };
 
@@ -95,16 +96,16 @@ export const projects = [
     problem: "Building a marketplace for carbon credits while learning team collaboration",
     solution: "Built wallet system, marketplace features, and learned deployment to production",
     challenge: "Working with 3 teammates using Git workflow and coordinating tasks",
-    whatILearned: "Team collaboration with Git and Jira, payment integration with PayPal and Stripe, deploying to production with Docker, preventing duplicate transactions in wallet system",
+    whatILearned: "Team collaboration with Git and Jira, payment webhook integration, deploying to production with Docker Compose, designing idempotency and distributed locking mechanisms",
     highlights: [
-      "Built wallet transactions (deposit/withdraw/payout) for 2 user types",
-      "Developed marketplace for buying/selling credits with profit sharing",
-      "Learned Git workflow with 3 teammates - handled merge conflicts",
-      "Integrated payment APIs following documentation (PayPal, Stripe)",
-      "Generated PDF reports and Excel exports with rate limiting",
-      "Learned deployment workflow: packaged app with Docker and deployed on VPS with SSL"
+      "Developed Order Lifecycle management systems adopting Clean Architecture principles",
+      "Implemented Idempotency Key mechanisms to prevent redundant payment processing",
+      "Managed complex data transactions with DB-level Locking and concurrency handling",
+      "Built Global Exception Middleware for structured system observability and error handling",
+      "Integrated PayPal & Stripe webhook handlers with reliable transaction state updates",
+      "Deployed the infrastructure using Docker Compose on a Linux VPS environment"
     ],
-    technologies: ["Java 17", "Spring Boot", "MySQL", "Docker", "PayPal", "Stripe", "Redis", "Jira", "Git"],
+    technologies: [".NET 8", "Spring Boot", "MySQL", "Docker", "Redis", "Jira", "Git"],
     github: null,
     demo: "https://carbonx.io.vn/home",
     featured: true
@@ -146,10 +147,10 @@ export const projects = [
     challenge: "Preventing two users from booking the same seat at the same time",
     whatILearned: "Managing booking states with automatic timeout, integrating payment gateway (VNPay), why pagination is important with large datasets, handling concurrent seat selection",
     highlights: [
-      "Built search for train trips with filters",
-      "Implemented booking flow: seat holds for 15 minutes, then auto-releases",
-      "Integrated VNPay payment - learned about callbacks and verification",
-      "Created 36,000 test records - pagination was way faster than loading all!"
+      "Built search for train trips with complex filtering logic",
+      "Implemented booking flow: seat holds for 15 minutes with auto-release system",
+      "Integrated VNPay payment gateway including secure callback verification",
+      "Optimized performance for 36,000+ records using database pagination"
     ],
     technologies: ["Java 17", "Spring Boot", "Thymeleaf", "MS SQL Server", "VNPay"],
     github: null,
@@ -191,12 +192,12 @@ export const projects = [
     problem: "Understanding how caching improves performance",
     solution: "Built URL shortener with Redis caching to reduce database load",
     challenge: "Spent 2 days debugging CORS errors with QR code images",
-    whatILearned: "How caching reduces database queries by 80%, why checking Redis first is faster, understanding CORS and cross-origin requests, generating QR codes for links",
+    whatILearned: "Optimizing short-code generation, database indexing strategies, how caching reduces database queries by 80%, understanding CORS, generating QR codes for links",
     highlights: [
-      "Converted long URLs to short codes (like bit.ly)",
-      "Learned Redis caching - saw database queries drop by 80%!",
-      "Generated QR codes for short links",
-      "Learned a lot from debugging CORS issues for 2 days"
+      "Designed a high-throughput URL shortening service with optimized short-code generation",
+      "Implemented Redis caching reducing database load by 80%",
+      "Engineered database indexing strategies for efficient redirection lookups",
+      "Resolved complex Cross-Origin Resource Sharing (CORS) issues for image generation"
     ],
     technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "React", "Docker"],
     github: null,
@@ -292,14 +293,15 @@ export const experiences = [
     companyUrl: "https://fptsoftware.com",
     description: "Contributing to a microservices system for a large coffee shop chain while learning from senior developers.",
     responsibilities: [
-      "How microservices communicate with each other (Order, Payment, Notification services)",
-      "Event-driven patterns and why they're useful",
-      "Professional code review process and coding standards",
-      "Payment integration and security practices",
-      "Working in a larger development team"
+      "Contributing to a Microservices-based ecosystem for retail chains (Order & Payment modules)",
+      "Implementing Event-driven patterns for scalable asynchronous cross-service workflows",
+      "Configuring CQRS with MediatR to separate write/read operations, improving system maintainability",
+      "Building Webhook Deduplication systems with Distributed Locking (Redis) for 100% idempotency",
+      "Implementing Role-Based Access Control (RBAC) and securing internal service calls",
+      "Strict adherence to professional code review processes and enterprise coding standards"
     ],
-    sectionLabel: "What I'm Learning:",
-    technologies: ["Java", "Spring Boot", "Microservices", "Kafka/RabbitMQ", "SQL Server", "Docker"]
+    sectionLabel: "Key Responsibilities:",
+    technologies: [".NET 8", "Spring Boot", "RabbitMQ", "gRPC", "SQL Server", "Redis", "Docker"]
   },
   {
     id: 2,
@@ -309,14 +311,17 @@ export const experiences = [
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built REST APIs for business websites while learning professional workflow.",
     responsibilities: [
-      "Designing APIs that frontend developers can easily use",
-      "Database schema design and relationships",
-      "Collaborating with frontend team through daily communication",
+      "Engineered an End-to-end Cost Estimator module, automating quotations and lead tracking",
+      "Produced standard API Documentation (Swagger) to align frontend and backend development",
+      "Taking ownership of client bug-fix tickets and leveraging AI tools for root-cause analysis",
+      "Collaborating with frontend team and bussiness analystic team through daily communication",
       "Writing API documentation with Swagger",
-      "Testing APIs thoroughly before deployment"
+      "Testing functionality and taking ownership of client bug-fix tickets",
+      "Leveraging AI tools to analyze and accelerate bug fixing",
+      "Developed the Cost Estimate feature end-to-end (both Backend and Frontend)"
     ],
-    sectionLabel: "What I Learned:",
-    technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Git"]
+    sectionLabel: "Key Achievements:",
+    technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Swagger", "Git"]
   },
   {
     id: 3,
@@ -348,6 +353,10 @@ export const education = [
       "Specialized in Java and Spring Boot ecosystem",
       "Participated in team projects with real-world scenarios",
       "Learned software engineering principles and best practices"
-    ]
+    ],
+    toeic: {
+      score: "690",
+      label: "English Proficiency"
+    }
   }
 ];
