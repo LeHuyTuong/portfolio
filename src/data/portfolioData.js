@@ -105,7 +105,7 @@ export const projects = [
       "Integrated PayPal & Stripe webhook handlers with reliable transaction state updates",
       "Deployed the infrastructure using Docker Compose on a Linux VPS environment"
     ],
-    technologies: [".NET 8", "Spring Boot", "MySQL", "Docker", "Redis", "Jira", "Git"],
+    technologies: ["Java 17", "Spring Boot", "MySQL", "Docker", "Redis", "Jira", "Git"],
     github: null,
     demo: "https://carbonx.io.vn/home",
     featured: true
@@ -301,7 +301,7 @@ export const experiences = [
       "Strict adherence to professional code review processes and enterprise coding standards"
     ],
     sectionLabel: "Key Responsibilities:",
-    technologies: [".NET 8", "Spring Boot", "RabbitMQ", "gRPC", "SQL Server", "Redis", "Docker"]
+    technologies: [".NET 8", ".NET EF Core", "RabbitMQ", "gRPC", "SQL Server", "Redis", "Docker"]
   },
   {
     id: 2,

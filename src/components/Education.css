@@ -3,10 +3,15 @@
 }
 
 .education-grid {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 3rem auto 0;
+}
+
+.edu-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: start;
 }
 
 .column-title {
@@ -148,9 +153,93 @@
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .education-grid {
+/* TOEIC Highlight Card */
+.toeic-highlight-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(37, 99, 235, 0.04) 100%);
+    border: 1.5px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+.toeic-highlight-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.toeic-highlight-card:hover {
+    transform: scale(1.03) rotate(1deg);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px -12px rgba(59, 130, 246, 0.4);
+}
+
+.toeic-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.toeic-badge {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.toeic-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.toeic-score {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.toeic-status {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .edu-layout {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 1.5rem;
+    }
+
+    .toeic-highlight-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 4rem 1rem;
     }
 }

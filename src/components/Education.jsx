@@ -11,24 +11,39 @@ const Education = () => {
                     <p>My academic foundation and professional credentials</p>
                 </div>
 
-                <div className="education-grid single-column">
-                    <div className="edu-list">
-                        {education.map(edu => (
-                            <div key={edu.id} className="edu-card">
-                                <div className="edu-period">{edu.period}</div>
-                                <h4 className="edu-school">{edu.school}</h4>
-                                <div className="edu-degree">{edu.degree}</div>
-                                <p className="edu-desc">{edu.description}</p>
-                                {edu.achievements && edu.achievements.length > 0 && (
-                                    <ul className="edu-achievements">
-                                        {edu.achievements.map((ach, i) => (
-                                            <li key={i}>{ach}</li>
-                                        ))}
-                                    </ul>
-                                )}
+                <div className="education-grid">
+                    {education.map(edu => (
+                        <div key={edu.id} className="edu-layout">
+                            <div className="edu-left">
+                                <div className="edu-card">
+                                    <div className="edu-period">{edu.period}</div>
+                                    <h4 className="edu-school">{edu.school}</h4>
+                                    <div className="edu-degree">{edu.degree}</div>
+                                    <p className="edu-desc">{edu.description}</p>
+                                    {edu.achievements && edu.achievements.length > 0 && (
+                                        <ul className="edu-achievements">
+                                            {edu.achievements.map((ach, i) => (
+                                                <li key={i}>{ach}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
                             </div>
-                        ))}
-                    </div>
+
+                            {edu.toeic && (
+                                <div className="edu-right">
+                                    <div className="toeic-highlight-card">
+                                        <div className="toeic-label">{edu.toeic.label}</div>
+                                        <div className="toeic-badge">
+                                            <span className="toeic-text">TOEIC</span>
+                                            <span className="toeic-score">{edu.toeic.score}</span>
+                                        </div>
+                                        <div className="toeic-status">Certified Proficiency</div>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
