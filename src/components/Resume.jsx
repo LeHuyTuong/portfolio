@@ -120,7 +120,7 @@ const Resume = ({ onBack }) => {
                     <div className="project-item">
                         <div className="item-header">
                             <strong>CarbonX – Carbon Credit Marketplace</strong>
-                            <span className="date-range">[2025] – Present</span>
+                            <span className="date-range">[2025]</span>
                         </div>
                         <div className="item-sub">
                             <em>Backend Developer (Team: 4 – 2BE/2FE) | Tech: Java 17, Spring Boot 3, Spring Security, MySQL, Redis, Docker, Nginx, PayPal · Stripe (Sandbox)</em>
@@ -143,7 +143,7 @@ const Resume = ({ onBack }) => {
                     <div className="project-item">
                         <div className="item-header">
                             <strong>Card Issuing & Transaction Authorization System</strong>
-                            <span className="date-range">[2025] – Present</span>
+                            <span className="date-range">[2025]</span>
                         </div>
                         <div className="item-sub">
                             <em>Technical Research: Banking Logic & Unit Testing Lab | Tech: Java 17, Spring Boot, Spring Data JPA, JUnit 5, Mockito</em>
