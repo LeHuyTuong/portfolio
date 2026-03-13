@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './styles/index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,13 +9,20 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
 
 function App() {
+  const [showResume, setShowResume] = useState(false);
+
+  if (showResume) {
+    return <Resume onBack={() => setShowResume(false)} />;
+  }
+
   return (
     <div className="app">
-      <Navbar />
+      <Navbar onResumeClick={() => setShowResume(true)} />
       <main>
-        <Hero />
+        <Hero onResumeClick={() => setShowResume(true)} />
         <BankingMindset />
         <Skills />
         <Experience />

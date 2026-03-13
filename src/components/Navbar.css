@@ -67,6 +67,17 @@
     background: var(--gradient-primary);
 }
 
+.resume-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.resume-btn:hover {
+    background: var(--gradient-primary);
+}
+
 .navbar-toggle {
     display: none;
     flex-direction: column;

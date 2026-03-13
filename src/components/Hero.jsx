@@ -2,7 +2,7 @@ import { personalInfo, stats } from '../data/portfolioData';
 import './Hero.css';
 import './HeroStats.css';
 
-const Hero = () => {
+const Hero = ({ onResumeClick }) => {
     return (
         <section id="home" className="hero">
             <div className="hero-bg">
@@ -48,9 +48,9 @@ const Hero = () => {
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
-                        <a href="#contact" className="btn btn-secondary">
-                            <span>Contact Me</span>
-                        </a>
+                        <button onClick={onResumeClick} className="btn btn-secondary">
+                            <span>View Resume</span>
+                        </button>
                     </div>
 
                     <div className="hero-social">

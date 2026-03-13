@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { personalInfo, navLinks } from '../data/portfolioData';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onResumeClick }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
@@ -58,6 +58,9 @@ const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
+                    <button className="navbar-link resume-btn" onClick={onResumeClick}>
+                        Resume
+                    </button>
                 </div>
 
                 <button

@@ -3,13 +3,13 @@
 
 export const personalInfo = {
   name: "Le Huy Tuong",
-  title: "Java Backend Developer",
+  title: "Java Fresher",
   tagline: "Ready to Learn & Grow",
   subtitle: "Seeking Java Fresher position to contribute to real projects, learn from experienced engineers, and grow in backend development",
   email: "lehuytuong2005@gmail.com",
-  phone: "+84 372 728 768",
-  location: "Thu Duc, Ho Chi Minh City, Vietnam",
-  bio: `I focus on understanding how things work. I enjoy breaking down problems, writing clean code, and learning from mistakes. Every project teaches me something new about building reliable systems.`,
+  phone: "0372728768",
+  location: "Ho Chi Minh City, Vietnam",
+  bio: `Java Backend Engineering fresher with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Seeking to apply backend engineering fundamentals as a Java Fresher in a high-scale environment.`,
   resumeUrl: "/resume.pdf",
   social: {
     github: "https://github.com/LeHuyTuong",
@@ -42,33 +42,39 @@ export const bankingMindset = {
 };
 
 export const skills = {
-  "⚙️ Programming": [
-    { name: "Java", highlight: true },
-    { name: "C#", highlight: true },
-    { name: "SQL" }
+  "⚙️ Languages": [
+    { name: "Java 17/21 (Core, Stream API, Multithreading)", highlight: true },
+    { name: "C# (.NET)", highlight: true },
+    { name: "SQL (Procedures, Indexing)", highlight: true }
   ],
-  "🧰 Backend Frameworks": [
-    { name: "Spring Boot", highlight: true },
-    { name: "ASP.NET Core", highlight: true },
-    { name: "REST APIs" },
-    { name: "JPA/Hibernate" }
+  "☕ Java Ecosystem": [
+    { name: "Spring Boot 3.x", highlight: true },
+    { name: "Spring Security" },
+    { name: "Spring Data JPA" },
+    { name: "Hibernate" },
+    { name: "JUnit 5 & Mockito", highlight: true }
   ],
-  "🗄️ Databases": [
+  "🗄️ Databases & Caching": [
     { name: "MySQL", highlight: true },
-    { name: "SQL Server", highlight: true },
-    { name: "Redis" }
+    { name: "SQL Server" },
+    { name: "Redis (Caching, Distributed Locking)", highlight: true },
+    { name: "PostgreSQL" }
   ],
-  "🏗️ Architecture": [
+  "🏗️ Architecture & Design": [
     { name: "Microservices", highlight: true },
-    { name: "Transactions" },
-    { name: "Concurrency Control" },
-    { name: "Idempotency" },
-    { name: "Rate Limiting" }
+    { name: "Clean Architecture" },
+    { name: "CQRS (MediatR)", highlight: true },
+    { name: "SOLID principles" },
+    { name: "Design Patterns (Singleton)" }
   ],
-  "🧪 Tools & DevOps": [
-    { name: "Docker & Docker Compose", highlight: true },
-    { name: "Git" },
-    { name: "Linux" }
+  "🛠️ Communication & Tools": [
+    { name: "gRPC", highlight: true },
+    { name: "RESTful API" },
+    { name: "Docker", highlight: true },
+    { name: "Nginx" },
+    { name: "Git & GitHub Actions" },
+    { name: "Maven" },
+    { name: "Postman" }
   ]
 };
 
@@ -98,6 +104,7 @@ export const projects = [
     challenge: "Working with 3 teammates using Git workflow and coordinating tasks",
     whatILearned: "Team collaboration with Git and Jira, payment webhook integration, deploying to production with Docker Compose, designing idempotency and distributed locking mechanisms",
     highlights: [
+      "Architecture: RESTful API design, MVC, RBAC, JWT, Modular Monolith, Clean Architecture, SOLID principles.",
       "Developed Order Lifecycle management systems adopting Clean Architecture principles",
       "Implemented Idempotency Key mechanisms to prevent redundant payment processing",
       "Managed complex data transactions with DB-level Locking and concurrency handling",
@@ -288,25 +295,22 @@ export const experiences = [
   {
     id: 1,
     date: "Dec 2025 - Present",
-    title: "Backend Developer",
-    company: "FPT Software",
+    title: "Backend Intern",
+    company: "FPT Software Academy (FSA)",
     companyUrl: "https://fptsoftware.com",
-    description: "Contributing to a microservices system for a large coffee shop chain while learning from senior developers.",
+    description: "Contributing to a high-scale franchise management platform built on C# .NET microservices.",
     responsibilities: [
-      "Contributing to a Microservices-based ecosystem for retail chains (Order & Payment modules)",
-      "Implementing Event-driven patterns for scalable asynchronous cross-service workflows",
-      "Configuring CQRS with MediatR to separate write/read operations, improving system maintainability",
-      "Building Webhook Deduplication systems with Distributed Locking (Redis) for 100% idempotency",
-      "Implementing Role-Based Access Control (RBAC) and securing internal service calls",
-      "Strict adherence to professional code review processes and enterprise coding standards"
+      "Boosted system performance by transitioning internal service communication (Order to Product services) from REST to gRPC, significantly reducing serialization overhead and latency.",
+      "Architected backend components using CQRS (MediatR) and Clean Architecture to segregate Read/Write operations, improving system scalability.",
+      "Resolved complex Race Conditions and double-payment issues in high-concurrency Webhook handlers by implementing Distributed Locking (Redlock) via Redis."
     ],
-    sectionLabel: "Key Responsibilities:",
-    technologies: [".NET 8", ".NET EF Core", "RabbitMQ", "gRPC", "SQL Server", "Redis", "Docker"]
+    sectionLabel: "Key Contributions:",
+    technologies: ["C# .NET", "RESTful API", "gRPC", "Redis", "SQL Server", "CQRS (MediatR)", "Clean Architecture"]
   },
   {
     id: 2,
     date: "Oct 2025 - Present",
-    title: "Backend Developer (Remote)",
+    title: "Backend Developer (Freelancer)",
     company: "TCH Company",
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built REST APIs for business websites while learning professional workflow.",
@@ -355,7 +359,7 @@ export const education = [
       "Learned software engineering principles and best practices"
     ],
     toeic: {
-      score: "690",
+      score: "705",
       label: "English Proficiency"
     }
   }
