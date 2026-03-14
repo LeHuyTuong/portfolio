@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import './Resume.css';
 import { personalInfo, education, skills, projects, experiences } from '../data/portfolioData';
 
-const Resume = ({ onBack }) => {
+const Resume = () => {
     const handlePrint = () => {
         window.print();
     };
@@ -9,12 +10,12 @@ const Resume = ({ onBack }) => {
     return (
         <div className="resume-page">
             <div className="resume-controls no-print">
-                <button onClick={onBack} className="btn-back">
+                <Link to="/" className="btn-back">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M19 12H5M12 19l-7-7 7-7" />
                     </svg>
                     Back to Portfolio
-                </button>
+                </Link>
                 <button onClick={handlePrint} className="btn-download">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3" />

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './styles/index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -11,18 +11,12 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Resume from './components/Resume';
 
-function App() {
-  const [showResume, setShowResume] = useState(false);
-
-  if (showResume) {
-    return <Resume onBack={() => setShowResume(false)} />;
-  }
-
+const LandingPage = () => {
   return (
     <div className="app">
-      <Navbar onResumeClick={() => setShowResume(true)} />
+      <Navbar />
       <main>
-        <Hero onResumeClick={() => setShowResume(true)} />
+        <Hero />
         <BankingMindset />
         <Skills />
         <Experience />
@@ -32,6 +26,16 @@ function App() {
       </main>
       <Footer />
     </div>
+  );
+};
+
+function App() {
+  
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/resume" element={<Resume />} />
+    </Routes>
   );
 }
 

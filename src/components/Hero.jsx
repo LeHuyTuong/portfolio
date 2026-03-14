@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import { personalInfo, stats } from '../data/portfolioData';
 import './Hero.css';
 import './HeroStats.css';
 
-const Hero = ({ onResumeClick }) => {
+const Hero = () => {
     return (
         <section id="home" className="hero">
             <div className="hero-bg">
@@ -48,9 +49,9 @@ const Hero = ({ onResumeClick }) => {
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
-                        <button onClick={onResumeClick} className="btn btn-secondary">
+                        <Link to="/resume" className="btn btn-secondary">
                             <span>View Resume</span>
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="hero-social">

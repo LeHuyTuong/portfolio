@@ -10,7 +10,7 @@ export const personalInfo = {
   phone: "0372728768",
   location: "Ho Chi Minh City, Vietnam",
   bio: `Java Backend Engineering fresher with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Seeking to apply backend engineering fundamentals as a Java Fresher in a high-scale environment.`,
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume",
   social: {
     github: "https://github.com/LeHuyTuong",
     linkedin: "https://linkedin.com/in/lehuytuong",

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { personalInfo, navLinks } from '../data/portfolioData';
 import './Navbar.css';
 
-const Navbar = ({ onResumeClick }) => {
+const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
@@ -58,9 +59,9 @@ const Navbar = ({ onResumeClick }) => {
                             {link.label}
                         </a>
                     ))}
-                    <button className="navbar-link resume-btn" onClick={onResumeClick}>
+                    <Link to="/resume" className="navbar-link resume-btn">
                         Resume
-                    </button>
+                    </Link>
                 </div>
 
                 <button
