@@ -27,7 +27,7 @@ const Resume = () => {
             <div className="resume-container">
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
-                    <p className="resume-title">{personalInfo.title}</p>
+                    <p className="resume-title">Backend Software Engineer</p>
                     <div className="resume-contact">
                         <span>{personalInfo.phone}</span>
                         <span className="divider">|</span>
@@ -42,7 +42,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Java Backend Engineering fresher with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Seeking to apply backend engineering fundamentals as a Java Fresher in a high-scale environment.</p>
+                    <p className="summary-text">Java Backend Engineering fresher with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Seeking to apply backend engineering fundamentals as a Backend Software Engineer in a high-scale environment.</p>
                 </section>
 
                 <section className="resume-section">
