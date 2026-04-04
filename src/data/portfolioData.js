@@ -1,15 +1,15 @@
 // ===== LÊ HUY TƯỜNG - PORTFOLIO DATA =====
-// Backend Developer Fresher | FPT University
+// Junior Java Backend Developer | FPT University
 
 export const personalInfo = {
   name: "Le Huy Tuong",
-  title: "Java Fresher",
-  tagline: "Ready to Learn & Grow",
-  subtitle: "Seeking Java Fresher position to contribute to real projects, learn from experienced engineers, and grow in backend development",
+  title: "Junior Java Backend Developer",
+  tagline: "Building Scalable & High-Performance Backend Systems",
+  subtitle: "Junior Java Backend Developer with hands-on production experience in building scalable APIs and reliable backend systems",
   email: "lehuytuong2005@gmail.com",
   phone: "0372728768",
   location: "Ho Chi Minh City, Vietnam",
-  bio: `Java Backend Engineering fresher with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Seeking to apply backend engineering fundamentals as a Java Fresher in a high-scale environment.`,
+  bio: `Junior Java Backend Developer with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Passionate about applying backend engineering fundamentals to build high-scale, reliable systems.`,
   resumeUrl: "/resume",
   social: {
     github: "https://github.com/LeHuyTuong",
@@ -84,7 +84,7 @@ export const stats = {
   enterpriseProjects: "Always",
   totalProjects: 8,
   labels: {
-    java: "Learning Projects",
+    java: "Technical Projects",
     companies: "Companies",
     total: "Improving"
   }
@@ -99,10 +99,10 @@ export const projects = [
     displayName: "Carbon Credit Marketplace",
     role: "Backend Developer",
     period: "2025",
-    problem: "Building a marketplace for carbon credits while learning team collaboration",
-    solution: "Built wallet system, marketplace features, and learned deployment to production",
-    challenge: "Working with 3 teammates using Git workflow and coordinating tasks",
-    whatILearned: "Team collaboration with Git and Jira, payment webhook integration, deploying to production with Docker Compose, designing idempotency and distributed locking mechanisms",
+    problem: "Developing a robust marketplace for carbon credits with secure transaction flows",
+    solution: "Built a production-grade wallet system and marketplace features with automated deployment",
+    challenge: "Managing complex financial states and concurrent transactions in a distributed environment",
+    whatILearned: "Experienced in enterprise Git workflows, payment gateway integration, Docker orchestration, and designing idempotent transaction mechanisms",
     highlights: [
       "Architecture: RESTful API design, MVC, RBAC, JWT, Modular Monolith, Clean Architecture, SOLID principles.",
       "Developed Order Lifecycle management systems adopting Clean Architecture principles",
@@ -122,13 +122,13 @@ export const projects = [
     category: "star",
     categoryLabel: "⭐ Solo Project",
     title: "Card Issuing System",
-    displayName: "Banking Logic & Testing Practice",
+    displayName: "Transaction Processing & Data Accuracy",
     role: "Solo Developer",
     period: "2025",
-    problem: "Learning why testing matters in backend development",
-    solution: "Built banking features with comprehensive unit tests",
-    challenge: "Writing tests that actually catch bugs, not just coverage",
-    whatILearned: "Why unit testing matters in financial systems, how to write meaningful tests, proper error handling and validation, importance of defensive programming",
+    problem: "Ensuring near-zero financial discrepancy in high-volume transaction systems",
+    solution: "Architected a card management engine with 100% test coverage for core banking logic",
+    challenge: "Validating complex business rules and preventing edge-case failures",
+    whatILearned: "Expertise in JUnit 5/Mockito, defensive programming, and building high-reliability financial microservices",
     highlights: [
       "Built card management and transaction ledger features",
       "Wrote unit tests with JUnit 5 and Mockito - caught 12+ edge cases",
@@ -149,10 +149,10 @@ export const projects = [
     displayName: "Booking System",
     role: "Backend Developer",
     period: "2025",
-    problem: "Learning about booking workflows and payment integration",
-    solution: "Built train ticket booking with seat reservation and VNPay payment",
-    challenge: "Preventing two users from booking the same seat at the same time",
-    whatILearned: "Managing booking states with automatic timeout, integrating payment gateway (VNPay), why pagination is important with large datasets, handling concurrent seat selection",
+    problem: "Managing concurrent seat reservations and real-time availability in a high-traffic booking system",
+    solution: "Developed a distributed booking engine with seat-hold logic and secure VNPay integration",
+    challenge: "Preventing double-booking and race conditions during peak hours",
+    whatILearned: "Implementing distributed locking, managing complex booking life-cycles, and optimizing database pagination for high-volume datasets",
     highlights: [
       "Built search for train trips with complex filtering logic",
       "Implemented booking flow: seat holds for 15 minutes with auto-release system",
@@ -193,13 +193,13 @@ export const projects = [
     category: "star",
     categoryLabel: "⭐ Learning Project",
     title: "URL Shortener",
-    displayName: "Learning About Caching",
+    displayName: "High-Performance URL Redirection",
     role: "Solo Developer",
     period: "2025",
-    problem: "Understanding how caching improves performance",
-    solution: "Built URL shortener with Redis caching to reduce database load",
-    challenge: "Spent 2 days debugging CORS errors with QR code images",
-    whatILearned: "Optimizing short-code generation, database indexing strategies, how caching reduces database queries by 80%, understanding CORS, generating QR codes for links",
+    problem: "Scaling link redirection services to handle high traffic with minimal latency",
+    solution: "Architected a Redis-backed URL redirection engine reducing DB pressure by 80%",
+    challenge: "Generating collision-free short codes while maintaining peak performance",
+    whatILearned: "Advanced Redis caching strategies, database indexing for prefix searches, and cross-origin security protocols",
     highlights: [
       "Designed a high-throughput URL shortening service with optimized short-code generation",
       "Implemented Redis caching reducing database load by 80%",
@@ -219,10 +219,10 @@ export const projects = [
     displayName: "Learning Async Processing",
     role: "Solo Developer",
     period: "2025",
-    problem: "Video downloads take too long for synchronous requests",
-    solution: "Used queue-based async processing so users get instant response",
-    challenge: "Managing rate limits from YouTube API and handling failures",
-    whatILearned: "Why synchronous processing fails at scale, producer-consumer pattern for background jobs, retry logic for handling failures, working with external APIs",
+    problem: "Processing high-latency video tasks without blocking the main application thread",
+    solution: "Implemented an asynchronous worker pattern with Redis queues for non-blocking video downloading",
+    challenge: "Handling external API rate limits and ensuring fallback mechanisms for failed jobs",
+    whatILearned: "Engineering producer-consumer architectures, implementing fault-tolerant retry logic, and optimizing distributed background workers",
     highlights: [
       "Learned producer-consumer pattern with Redis queue",
       "Video downloads in background - users don't wait",
@@ -242,10 +242,10 @@ export const projects = [
     displayName: "MVC Pattern Practice",
     role: "Solo Developer",
     period: "2025",
-    problem: "Learning Spring MVC architecture pattern",
-    solution: "Built course platform with Thymeleaf templates for server-side rendering",
-    challenge: "Managing relationships between courses, sections, and lessons",
-    whatILearned: "Spring MVC pattern (Controller → Service → Repository), server-side rendering with Thymeleaf, managing complex entity relationships with JPA",
+    problem: "Developing a robust Content Management System (CMS) using modular architecture",
+    solution: "Built a course sharing platform utilizing Spring MVC and Thymeleaf for SEO-friendly rendering",
+    challenge: "Optimizing complex relational data models and ensuring efficient entity life-cycle management",
+    whatILearned: "Mastery of the Controller-Service-Repository pattern, server-side template engine logic, and sophisticated JPA entity mapping",
     highlights: [
       "Practiced Spring MVC architecture",
       "Learned Thymeleaf for server-side templates",
@@ -265,10 +265,10 @@ export const projects = [
     displayName: "Learning PHP/Laravel",
     role: "Solo Developer",
     period: "2025",
-    problem: "Comparing different frameworks (Laravel vs Spring Boot)",
-    solution: "Built news CMS with Laravel to see how other frameworks work",
-    challenge: "Learning new language (PHP) and different framework patterns",
-    whatILearned: "How Laravel compares to Spring Boot, different framework philosophies, Eloquent ORM vs Hibernate patterns, Blade templating engine",
+    problem: "Requirement for a multi-platform content solution using diverse backend ecosystems",
+    solution: "Developed a full-featured news portal with Laravel to compare ecosystem performance and productivity",
+    challenge: "Adapting backend logic patterns across different language paradigms (PHP vs Java)",
+    whatILearned: "Comparative analysis of Eloquent vs Hibernate, Blade templating engines, and cross-framework architecture design",
     highlights: [
       "Explored Laravel framework to compare with Spring Boot",
       "Learned Eloquent ORM and Blade templates",
@@ -315,15 +315,15 @@ export const experiences = [
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built REST APIs for business websites while learning professional workflow.",
     responsibilities: [
-      "Assisted in backend API performance optimization for a cost estimation module, targeting latency and data access efficiency",
-      "Utilized automated benchmark scripts to measure latency and database query counts across different optimization stages",
-      "Implemented response caching with invalidation logic to improve speed while maintaining data correctness",
-      "Refined payload structure and data retrieval paths to reduce redundant queries and backend load",
+      "Optimized backend API performance for a cost estimation module, focusing on response latency and data access efficiency",
+      "Developed and executed benchmark workflows to measure latency and database query counts across different optimization stages",
+      "Implemented high-performance response caching with invalidation logic to ensure data correctness and speed",
+      "Refined payload structure and data retrieval paths, reducing redundant queries and overall backend load",
       "Achieved measurable improvements: key API latency reduced from ~245ms to ~93ms, DB queries reduced from 3 to 1, and render time reduced from ~706ms to ~538ms",
       "Developed an End-to-end Cost Estimator module, automating quotations and lead tracking",
       "Produced standard API Documentation (Swagger) to align frontend and backend development",
-      "Handled client bug-fix tickets and collaborated with clients and Business Analysts to finalize frontend modifications",
-      "Applied basic SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse"
+      "Resolved client bug-fix tickets and collaborated directly with clients and Business Analysts to finalize frontend requirements",
+      "Implemented SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse"
     ],
     sectionLabel: "Key Achievements:",
     technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Swagger", "Git"]
@@ -334,11 +334,11 @@ export const experiences = [
     title: "Self-Learning Journey",
     company: "Personal Projects",
     companyUrl: null,
-    description: "Teaching myself backend development through hands-on projects.",
+    description: "Developing sophisticated backend systems through independent technical research and hands-on projects.",
     responsibilities: [
-      "Building complete systems from scratch to understand the full picture",
-      "Learning Spring Boot ecosystem step by step",
-      "Exploring system design concepts through practical projects",
+      "Developing complete systems from scratch to understand enterprise-grade architectures",
+      "Mastering the Spring Boot ecosystem via complex feature implementations",
+      "Exploring and applying system design concepts through practical projects",
       "Understanding deployment (Docker, Linux VPS)",
       "Practicing both solo and team project workflows"
     ],
@@ -355,9 +355,9 @@ export const education = [
     period: "2023 - Present",
     description: "Focused on backend development and enterprise systems",
     achievements: [
-      "Specialized in Java and Spring Boot ecosystem",
-      "Participated in team projects with real-world scenarios",
-      "Learned software engineering principles and best practices"
+      "Specialized in Java and Spring Boot ecosystem with high academic performance",
+      "Led and participated in team projects simulating real-world enterprise scenarios",
+      "Applied software engineering principles and best practices in all development cycles"
     ],
     toeic: {
       score: "705",

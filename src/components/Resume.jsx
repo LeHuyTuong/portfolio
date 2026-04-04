@@ -27,7 +27,7 @@ const Resume = () => {
             <div className="resume-container">
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
-                    <p className="resume-title">Backend Software Engineer</p>
+                    <p className="resume-title">Junior Java Backend Developer</p>
                     <div className="resume-contact">
                         <span>{personalInfo.phone}</span>
                         <span className="divider">|</span>
@@ -42,7 +42,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Java Backend Engineering fresher with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Seeking to apply backend engineering fundamentals as a Backend Software Engineer in a high-scale environment.</p>
+                    <p className="summary-text">Junior Java Backend Developer with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Passionate about applying backend engineering fundamentals to build high-scale, reliable systems.</p>
                 </section>
 
                 <section className="resume-section">
@@ -91,15 +91,15 @@ const Resume = () => {
                             <em>Backend Developer (Freelancer) | Tech: Java, Spring Boot, MySQL, REST API, Swagger, Git</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Assisted in backend API performance optimization for a cost estimation module, targeting latency and data access efficiency.</li>
-                            <li>Utilized automated benchmark scripts to measure latency and database query counts across different optimization stages.</li>
-                            <li>Implemented response caching with invalidation logic to improve speed while maintaining data correctness.</li>
-                            <li>Refined payload structure and data retrieval paths to reduce redundant queries and backend load.</li>
+                            <li>Optimized backend API performance for a cost estimation module, focusing on response latency and data access efficiency.</li>
+                            <li>Developed and executed benchmark workflows to measure latency and database query counts across different optimization stages.</li>
+                            <li>Implemented high-performance response caching with invalidation logic to ensure data correctness and speed.</li>
+                            <li>Refined payload structure and data retrieval paths, reducing redundant queries and overall backend load.</li>
                             <li><strong>Achieved measurable improvements:</strong> key API latency reduced from ~245ms to ~93ms, DB queries reduced from 3 to 1, and render time reduced from ~706ms to ~538ms.</li>
                             <li>Developed an End-to-end Cost Estimator module, automating quotations and lead tracking.</li>
                             <li>Produced standard API Documentation (Swagger) to align frontend and backend development.</li>
-                            <li>Handled client bug-fix tickets and collaborated with clients and Business Analysts to finalize frontend modifications.</li>
-                            <li>Applied basic SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse.</li>
+                            <li>Resolved client bug-fix tickets and collaborated directly with clients and Business Analysts to finalize frontend requirements.</li>
+                            <li>Implemented SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse.</li>
                         </ul>
                     </div>
 
