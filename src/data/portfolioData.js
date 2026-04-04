@@ -315,14 +315,15 @@ export const experiences = [
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built REST APIs for business websites while learning professional workflow.",
     responsibilities: [
-      "Engineered an End-to-end Cost Estimator module, automating quotations and lead tracking",
+      "Assisted in backend API performance optimization for a cost estimation module, targeting latency and data access efficiency",
+      "Utilized automated benchmark scripts to measure latency and database query counts across different optimization stages",
+      "Implemented response caching with invalidation logic to improve speed while maintaining data correctness",
+      "Refined payload structure and data retrieval paths to reduce redundant queries and backend load",
+      "Achieved measurable improvements: key API latency reduced from ~245ms to ~93ms, DB queries reduced from 3 to 1, and render time reduced from ~706ms to ~538ms",
+      "Developed an End-to-end Cost Estimator module, automating quotations and lead tracking",
       "Produced standard API Documentation (Swagger) to align frontend and backend development",
-      "Taking ownership of client bug-fix tickets and leveraging AI tools for root-cause analysis",
-      "Collaborating with frontend team and bussiness analystic team through daily communication",
-      "Writing API documentation with Swagger",
-      "Testing functionality and taking ownership of client bug-fix tickets",
-      "Leveraging AI tools to analyze and accelerate bug fixing",
-      "Developed the Cost Estimate feature end-to-end (both Backend and Frontend)"
+      "Handled client bug-fix tickets and collaborated with clients and Business Analysts to finalize frontend modifications",
+      "Applied basic SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse"
     ],
     sectionLabel: "Key Achievements:",
     technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Swagger", "Git"]

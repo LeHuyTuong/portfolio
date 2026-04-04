@@ -81,7 +81,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>WORK EXPERIENCE</h2>
                     <div className="section-line"></div>
-                    
+
                     <div className="experience-item">
                         <div className="item-header">
                             <strong>TCH Company</strong>
@@ -91,10 +91,15 @@ const Resume = () => {
                             <em>Backend Developer (Freelancer) | Tech: Java, Spring Boot, MySQL, REST API, Swagger, Git</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Engineered an End-to-end Cost Estimator module, automating quotations and lead tracking.</li>
+                            <li>Assisted in backend API performance optimization for a cost estimation module, targeting latency and data access efficiency.</li>
+                            <li>Utilized automated benchmark scripts to measure latency and database query counts across different optimization stages.</li>
+                            <li>Implemented response caching with invalidation logic to improve speed while maintaining data correctness.</li>
+                            <li>Refined payload structure and data retrieval paths to reduce redundant queries and backend load.</li>
+                            <li><strong>Achieved measurable improvements:</strong> key API latency reduced from ~245ms to ~93ms, DB queries reduced from 3 to 1, and render time reduced from ~706ms to ~538ms.</li>
+                            <li>Developed an End-to-end Cost Estimator module, automating quotations and lead tracking.</li>
                             <li>Produced standard API Documentation (Swagger) to align frontend and backend development.</li>
-                            <li>Taking ownership of client bug-fix tickets and leveraging AI tools for root-cause analysis.</li>
-                            <li>Collaborating with frontend team and business analytics team through daily communication.</li>
+                            <li>Handled client bug-fix tickets and collaborated with clients and Business Analysts to finalize frontend modifications.</li>
+                            <li>Applied basic SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse.</li>
                         </ul>
                     </div>
 
@@ -136,7 +141,7 @@ const Resume = () => {
                             <li>Containerized full stack (backend + frontend + DB + Nginx) with Docker Compose, deployed on Linux VPS with HTTPS/SSL.</li>
                         </ul>
                         <p className="project-links">
-                            Website: <a href="https://carbonx.io.vn" target="_blank" rel="noopener noreferrer">carbonx.io.vn</a> | 
+                            Website: <a href="https://carbonx.io.vn" target="_blank" rel="noopener noreferrer">carbonx.io.vn</a> |
                             GitHub: <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a>
                         </p>
                     </div>
