@@ -296,7 +296,7 @@ export const experiences = [
   {
     id: 4,
     date: "Apr 2026 - Present",
-    title: "Software Engineering Trainee",
+    title: "Backend Engineer (VDT Program)",
     company: "Viettel Digital Talent 2026",
     companyUrl: "https://tuyendung.viettel.vn/",
     description: "Selected for Viettel's intensive digital talent program specializing in Web Programming.",
@@ -316,15 +316,9 @@ export const experiences = [
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built REST APIs for business websites while learning professional workflow.",
     responsibilities: [
-      "Optimized backend API performance for a cost estimation module, focusing on response latency and data access efficiency",
-      "Developed and executed benchmark workflows to measure latency and database query counts across different optimization stages",
-      "Implemented high-performance response caching with invalidation logic to ensure data correctness and speed",
-      "Refined payload structure and data retrieval paths, reducing redundant queries and overall backend load",
-      "Achieved measurable improvements: key API latency reduced from ~245ms to ~93ms, DB queries reduced from 3 to 1, and render time reduced from ~706ms to ~538ms",
-      "Developed an End-to-end Cost Estimator module, automating quotations and lead tracking",
-      "Produced standard API Documentation (Swagger) to align frontend and backend development",
-      "Resolved client bug-fix tickets and collaborated directly with clients and Business Analysts to finalize frontend requirements",
-      "Implemented SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse"
+      "Engineered high-performance response caching and refined payload structures, achieving a 62% reduction in key API latency (from ~245ms to ~93ms) and minimizing database queries from 3 to 1.",
+      "Developed an End-to-end Cost Estimator module automating quotations, and produced comprehensive API Documentation (Swagger) to streamline cross-functional collaboration.",
+      "Resolved critical production bugs and implemented SEO metadata optimization, securing an overall SEO health score of 90/100 on Google Lighthouse."
     ],
     sectionLabel: "Key Achievements:",
     technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Swagger", "Git"]

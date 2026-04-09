@@ -88,7 +88,7 @@ const Resume = () => {
                             <span className="date-range">[Apr 2026] – Present</span>
                         </div>
                         <div className="item-sub">
-                            <em>Software Engineering Trainee (Web Programming)</em>
+                            <em>Backend Engineer (VDT Program) | Web Programming</em>
                         </div>
                         <ul className="resume-bullets">
                             <li>Selected from a highly competitive pool to participate in Viettel's exclusive digital talent program.</li>
@@ -105,15 +105,9 @@ const Resume = () => {
                             <em>Backend Developer (Freelancer) | Tech: Java, Spring Boot, MySQL, REST API, Swagger, Git</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Optimized backend API performance for a cost estimation module, focusing on response latency and data access efficiency.</li>
-                            <li>Developed and executed benchmark workflows to measure latency and database query counts across different optimization stages.</li>
-                            <li>Implemented high-performance response caching with invalidation logic to ensure data correctness and speed.</li>
-                            <li>Refined payload structure and data retrieval paths, reducing redundant queries and overall backend load.</li>
-                            <li><strong>Achieved measurable improvements:</strong> key API latency reduced from ~245ms to ~93ms, DB queries reduced from 3 to 1, and render time reduced from ~706ms to ~538ms.</li>
-                            <li>Developed an End-to-end Cost Estimator module, automating quotations and lead tracking.</li>
-                            <li>Produced standard API Documentation (Swagger) to align frontend and backend development.</li>
-                            <li>Resolved client bug-fix tickets and collaborated directly with clients and Business Analysts to finalize frontend requirements.</li>
-                            <li>Implemented SEO metadata optimization (Meta Title & Description), achieving an overall SEO health score of 90/100 on Google Lighthouse.</li>
+                            <li><strong>Performance Optimization:</strong> Engineered high-performance response caching and refined payload structures, achieving a 62% reduction in key API latency (from ~245ms to ~93ms) and minimizing database queries from 3 to 1.</li>
+                            <li><strong>Feature Development:</strong> Developed an End-to-end Cost Estimator module automating quotations, and produced comprehensive API Documentation (Swagger) to streamline cross-functional collaboration.</li>
+                            <li><strong>Production Stability & SEO:</strong> Resolved critical production bugs and implemented SEO metadata optimization, securing an overall SEO health score of 90/100 on Google Lighthouse.</li>
                         </ul>
                     </div>
 
