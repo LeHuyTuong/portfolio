@@ -21,7 +21,7 @@ export const personalInfo = {
 export const bankingMindset = {
   title: "Philosophy",
   subtitle: "How I Approach Development",
-  description: `"I focus on understanding how things work. I enjoy breaking down problems, writing clean code, and learning from mistakes. Every project teaches me something new about building reliable systems."`,
+  description: `"I focus on engineering reliable, scalable backend systems. I enjoy architecting robust APIs, resolving complex performance bottlenecks, and delivering maintainable code."`,
   principles: [
     {
       icon: "🧠",
@@ -120,7 +120,7 @@ export const projects = [
   {
     id: 2,
     category: "star",
-    categoryLabel: "⭐ Solo Project",
+    categoryLabel: "🏦 Core Financial Logic",
     title: "Card Issuing System",
     displayName: "Transaction Processing & Data Accuracy",
     role: "Solo Developer",
@@ -134,7 +134,7 @@ export const projects = [
       "Wrote unit tests with JUnit 5 and Mockito - caught 12+ edge cases",
       "Implemented proper exception handling for better debugging",
       "Learned to test business logic in isolation using mocking",
-      "Understanding: Good tests are a safety net for code changes"
+      "Enforced system reliability by implementing a comprehensive testing suite (JUnit 5/Mockito) that caught 12+ critical edge cases before deployment."
     ],
     technologies: ["Java 17", "Spring Boot", "JUnit 5", "Mockito", "MySQL"],
     github: null,
@@ -180,8 +180,7 @@ export const projects = [
       "Implemented JWT authentication with access and refresh tokens",
       "Built shopping cart stored in Redis for fast access",
       "Integrated Stripe for card payments + wallet system",
-      "Discovered and fixed double-payment bug by learning about database locking",
-      "Deployed on Linux VPS with SSL - very rewarding!"
+      "Enforced transaction integrity and eliminated double-payment race conditions using Database-level Locking."
     ],
     technologies: ["Java 17", "Spring Boot", "React 18", "MySQL", "JWT", "Stripe", "Docker"],
     github: null,
@@ -191,7 +190,7 @@ export const projects = [
   {
     id: 5,
     category: "star",
-    categoryLabel: "⭐ Learning Project",
+    categoryLabel: "⚡ High-Throughput System",
     title: "URL Shortener",
     displayName: "High-Performance URL Redirection",
     role: "Solo Developer",
@@ -214,7 +213,7 @@ export const projects = [
   {
     id: 6,
     category: "star",
-    categoryLabel: "⭐ System Design Practice",
+    categoryLabel: "⚙️ Asynchronous Architecture",
     title: "YouTube Downloader",
     displayName: "Learning Async Processing",
     role: "Solo Developer",
@@ -227,7 +226,7 @@ export const projects = [
       "Learned producer-consumer pattern with Redis queue",
       "Video downloads in background - users don't wait",
       "Implemented retry logic for failed downloads",
-      "Understanding: Long tasks need async processing"
+      "Architected a non-blocking asynchronous system to offload high-latency video processing tasks from the main application thread."
     ],
     technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "Docker", "yt-dlp"],
     github: null,
@@ -255,7 +254,8 @@ export const projects = [
     technologies: ["Java 17", "Spring Boot", "Spring MVC", "Thymeleaf", "MySQL"],
     github: null,
     demo: null,
-    featured: false
+    featured: false,
+    hidden: true
   },
   {
     id: 8,
@@ -278,7 +278,8 @@ export const projects = [
     technologies: ["PHP", "Laravel", "MySQL", "Blade", "TailwindCSS"],
     github: null,
     demo: null,
-    featured: false
+    featured: false,
+    hidden: true
   }
 ];
 
@@ -293,19 +294,19 @@ export const navLinks = [
 
 export const experiences = [
   {
-    id: 1,
-    date: "Dec 2025 - Present",
-    title: "Backend Intern",
-    company: "FPT Software Academy (FSA)",
-    companyUrl: "https://fptsoftware.com",
-    description: "Contributing to a high-scale franchise management platform built on C# .NET microservices.",
+    id: 4,
+    date: "Apr 2026 - Present",
+    title: "Software Engineering Trainee",
+    company: "Viettel Digital Talent 2026",
+    companyUrl: "https://tuyendung.viettel.vn/",
+    description: "Selected for Viettel's intensive digital talent program specializing in Web Programming.",
     responsibilities: [
-      "Boosted system performance by transitioning internal service communication (Order to Product services) from REST to gRPC, significantly reducing serialization overhead and latency.",
-      "Architected backend components using CQRS (MediatR) and Clean Architecture to segregate Read/Write operations, improving system scalability.",
-      "Resolved complex Race Conditions and double-payment issues in high-concurrency Webhook handlers by implementing Distributed Locking (Redlock) via Redis."
+      "Participating in intensive training and hands-on experience on real-world projects within Viettel Group.",
+      "Applying rigorous software development standards to large-scale Web systems."
+      // You can update more when working in reality
     ],
-    sectionLabel: "Key Contributions:",
-    technologies: ["C# .NET", "RESTful API", "gRPC", "Redis", "SQL Server", "CQRS (MediatR)", "Clean Architecture"]
+    sectionLabel: "Key Activities:",
+    technologies: ["Java", "Spring Boot", "Microservices", "System Design"]
   },
   {
     id: 2,
@@ -329,20 +330,35 @@ export const experiences = [
     technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Swagger", "Git"]
   },
   {
+    id: 1,
+    date: "Dec 2025 - Apr 2026",
+    title: "Backend Intern",
+    company: "FPT Software Academy (FSA)",
+    companyUrl: "https://fptsoftware.com",
+    description: "Contributing to a high-scale franchise management platform built on C# .NET microservices.",
+    responsibilities: [
+      "Boosted system performance by transitioning internal service communication (Order to Product services) from REST to gRPC, significantly reducing serialization overhead and latency.",
+      "Architected backend components using CQRS (MediatR) and Clean Architecture to segregate Read/Write operations, improving system scalability.",
+      "Resolved complex Race Conditions and double-payment issues in high-concurrency Webhook handlers by implementing Distributed Locking (Redlock) via Redis."
+    ],
+    sectionLabel: "Key Contributions:",
+    technologies: ["C# .NET", "RESTful API", "gRPC", "Redis", "SQL Server", "CQRS (MediatR)", "Clean Architecture"]
+  },
+  {
     id: 3,
     date: "Jan 2023 - Present",
-    title: "Self-Learning Journey",
-    company: "Personal Projects",
+    title: "Independent Engineering & Architecture Projects",
+    company: "Independent Engineering",
     companyUrl: null,
-    description: "Developing sophisticated backend systems through independent technical research and hands-on projects.",
+    description: "Architecting complete backend systems from scratch to master enterprise-grade design patterns (Clean Architecture, DDD).",
     responsibilities: [
-      "Developing complete systems from scratch to understand enterprise-grade architectures",
-      "Mastering the Spring Boot ecosystem via complex feature implementations",
-      "Exploring and applying system design concepts through practical projects",
-      "Understanding deployment (Docker, Linux VPS)",
-      "Practicing both solo and team project workflows"
+      "Architecting complete backend systems from scratch to master enterprise-grade design patterns (Clean Architecture, DDD)",
+      "Mastering the Spring Boot ecosystem via complex feature implementations focusing on scalability",
+      "Exploring and applying advanced system design concepts through practical high-load simulations",
+      "Deploying and monitoring applications on Linux VPS using Docker and Nginx",
+      "Practicing professional engineering workflows including CI/CD and automated testing"
     ],
-    sectionLabel: "What I Focused On:",
+    sectionLabel: "Core Engineering Implementations:",
     technologies: ["Java", "Spring Boot", "React", "Docker", "MySQL", "Redis"]
   }
 ];

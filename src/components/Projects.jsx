@@ -12,8 +12,8 @@ const Projects = () => {
     ];
 
     const filteredProjects = filter === 'all'
-        ? projects
-        : projects.filter(p => p.category === filter);
+        ? projects.filter(p => !p.hidden)
+        : projects.filter(p => p.category === filter && !p.hidden);
 
     return (
         <section id="projects" className="section projects-section">
@@ -85,7 +85,7 @@ const Projects = () => {
                                 </div>
                                 {project.whatILearned && (
                                     <div className="detail-item what-learned">
-                                        <span className="detail-label">🎓 What I Learned:</span>
+                                        <span className="detail-label">🚀 Technical Impact:</span>
                                         <p>{project.whatILearned}</p>
                                     </div>
                                 )}

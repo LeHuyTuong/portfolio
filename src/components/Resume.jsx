@@ -84,6 +84,20 @@ const Resume = () => {
 
                     <div className="experience-item">
                         <div className="item-header">
+                            <strong>Viettel Digital Talent 2026</strong>
+                            <span className="date-range">[Apr 2026] – Present</span>
+                        </div>
+                        <div className="item-sub">
+                            <em>Software Engineering Trainee (Web Programming)</em>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li>Selected from a highly competitive pool to participate in Viettel's exclusive digital talent program.</li>
+                            <li>Engaging in intensive training and real-world project development for enterprise-scale web applications.</li>
+                        </ul>
+                    </div>
+
+                    <div className="experience-item" style={{ marginTop: '0.8rem' }}>
+                        <div className="item-header">
                             <strong>TCH Company</strong>
                             <span className="date-range">[Oct 2025] – Present</span>
                         </div>
@@ -106,7 +120,7 @@ const Resume = () => {
                     <div className="experience-item" style={{ marginTop: '0.8rem' }}>
                         <div className="item-header">
                             <strong>FPT Software Academy (FSA)</strong>
-                            <span className="date-range">[Dec 2025] – Present</span>
+                            <span className="date-range">[Dec 2025] – [Apr 2026]</span>
                         </div>
                         <div className="item-sub">
                             <em>Backend Intern | Tech: C# .NET, RESTful API, gRPC, Redis, SQL Server, CQRS (MediatR), Clean Architecture</em>
@@ -152,7 +166,7 @@ const Resume = () => {
                             <span className="date-range">[2025]</span>
                         </div>
                         <div className="item-sub">
-                            <em>Technical Research: Banking Logic & Unit Testing Lab | Tech: Java 17, Spring Boot, Spring Data JPA, JUnit 5, Mockito</em>
+                            <em>Core Financial Logic | Technical Research: Banking Logic & Unit Testing Lab | Tech: Java 17, Spring Boot, Spring Data JPA, JUnit 5, Mockito</em>
                         </div>
                         <ul className="resume-bullets">
                             <li>Built core backend logic for banking features (card management, ledger) with strict focus on data accuracy and financial consistency.</li>
@@ -162,6 +176,35 @@ const Resume = () => {
                         <p className="project-links">
                             GitHub: <a href="https://github.com/LeHuyTuong/Card-Issuing-System" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Card-Issuing-System</a>
                         </p>
+                    </div>
+
+                    <div className="project-item" style={{ marginTop: '0.8rem' }}>
+                        <div className="item-header">
+                            <strong>High-Throughput URL Shortener</strong>
+                            <span className="date-range">[2025]</span>
+                        </div>
+                        <div className="item-sub">
+                            <em>Backend Developer (Solo) | Tech: Java 17, Spring Boot, Redis, MySQL, Docker, React</em>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li>Architected a Redis-backed URL redirection engine reducing database pressure by 80% and minimizing latency.</li>
+                            <li>Engineered database indexing strategies for efficient redirection lookups and collision-free code generation.</li>
+                            <li>Resolved complex Cross-Origin Resource Sharing (CORS) issues for dynamic image generation.</li>
+                        </ul>
+                    </div>
+
+                    <div className="project-item" style={{ marginTop: '0.8rem' }}>
+                        <div className="item-header">
+                            <strong>Asynchronous YouTube Downloader</strong>
+                            <span className="date-range">[2025]</span>
+                        </div>
+                        <div className="item-sub">
+                            <em>Backend Developer (Solo) | Tech: Java 17, Spring Boot, Redis, MySQL, Docker, yt-dlp</em>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li>Architected a non-blocking asynchronous system to offload high-latency video processing tasks using Redis queues.</li>
+                            <li>Implemented producer-consumer patterns and fault-tolerant retry logic for high-reliability background jobs.</li>
+                        </ul>
                     </div>
                 </section>
 
