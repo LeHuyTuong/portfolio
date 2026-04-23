@@ -27,7 +27,7 @@ const Resume = () => {
             <div className="resume-container">
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
-                    <p className="resume-title">Junior Java Backend Developer</p>
+                    <p className="resume-title">Backend Engineer | Java & Spring Boot Specialist</p>
                     <div className="resume-contact">
                         <span>{personalInfo.phone}</span>
                         <span className="divider">|</span>
@@ -42,7 +42,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Junior Java Backend Developer with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Passionate about applying backend engineering fundamentals to build high-scale, reliable systems.</p>
+                    <p className="summary-text">Backend Engineer with a 'Reliability-First' mindset and hands-on experience building mission-critical financial systems. Specialist in architecting secure wallet transaction flows, distributed state management, and high-integrity payment integrations. Dedicated to transaction integrity, system scalability, and technical discipline in enterprise environments.</p>
                 </section>
 
                 <section className="resume-section">
@@ -69,11 +69,12 @@ const Resume = () => {
                     <div className="section-line"></div>
                     <div className="skills-content">
                         <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '2px' }}><strong>Languages:</strong> Java 17/21 (Core, Stream API, Multithreading), C# (.NET), SQL (Procedures, Indexing).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Java Ecosystem:</strong> Spring Boot 3.x, Spring Security, Spring Data JPA, Hibernate, JUnit 5, Mockito.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Databases & Caching:</strong> MySQL, SQL Server, Redis (Caching, Distributed Locking), PostgreSQL.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Architecture & Design:</strong> Microservices, Clean Architecture, CQRS (MediatR), SOLID principles, Design Patterns (Singleton).</li>
-                            <li style={{ marginBottom: '0' }}><strong>Communication & Tools:</strong> gRPC, RESTful API, Docker, Nginx, Git, Maven, GitHub Actions, Postman.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Languages:</strong> Java, SQL.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Backend & Frameworks:</strong> Spring Boot 3, Spring Security, Spring Data JPA, Hibernate, JUnit 5, gRPC.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Databases & Caching:</strong> PostgreSQL, Redis (Caching, Distributed Locking), MySQL, SQL Server.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Architecture & Engineering:</strong> Microservices, Clean Architecture, CQRS, Distributed Locking, SOLID, Design Patterns.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>DevOps & Tools:</strong> Docker, Nginx, Git, Maven, GitHub Actions, Postman, Swagger.</li>
+                            <li style={{ marginBottom: '0' }}><strong>Domain Exposure:</strong> Payment Integration, Wallet & Transaction Flows, Webhook Handling, KYC & Compliance.</li>
                         </ul>
                     </div>
                 </section>
@@ -84,45 +85,49 @@ const Resume = () => {
 
                     <div className="experience-item">
                         <div className="item-header">
-                            <strong>Viettel Digital Talent 2026</strong>
-                            <span className="date-range">[Apr 2026] – Present</span>
+                            <strong>Viettel Digital</strong>
+                            <span className="date-range">Apr 2026 – Present</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Engineer (VDT Program) | Web Programming</em>
+                            <em>Software Engineer - Viettel Digital Talent | Part-time</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Selected from a highly competitive pool to participate in Viettel's exclusive digital talent program.</li>
-                            <li>Engaging in intensive training and real-world project development for enterprise-scale web applications.</li>
+                            <li>Selected for Viettel Digital Talent 2026, a software engineering training program at Viettel Digital.</li>
+                            <li>Trained in backend engineering through technical coursework, mentoring, and project-based practice.</li>
                         </ul>
                     </div>
 
                     <div className="experience-item" style={{ marginTop: '0.8rem' }}>
                         <div className="item-header">
                             <strong>TCH Company</strong>
-                            <span className="date-range">[Oct 2025] – Present</span>
+                            <span className="date-range">Oct 2025 – Present</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Freelancer) | Tech: Java, Spring Boot, MySQL, REST API, Swagger, Git</em>
+                            <em>Software Engineer | Freelance</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li><strong>Performance Optimization:</strong> Engineered high-performance response caching and refined payload structures, achieving a 62% reduction in key API latency (from ~245ms to ~93ms) and minimizing database queries from 3 to 1.</li>
-                            <li><strong>Feature Development:</strong> Developed an End-to-end Cost Estimator module automating quotations, and produced comprehensive API Documentation (Swagger) to streamline cross-functional collaboration.</li>
-                            <li><strong>Production Stability & SEO:</strong> Resolved critical production bugs and implemented SEO metadata optimization, securing an overall SEO health score of 90/100 on Google Lighthouse.</li>
+                            <li><strong>Cost Estimator:</strong> Built the feature end-to-end (database design, CRUD APIs, frontend integration), delivering a client-facing quotation tool that reduced manual price estimation.</li>
+                            <li><strong>Admin System:</strong> Replaced hardcoded configs with a database-driven admin system, enabling non-technical staff to update settings directly without code deployments.</li>
+                            <li><strong>Optimization:</strong> Fixed N+1 query issues on listing pages using eager loading and selective column fetching, reducing query counts from 3 to 1 on key endpoints.</li>
+                            <li><strong>Caching:</strong> Reduced redundant database access on site-wide page views by caching tracking scripts (Google Analytics, Facebook Pixel).</li>
+                            <li><strong>SEO & Workflow:</strong> Integrated dynamic SEO metadata contributing to a Google Lighthouse SEO score of 90/100 and documented API endpoints to streamline team coordination.</li>
                         </ul>
                     </div>
 
                     <div className="experience-item" style={{ marginTop: '0.8rem' }}>
                         <div className="item-header">
-                            <strong>FPT Software Academy (FSA)</strong>
-                            <span className="date-range">[Dec 2025] – [Apr 2026]</span>
+                            <strong>FPT Software</strong>
+                            <span className="date-range">Dec 2025 – Apr 2026</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Intern | Tech: C# .NET, RESTful API, gRPC, Redis, SQL Server, CQRS (MediatR), Clean Architecture</em>
+                            <em>Backend Engineer | Internship</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li><strong>Performance Optimization:</strong> Boosted system performance by transitioning internal service communication from REST to gRPC, significantly reducing serialization overhead and latency.</li>
-                            <li><strong>Architecture & Design:</strong> Orchestrated backend logic using CQRS (MediatR) and Clean Architecture to segregate Read/Write operations, improving scalability.</li>
-                            <li><strong>Concurrency Management:</strong> Resolved complex Race Conditions and double-payment issues in high-concurrency Webhook handlers by implementing Distributed Locking (Redlock) via Redis.</li>
+                            <li><strong>gRPC Migration:</strong> Migrated Order-to-Product communication from REST to gRPC, reducing inter-service latency and HTTP overhead for frequently called endpoints.</li>
+                            <li><strong>Concurrency:</strong> Solved duplicate payment processing from 2 payment gateways (VNPay, SePay) by implementing distributed locking and idempotency checks.</li>
+                            <li><strong>Architecture:</strong> Worked with CQRS in microservice modules, separating read/write logic to improve maintainability and testability as the codebase grew.</li>
+                            <li><strong>Order State Machine:</strong> Built an Order status state machine with 5 validated transitions, ensuring consistent tracking and preventing invalid state changes.</li>
+                            <li><strong>Validation & Error Handling:</strong> Added request validation and centralized error handling, reducing invalid requests and making debugging faster.</li>
                         </ul>
                     </div>
                 </section>
@@ -189,16 +194,21 @@ const Resume = () => {
 
                     <div className="project-item" style={{ marginTop: '0.8rem' }}>
                         <div className="item-header">
-                            <strong>Asynchronous YouTube Downloader</strong>
-                            <span className="date-range">[2025]</span>
+                            <strong>S-Platform – Distributed Media Processing Engine</strong>
+                            <span className="date-range">[2026]</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Solo) | Tech: Java 17, Spring Boot, Redis, MySQL, Docker, yt-dlp</em>
+                            <em>Lead Architect (Solo) | Tech: Java 17, Spring Boot 3, React 19, MySQL, Redis, Docker, Telegram API, Google Drive API</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Architected a non-blocking asynchronous system to offload high-latency video processing tasks using Redis queues.</li>
-                            <li>Implemented producer-consumer patterns and fault-tolerant retry logic for high-reliability background jobs.</li>
+                            <li>Architected a 'Micro-monolith' distributed system using the <strong>Transactional Outbox pattern</strong> to guarantee message delivery consistency between DB and external APIs (Telegram/Drive).</li>
+                            <li>Engineered <strong>Distributed Lease Management</strong> to orchestrate task execution across multiple worker nodes, preventing resource contention and ensuring high availability.</li>
+                            <li>Developed a session-aware React 19 frontend with <strong>Role-Based Access Control (RBAC)</strong> and dynamic workspace routing for Admin and User roles.</li>
+                            <li>Integrated encrypted Service Account management for secure, multi-user integrations with Google Drive and Telegram bot notification systems.</li>
                         </ul>
+                        <p className="project-links">
+                            GitHub: <a href="https://github.com/LeHuyTuong/S-Platform-Engine" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/S-Platform-Engine</a>
+                        </p>
                     </div>
                 </section>
 

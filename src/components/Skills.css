@@ -62,16 +62,53 @@
     color: var(--text-primary);
 }
 
-.skill-tag.highlight {
-    background: rgba(99, 102, 241, 0.2);
+.skill-tag.tier-primary {
+    background: rgba(37, 99, 235, 0.25);
     border-color: var(--primary);
     color: var(--primary-light);
+    font-weight: 700;
+}
+
+.skill-tag.tier-normal {
+    background: rgba(148, 163, 184, 0.15); /* Slate color */
+    border-color: rgba(148, 163, 184, 0.3);
+    color: #cbd5e1;
     font-weight: 500;
+}
+
+.skill-tag.tier-low {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+}
+
+.skill-tag.tier-low-white {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.8rem;
+    opacity: 0.9;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-category {
+        padding: 20px;
+    }
+
+    .skill-tag {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .category-header h3 {
+        font-size: 0.9rem;
     }
 }

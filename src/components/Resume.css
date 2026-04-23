@@ -107,6 +107,9 @@
 .summary-text {
     margin: 0;
     text-align: justify;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #222;
 }
 
 .education-item, .project-item {

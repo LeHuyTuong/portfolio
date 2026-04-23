@@ -8,7 +8,7 @@ const Experience = () => {
                 <div className="section-header">
                     <span className="section-label">Roadmap</span>
                     <h2>Work <span className="gradient-text">Experience</span></h2>
-                    <p>Professional Engineering Experience</p>
+                    <p>Building high-integrity backend systems in enterprise environments</p>
                 </div>
 
                 <div className="timeline">

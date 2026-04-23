@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { personalInfo, navLinks } from '../data/portfolioData';
 import './Navbar.css';
 
+import ThemeToggle from './ThemeToggle';
+
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -64,15 +66,18 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <button
-                    className={`navbar-toggle ${isMobileMenuOpen ? 'active' : ''}`}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div className="navbar-actions">
+                    <ThemeToggle />
+                    <button
+                        className={`navbar-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </nav>
     );

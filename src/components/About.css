@@ -1,0 +1,118 @@
+.about {
+    background: var(--bg-secondary);
+    position: relative;
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.professional-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.professional-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.professional-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.card-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.soft-skill-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: var(--bg-primary);
+}
+
+.skill-icon {
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass-bg);
+    border-radius: 12px;
+}
+
+.skill-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.skill-info p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .professional-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .professional-card {
+        padding: 20px;
+    }
+
+    .about {
+        padding: 60px 0;
+    }
+}

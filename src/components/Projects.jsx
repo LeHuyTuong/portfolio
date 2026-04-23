@@ -7,8 +7,8 @@ const Projects = () => {
 
     const categories = [
         { key: 'all', label: 'All Projects' },
-        { key: 'star', label: '⭐ Star' },
-        { key: 'business', label: '🏢 Business' }
+        { key: 'fintech', label: '🏦 Fintech' },
+        { key: 'enterprise', label: '⚡ Enterprise' }
     ];
 
     const filteredProjects = filter === 'all'
@@ -21,7 +21,7 @@ const Projects = () => {
                 <div className="section-header">
                     <span className="section-label">Portfolio</span>
                     <h2>Featured <span className="gradient-text">Projects</span></h2>
-                    <p>Projects where I learned the most</p>
+                    <p>Building reliable systems with technical depth</p>
                 </div>
 
                 <div className="project-filters">
@@ -83,6 +83,12 @@ const Projects = () => {
                                     <span className="detail-label">⚡ Challenge:</span>
                                     <p>{project.challenge}</p>
                                 </div>
+                                {project.architectureNote && (
+                                    <div className="detail-item architecture-note">
+                                        <span className="detail-label">🏗️ Architecture Note:</span>
+                                        <p>{project.architectureNote}</p>
+                                    </div>
+                                )}
                                 {project.whatILearned && (
                                     <div className="detail-item what-learned">
                                         <span className="detail-label">🚀 Technical Impact:</span>

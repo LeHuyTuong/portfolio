@@ -10,7 +10,7 @@ const Skills = () => {
                 <div className="section-header">
                     <span className="section-label">Expertise</span>
                     <h2>Technical <span className="gradient-text">Skills</span></h2>
-                    <p>Technologies and tools I work with</p>
+                    <p>Core backend infrastructure and fintech domain expertise</p>
                 </div>
 
                 <div className="skills-grid">
@@ -24,7 +24,7 @@ const Skills = () => {
                                 {skillList.map((skill) => (
                                     <span
                                         key={skill.name}
-                                        className={`skill-tag ${skill.highlight ? 'highlight' : ''}`}
+                                        className={`skill-tag ${skill.tier ? `tier-${skill.tier}` : ''}`}
                                     >
                                         {skill.name}
                                     </span>

@@ -5,43 +5,64 @@
 
 /* ===== CSS VARIABLES ===== */
 :root {
-  /* Primary Colors - Vibrant Blue */
+  /* Dark Theme (Default) - High Energy */
   --primary: #2563eb;
   --primary-light: #3b82f6;
   --primary-dark: #1d4ed8;
 
-  /* Background - Much Lighter */
   --bg-primary: #1a1f35;
   --bg-secondary: #242b45;
   --bg-tertiary: #3a4366;
   --bg-card: rgba(42, 52, 82, 0.95);
 
-  /* Text - Brighter */
   --text-primary: #ffffff;
   --text-secondary: #b8c5e0;
   --text-muted: #8895b3;
 
-  /* Accents - More Vibrant */
   --accent-cyan: #00d4ff;
-  --accent-purple: #b366ff;
-  --accent-pink: #ff66b2;
   --accent-green: #00e676;
-  --accent-orange: #ff9100;
 
-  /* Gradients - Brighter */
   --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
-  --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #2563eb 50%, #7c3aed 100%);
-  --gradient-text: linear-gradient(135deg, #ffffff 0%, #b8c5e0 100%);
-
-  /* Glass Effect - More visible */
   --glass-bg: rgba(255, 255, 255, 0.08);
   --glass-border: rgba(255, 255, 255, 0.15);
 
-  /* Shadows - Brighter glow */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 50px rgba(37, 99, 235, 0.5);
+  --shadow-glow: 0 0 50px rgba(37, 99, 235, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-hover-border: var(--primary);
+}
+
+[data-theme='light'] {
+  /* Light Theme - Clean Enterprise */
+  --primary: #1d4ed8;
+  --primary-light: #2563eb;
+  --primary-dark: #1e3a8a;
+
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  --bg-card: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --accent-cyan: #0ea5e9;
+  --accent-green: #10b981;
+
+  --gradient-primary: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: #e2e8f0;
+
+  --shadow-glow: 0 4px 20px rgba(29, 78, 216, 0.1);
+  --border-color: #e2e8f0;
+  --card-hover-border: #1d4ed8;
+}
+
+:root {
+  /* Common Variables */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
 
   /* Border Radius */
   --radius-sm: 8px;

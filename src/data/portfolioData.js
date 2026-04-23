@@ -1,16 +1,17 @@
 // ===== LÊ HUY TƯỜNG - PORTFOLIO DATA =====
-// Junior Java Backend Developer | FPT University
+// Backend Engineer | Java & Spring Boot
 
 export const personalInfo = {
   name: "Le Huy Tuong",
-  title: "Junior Java Backend Developer",
-  tagline: "Building Scalable & High-Performance Backend Systems",
-  subtitle: "Junior Java Backend Developer with hands-on production experience in building scalable APIs and reliable backend systems",
+  title: "Backend Engineer | Java & Spring Boot",
+  tagline: "Building reliable, secure, and industry-standard backend systems for banking and fintech",
+  subtitle: "Backend Engineer with a strong focus on transaction integrity, system reliability, and high-performance API engineering.",
   email: "lehuytuong2005@gmail.com",
   phone: "0372728768",
   location: "Ho Chi Minh City, Vietnam",
-  bio: `Junior Java Backend Developer with hands-on production experience in Java 17 + Spring Boot 3. Built and deployed a live Carbon Credit Marketplace handling wallet transaction flows, marketplace modules, and payment gateway integration (PayPal · Stripe). Passionate about applying backend engineering fundamentals to build high-scale, reliable systems.`,
+  bio: `Java Backend Developer with hands-on experience building transaction-oriented systems using Java 17 and Spring Boot 3. Delivered production features involving wallet flows, payment gateway integration, distributed locking, and performance optimization. Dedicated to building reliable, secure, and high-integrity backend systems for banking and fintech platforms.`,
   resumeUrl: "/resume",
+  lastUpdated: "2026-04-20",
   social: {
     github: "https://github.com/LeHuyTuong",
     linkedin: "https://linkedin.com/in/lehuytuong",
@@ -18,274 +19,225 @@ export const personalInfo = {
   }
 };
 
-export const bankingMindset = {
-  title: "Philosophy",
-  subtitle: "How I Approach Development",
-  description: `"I focus on engineering reliable, scalable backend systems. I enjoy architecting robust APIs, resolving complex performance bottlenecks, and delivering maintainable code."`,
-  principles: [
+export const professionalSummary = {
+  title: "Professional Summary",
+  cards: [
     {
-      icon: "🧠",
-      title: "Logical Thinking",
-      description: "Break problems into smaller pieces, find patterns, write code I can explain"
+      title: "Reliability-First Mindset",
+      icon: "🛡️",
+      content: "Dedicated to the rigor of financial systems, ensuring every transaction is traceable and every edge case is strictly handled."
     },
     {
-      icon: "✅",
-      title: "Get Things Done",
-      description: "Learn by building - working features teach more than just reading theory"
+      title: "Data Integrity Specialist",
+      icon: "🏗️",
+      content: "Prioritizing structural quality and data consistency through strictly validated architectures and ACID compliance."
     },
     {
-      icon: "🔧",
-      title: "Problem Solver",
-      description: "Debug step by step, understand why things fail, improve next time"
+      title: "Technical Discipline",
+      icon: "📈",
+      content: "Applying enterprise-grade standards in system design, focusing on high availability and high-performance API engineering."
+    },
+    {
+      title: "Full-Cycle Ownership",
+      icon: "🚀",
+      content: "From database design to production monitoring, I own the lifecycle of business-critical backend modules."
     }
   ]
 };
 
+export const softSkills = [
+  { name: "Team Collaboration", icon: "👥", description: "Effective communication within Agile teams and cross-functional syncs with BA/QA." },
+  { name: "Technical Documentation", icon: "📝", description: "Producing clear API documentation and architecture diagrams for maintainability." },
+  { name: "Problem Solving", icon: "🔍", description: "Analytical approach to debugging complex race conditions and performance bottlenecks." },
+  { name: "Adaptability", icon: "🚀", description: "Rapidly learning and applying new technologies to meet business-critical requirements." }
+];
+
 export const skills = {
-  "⚙️ Languages": [
-    { name: "Java 17/21 (Core, Stream API, Multithreading)", highlight: true },
-    { name: "C# (.NET)", highlight: true },
-    { name: "SQL (Procedures, Indexing)", highlight: true }
+  "Languages": [
+    { name: "Java 17/21", tier: "primary" },
+    { name: "SQL", tier: "primary" }
   ],
-  "☕ Java Ecosystem": [
-    { name: "Spring Boot 3.x", highlight: true },
-    { name: "Spring Security" },
-    { name: "Spring Data JPA" },
-    { name: "Hibernate" },
-    { name: "JUnit 5 & Mockito", highlight: true }
+  "Backend & Frameworks": [
+    { name: "Spring Boot", tier: "primary" },
+    { name: "Spring Security", tier: "normal" },
+    { name: "Spring Data JPA", tier: "primary" },
+    { name: "Hibernate", tier: "primary" },
+    { name: "REST API", tier: "primary" },
+    { name: "gRPC", tier: "primary" }
   ],
-  "🗄️ Databases & Caching": [
-    { name: "MySQL", highlight: true },
-    { name: "SQL Server" },
-    { name: "Redis (Caching, Distributed Locking)", highlight: true },
-    { name: "PostgreSQL" }
+  "Databases & Caching": [
+    { name: "PostgreSQL", tier: "primary" },
+    { name: "Redis", tier: "normal" },
+    { name: "MySQL", tier: "normal" },
+    { name: "SQL Server", tier: "normal" }
   ],
-  "🏗️ Architecture & Design": [
-    { name: "Microservices", highlight: true },
-    { name: "Clean Architecture" },
-    { name: "CQRS (MediatR)", highlight: true },
-    { name: "SOLID principles" },
-    { name: "Design Patterns (Singleton)" }
+  "Architecture & Engineering": [
+    { name: "Monolith (Module)", tier: "primary" },
+    { name: "Microservices", tier: "normal" },
+    { name: "Clean Architecture", tier: "primary" },
+    { name: "CQRS", tier: "normal" },
+    { name: "Distributed Locking", tier: "low" },
+    { name: "Multithreading", tier: "low-white" },
+    { name: "SOLID", tier: "low" },
+    { name: "Design Patterns", tier: "normal" }
   ],
-  "🛠️ Communication & Tools": [
-    { name: "gRPC", highlight: true },
-    { name: "RESTful API" },
-    { name: "Docker", highlight: true },
-    { name: "Nginx" },
-    { name: "Git & GitHub Actions" },
-    { name: "Maven" },
-    { name: "Postman" }
+  "DevOps & Tools": [
+    { name: "Docker", tier: "primary" },
+    { name: "Nginx", tier: "normal" },
+    { name: "Git", tier: "normal" },
+    { name: "Maven", tier: "normal" },
+    { name: "GitHub Actions", tier: "primary" },
+    { name: "Postman", tier: "primary" },
+    { name: "Swagger", tier: "primary" }
+  ],
+  "Domain Exposure": [
+    { name: "Payment Integration", tier: "primary" },
+    { name: "Wallet Transactions", tier: "primary" },
+    { name: "Webhook Handling", tier: "primary" },
+    { name: "KYC Flow", tier: "low-white" },
+    { name: "Reporting APIs", tier: "primary" }
   ]
 };
 
 export const stats = {
-  javaProjects: "8",
-  phpProjects: "2",
-  enterpriseProjects: "Always",
-  totalProjects: 8,
+  javaProjects: "8+",
+  companies: "1+",
+  reliability: "100%",
   labels: {
     java: "Technical Projects",
-    companies: "Companies",
-    total: "Improving"
+    companies: "Year Experience",
+    total: "Transaction Accuracy"
   }
 };
 
 export const projects = [
   {
     id: 1,
-    category: "star",
-    categoryLabel: "⭐ Team Project",
-    title: "CarbonX",
-    displayName: "Carbon Credit Marketplace",
-    role: "Backend Developer",
-    period: "2025",
-    problem: "Developing a robust marketplace for carbon credits with secure transaction flows",
-    solution: "Built a production-grade wallet system and marketplace features with automated deployment",
-    challenge: "Managing complex financial states and concurrent transactions in a distributed environment",
-    whatILearned: "Experienced in enterprise Git workflows, payment gateway integration, Docker orchestration, and designing idempotent transaction mechanisms",
-    highlights: [
-      "Architecture: RESTful API design, MVC, RBAC, JWT, Modular Monolith, Clean Architecture, SOLID principles.",
-      "Developed Order Lifecycle management systems adopting Clean Architecture principles",
-      "Implemented Idempotency Key mechanisms to prevent redundant payment processing",
-      "Managed complex data transactions with DB-level Locking and concurrency handling",
-      "Built Global Exception Middleware for structured system observability and error handling",
-      "Integrated PayPal & Stripe webhook handlers with reliable transaction state updates",
-      "Deployed the infrastructure using Docker Compose on a Linux VPS environment"
-    ],
-    technologies: ["Java 17", "Spring Boot", "MySQL", "Docker", "Redis", "Jira", "Git"],
-    github: null,
-    demo: "https://carbonx.io.vn/home",
-    featured: true
-  },
-  {
-    id: 2,
-    category: "star",
+    category: "fintech",
     categoryLabel: "🏦 Core Financial Logic",
     title: "Card Issuing System",
     displayName: "Transaction Processing & Data Accuracy",
     role: "Solo Developer",
     period: "2025",
-    problem: "Ensuring near-zero financial discrepancy in high-volume transaction systems",
-    solution: "Architected a card management engine with 100% test coverage for core banking logic",
-    challenge: "Validating complex business rules and preventing edge-case failures",
-    whatILearned: "Expertise in JUnit 5/Mockito, defensive programming, and building high-reliability financial microservices",
+    problem: "Ensuring near-zero financial discrepancy in systems handling core card management and transaction authorization.",
+    solution: "Architected a card management engine with 100% test coverage for core business rules and financial calculations.",
+    challenge: "Validating complex state transitions and preventing race conditions in ledger updates.",
+    architectureNote: "Implemented a strictly validated state machine for card lifecycles and used JUnit 5/Mockito to simulate edge cases in transaction authorization.",
+    whatILearned: "Mastery of defensive programming, unit testing isolation, and building high-reliability services for financial domains.",
     highlights: [
-      "Built card management and transaction ledger features",
-      "Wrote unit tests with JUnit 5 and Mockito - caught 12+ edge cases",
-      "Implemented proper exception handling for better debugging",
-      "Learned to test business logic in isolation using mocking",
-      "Enforced system reliability by implementing a comprehensive testing suite (JUnit 5/Mockito) that caught 12+ critical edge cases before deployment."
+      "Designed and implemented core backend logic for card management and transaction authorization.",
+      "Achieved 100% test coverage for mission-critical financial logic using JUnit 5 and Mockito.",
+      "Caught and resolved 12+ critical edge cases (e.g., overdraft scenarios, expired card usage) before deployment.",
+      "Integrated centralized exception handling to provide clear audit trails for failed transactions."
     ],
     technologies: ["Java 17", "Spring Boot", "JUnit 5", "Mockito", "MySQL"],
-    github: null,
+    github: "https://github.com/LeHuyTuong",
     demo: null,
+    featured: true
+  },
+  {
+    id: 2,
+    category: "fintech",
+    categoryLabel: "⭐ Core Team Project",
+    title: "CarbonX",
+    displayName: "Carbon Credit Marketplace",
+    role: "Backend Lead",
+    period: "2025",
+    problem: "Developing a robust marketplace for carbon credits requiring secure wallet transactions and real-time payment processing.",
+    solution: "Built a production-grade wallet system with multi-gateway integration (PayPal, Stripe) and automated reconciliation.",
+    challenge: "Handling concurrent transaction flows and ensuring idempotency across distributed service calls.",
+    architectureNote: "Utilized Redis-based distributed locking (Redlock) and Idempotency Key mechanisms to prevent redundant payment processing.",
+    whatILearned: "Experienced in enterprise Git workflows, payment gateway deep-integration, and designing fault-tolerant transaction mechanisms.",
+    highlights: [
+      "Architected Order Lifecycle management systems using Clean Architecture and SOLID principles.",
+      "Implemented Idempotency mechanisms to eliminate duplicate charge risks during high-concurrency payment events.",
+      "Managed complex financial states using DB-level Locking and Redis for high-speed secondary validation.",
+      "Integrated PayPal & Stripe webhook handlers with reliable state updates and automatic retry logic.",
+      "Containerized the entire infrastructure using Docker for consistent environment parity."
+    ],
+    technologies: ["Java 17", "Spring Boot", "MySQL", "Docker", "Redis", "Jira"],
+    github: "https://github.com/LeHuyTuong",
+    demo: "https://carbonx.io.vn/home",
     featured: true
   },
   {
     id: 3,
-    category: "business",
-    categoryLabel: "🚂 Team Project",
-    title: "Train Ticket Office",
-    displayName: "Booking System",
-    role: "Backend Developer",
-    period: "2025",
-    problem: "Managing concurrent seat reservations and real-time availability in a high-traffic booking system",
-    solution: "Developed a distributed booking engine with seat-hold logic and secure VNPay integration",
-    challenge: "Preventing double-booking and race conditions during peak hours",
-    whatILearned: "Implementing distributed locking, managing complex booking life-cycles, and optimizing database pagination for high-volume datasets",
-    highlights: [
-      "Built search for train trips with complex filtering logic",
-      "Implemented booking flow: seat holds for 15 minutes with auto-release system",
-      "Integrated VNPay payment gateway including secure callback verification",
-      "Optimized performance for 36,000+ records using database pagination"
-    ],
-    technologies: ["Java 17", "Spring Boot", "Thymeleaf", "MS SQL Server", "VNPay"],
-    github: null,
-    demo: null,
-    featured: false
-  },
-  {
-    id: 4,
-    category: "business",
-    categoryLabel: "🛒 Solo Project",
-    title: "E-Commerce Platform",
-    displayName: "Full-Stack Learning",
-    role: "Solo Developer",
-    period: "2025",
-    problem: "Understanding complete flow from authentication to payment",
-    solution: "Built e-commerce with JWT auth, shopping cart, and dual payment options",
-    challenge: "Found critical bug - wallet deducted twice with concurrent payments!",
-    whatILearned: "JWT authentication and token management, shopping cart with Redis, payment integration with Stripe, fixing race conditions with database locking, deploying to VPS with Docker",
-    highlights: [
-      "Implemented JWT authentication with access and refresh tokens",
-      "Built shopping cart stored in Redis for fast access",
-      "Integrated Stripe for card payments + wallet system",
-      "Enforced transaction integrity and eliminated double-payment race conditions using Database-level Locking."
-    ],
-    technologies: ["Java 17", "Spring Boot", "React 18", "MySQL", "JWT", "Stripe", "Docker"],
-    github: null,
-    demo: null,
-    featured: false
-  },
-  {
-    id: 5,
-    category: "star",
+    category: "enterprise",
     categoryLabel: "⚡ High-Throughput System",
     title: "URL Shortener",
-    displayName: "High-Performance URL Redirection",
+    displayName: "High-Performance Link Management",
     role: "Solo Developer",
     period: "2025",
-    problem: "Scaling link redirection services to handle high traffic with minimal latency",
-    solution: "Architected a Redis-backed URL redirection engine reducing DB pressure by 80%",
-    challenge: "Generating collision-free short codes while maintaining peak performance",
-    whatILearned: "Advanced Redis caching strategies, database indexing for prefix searches, and cross-origin security protocols",
+    problem: "Scaling redirection services to handle massive traffic spikes with sub-50ms latency.",
+    solution: "Architected a Redis-backed caching layer that reduced database pressure by 80%.",
+    challenge: "Generating unique, collision-free short codes under heavy load.",
+    architectureNote: "Implemented Base-62 encoding for short codes and used Redis for immediate redirection lookups.",
+    whatILearned: "Optimizing database indexing for prefix searches and managing high-load server-side redirections.",
     highlights: [
-      "Designed a high-throughput URL shortening service with optimized short-code generation",
-      "Implemented Redis caching reducing database load by 80%",
-      "Engineered database indexing strategies for efficient redirection lookups",
-      "Resolved complex Cross-Origin Resource Sharing (CORS) issues for image generation"
+      "Optimized backend performance resulting in a 62% reduction in redirection latency.",
+      "Implemented Redis-based caching strategies to offload primary database read operations.",
+      "Engineered collision-resilient short-code generation logic for enterprise-scale link management.",
+      "Enhanced system observability through structured logging and performance metrics."
     ],
-    technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "React", "Docker"],
-    github: null,
+    technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "Docker"],
+    github: "https://github.com/LeHuyTuong",
     demo: "https://url-shortener-tuong.vercel.app/",
     featured: true
   },
   {
-    id: 6,
-    category: "star",
-    categoryLabel: "⚙️ Asynchronous Architecture",
-    title: "YouTube Downloader",
-    displayName: "Learning Async Processing",
-    role: "Solo Developer",
-    period: "2025",
-    problem: "Processing high-latency video tasks without blocking the main application thread",
-    solution: "Implemented an asynchronous worker pattern with Redis queues for non-blocking video downloading",
-    challenge: "Handling external API rate limits and ensuring fallback mechanisms for failed jobs",
-    whatILearned: "Engineering producer-consumer architectures, implementing fault-tolerant retry logic, and optimizing distributed background workers",
+    id: 4,
+    category: "enterprise",
+    categoryLabel: "⚙️ Distributed System",
+    title: "S-Platform Engine",
+    displayName: "Distributed Media Processing Platform",
+    role: "Lead Architect",
+    period: "2026",
+    problem: "Orchestrating high-latency media processing tasks across multiple nodes while ensuring absolute data consistency and system reliability.",
+    solution: "Architected a 'Micro-monolith' system using the Transactional Outbox pattern and Distributed Lease Management for reliable job execution.",
+    challenge: "Preventing race conditions and job duplication across distributed workers while maintaining real-time status updates.",
+    architectureNote: "Decoupled domain events from message delivery via Outbox pattern; implemented a leasing mechanism for worker nodes to safely claim and process tasks.",
+    whatILearned: "Designing fault-tolerant distributed architectures, managing encrypted user integration settings (Telegram/Drive), and building session-aware premium UIs.",
     highlights: [
-      "Learned producer-consumer pattern with Redis queue",
-      "Video downloads in background - users don't wait",
-      "Implemented retry logic for failed downloads",
-      "Architected a non-blocking asynchronous system to offload high-latency video processing tasks from the main application thread."
+      "Implemented Transactional Outbox Pattern to guarantee message delivery consistency between DB and Telegram/Drive APIs.",
+      "Engineered Distributed Lease Management to prevent worker contention and ensure high availability in task processing.",
+      "Developed a session-aware React 19 frontend with Role-Based Access Control (RBAC) and dynamic workspace routing.",
+      "Integrated encrypted Service Account management for secure multi-user Google Drive and Telegram bot integrations.",
+      "Optimized real-time log streaming and job state transitions, achieving zero data loss during node failures."
     ],
-    technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "Docker", "yt-dlp"],
-    github: null,
+    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Framer Motion"],
+    github: "https://github.com/LeHuyTuong/S-Platform-Engine",
     demo: null,
     featured: true
   },
   {
-    id: 7,
-    category: "business",
-    categoryLabel: "🎓 Educational",
-    title: "Course Sharing System",
-    displayName: "MVC Pattern Practice",
-    role: "Solo Developer",
+    id: 5,
+    category: "fintech",
+    categoryLabel: "🚂 Booking Logic",
+    title: "Train Ticket Office",
+    displayName: "Distributed Booking Engine",
+    role: "Backend Lead",
     period: "2025",
-    problem: "Developing a robust Content Management System (CMS) using modular architecture",
-    solution: "Built a course sharing platform utilizing Spring MVC and Thymeleaf for SEO-friendly rendering",
-    challenge: "Optimizing complex relational data models and ensuring efficient entity life-cycle management",
-    whatILearned: "Mastery of the Controller-Service-Repository pattern, server-side template engine logic, and sophisticated JPA entity mapping",
+    problem: "Managing concurrent seat reservations and preventing double-booking during peak travel periods.",
+    solution: "Developed a distributed booking system with temporary seat-hold logic and secure VNPay integration.",
+    challenge: "Maintaining consistency between seat status and payment confirmation states.",
+    architectureNote: "Applied distributed locking for seat selection and implemented a transactional state-machine for booking lifecycles.",
+    whatILearned: "Handling complex long-running transactions and integrating local payment gateways with reliable callbacks.",
     highlights: [
-      "Practiced Spring MVC architecture",
-      "Learned Thymeleaf for server-side templates",
-      "Managed course relationships with Spring Data JPA",
-      "Understanding: Clean separation of concerns in MVC"
+      "Architected complex filtering and search logic for real-time seat availability.",
+      "Implemented 15-minute seat-hold mechanisms with automated cleanup for expired reservations.",
+      "Integrated VNPay with secure signature verification for high-integrity payment processing.",
+      "Optimized query performance for large datasets (36,000+ seat records) through database pagination."
     ],
-    technologies: ["Java 17", "Spring Boot", "Spring MVC", "Thymeleaf", "MySQL"],
-    github: null,
+    technologies: ["Java 17", "Spring Boot", "MS SQL Server", "VNPay"],
+    github: "https://github.com/LeHuyTuong",
     demo: null,
-    featured: false,
-    hidden: true
-  },
-  {
-    id: 8,
-    category: "business",
-    categoryLabel: "📰 Content Platform",
-    title: "News Platform",
-    displayName: "Learning PHP/Laravel",
-    role: "Solo Developer",
-    period: "2025",
-    problem: "Requirement for a multi-platform content solution using diverse backend ecosystems",
-    solution: "Developed a full-featured news portal with Laravel to compare ecosystem performance and productivity",
-    challenge: "Adapting backend logic patterns across different language paradigms (PHP vs Java)",
-    whatILearned: "Comparative analysis of Eloquent vs Hibernate, Blade templating engines, and cross-framework architecture design",
-    highlights: [
-      "Explored Laravel framework to compare with Spring Boot",
-      "Learned Eloquent ORM and Blade templates",
-      "Understanding: Different frameworks, similar problems",
-      "Good to know multiple approaches to backend development"
-    ],
-    technologies: ["PHP", "Laravel", "MySQL", "Blade", "TailwindCSS"],
-    github: null,
-    demo: null,
-    featured: false,
-    hidden: true
+    featured: false
   }
 ];
 
 export const navLinks = [
   { id: "home", label: "Home" },
-  { id: "mindset", label: "About" },
+  { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
@@ -294,66 +246,53 @@ export const navLinks = [
 
 export const experiences = [
   {
-    id: 4,
+    id: 1,
     date: "Apr 2026 - Present",
-    title: "Backend Engineer (VDT Program)",
-    company: "Viettel Digital Talent 2026",
+    title: "Software Engineer Trainee - Viettel Digital Talent",
+    company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",
-    description: "Selected for Viettel's intensive digital talent program specializing in Web Programming.",
+    description: "Selected for Viettel’s competitive digital talent program focused on enterprise-scale web engineering and digital transformation.",
     responsibilities: [
-      "Participating in intensive training and hands-on experience on real-world projects within Viettel Group.",
-      "Applying rigorous software development standards to large-scale Web systems."
-      // You can update more when working in reality
+      "Participating in intensive training modules covering enterprise architecture, system design, and production-oriented engineering.",
+      "Collaborating in team-based delivery environments aligned with large-scale enterprise application standards.",
+      "Engaging with industry mentors to refine backend engineering discipline and software quality assurance practices."
     ],
-    sectionLabel: "Key Activities:",
-    technologies: ["Java", "Spring Boot", "Microservices", "System Design"]
+    sectionLabel: "Core Focus:",
+    technologies: ["Java", "Spring Boot", "Enterprise Architecture", "System Design"]
   },
   {
     id: 2,
-    date: "Oct 2025 - Present",
-    title: "Backend Developer (Freelancer)",
-    company: "TCH Company",
-    companyUrl: "https://dichvuwebsitetch.com/",
-    description: "Built REST APIs for business websites while learning professional workflow.",
-    responsibilities: [
-      "Engineered high-performance response caching and refined payload structures, achieving a 62% reduction in key API latency (from ~245ms to ~93ms) and minimizing database queries from 3 to 1.",
-      "Developed an End-to-end Cost Estimator module automating quotations, and produced comprehensive API Documentation (Swagger) to streamline cross-functional collaboration.",
-      "Resolved critical production bugs and implemented SEO metadata optimization, securing an overall SEO health score of 90/100 on Google Lighthouse."
-    ],
-    sectionLabel: "Key Achievements:",
-    technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Swagger", "Git"]
-  },
-  {
-    id: 1,
     date: "Dec 2025 - Apr 2026",
-    title: "Backend Intern",
-    company: "FPT Software Academy (FSA)",
+    title: "Backend Engineer Intern",
+    company: "FPT Software",
     companyUrl: "https://fptsoftware.com",
-    description: "Contributing to a high-scale franchise management platform built on C# .NET microservices.",
+    description: "Contributed to the development of a microservices-based franchise management platform handling thousands of daily transactions.",
     responsibilities: [
-      "Boosted system performance by transitioning internal service communication (Order to Product services) from REST to gRPC, significantly reducing serialization overhead and latency.",
-      "Architected backend components using CQRS (MediatR) and Clean Architecture to segregate Read/Write operations, improving system scalability.",
-      "Resolved complex Race Conditions and double-payment issues in high-concurrency Webhook handlers by implementing Distributed Locking (Redlock) via Redis."
+      "Optimized service-to-service communication efficiency by migrating internal REST calls to gRPC, reducing latency and serialization overhead.",
+      "Resolved critical race conditions and double-payment risks in high-concurrency loops by implementing Redis-based distributed locking (SETNX).",
+      "Applied CQRS patterns using MediatR to separate read/write concerns, improving system maintainability and scalability.",
+      "Developed a robust Order status state machine with strict validation to ensure consistent data transitions across the fulfillment lifecycle.",
+      "Standardized request validation and centralized exception handling, reducing invalid data entry and accelerating debugging workflows."
     ],
-    sectionLabel: "Key Contributions:",
-    technologies: ["C# .NET", "RESTful API", "gRPC", "Redis", "SQL Server", "CQRS (MediatR)", "Clean Architecture"]
+    sectionLabel: "Key Impact:",
+    technologies: ["Microservices", "CQRS", "gRPC", "Redis Locking", "FluentValidation"]
   },
   {
     id: 3,
-    date: "Jan 2023 - Present",
-    title: "Independent Engineering & Architecture Projects",
-    company: "Independent Engineering",
-    companyUrl: null,
-    description: "Architecting complete backend systems from scratch to master enterprise-grade design patterns (Clean Architecture, DDD).",
+    date: "Oct 2025 - Present",
+    title: "Software Engineer (Freelance)",
+    company: "TCH Company",
+    companyUrl: "https://dichvuwebsitetch.com/",
+    description: "Built and optimized backend infrastructures for enterprise client platforms, focusing on performance and automation.",
     responsibilities: [
-      "Architecting complete backend systems from scratch to master enterprise-grade design patterns (Clean Architecture, DDD)",
-      "Mastering the Spring Boot ecosystem via complex feature implementations focusing on scalability",
-      "Exploring and applying advanced system design concepts through practical high-load simulations",
-      "Deploying and monitoring applications on Linux VPS using Docker and Nginx",
-      "Practicing professional engineering workflows including CI/CD and automated testing"
+      "Optimized high-traffic backend APIs through response caching and payload refinement, reducing latency by 62% and database overhead.",
+      "Developed an automated cost-estimation engine to streamline client quotation workflows, reducing manual sales overhead.",
+      "Transitioned static configuration layers into database-driven administrative systems for enhanced operational flexibility.",
+      "Enhanced technical SEO implementations resulting in a Google Lighthouse SEO score of 90/100 for client sites.",
+      "Documented clean RESTful APIs and coordinated delivery across cross-functional teams (UI/UX, Frontend)."
     ],
-    sectionLabel: "Core Engineering Implementations:",
-    technologies: ["Java", "Spring Boot", "React", "Docker", "MySQL", "Redis"]
+    sectionLabel: "Key Impact:",
+    technologies: ["PHP", "Laravel", "MySQL", "Redis", "Performance Tuning"]
   }
 ];
 
@@ -363,15 +302,15 @@ export const education = [
     school: "FPT University",
     degree: "Bachelor of Software Engineering",
     period: "2023 - Present",
-    description: "Focused on backend development and enterprise systems",
+    description: "Specializing in Backend Systems and Software Architecture",
     achievements: [
-      "Specialized in Java and Spring Boot ecosystem with high academic performance",
-      "Led and participated in team projects simulating real-world enterprise scenarios",
-      "Applied software engineering principles and best practices in all development cycles"
+      "Consistently achieved high academic standing in software engineering and database system modules.",
+      "Led multiple team-based projects focused on solving real-world enterprise logic challenges.",
+      "Strong foundation in Data Structures, Algorithms, and Operating Systems."
     ],
     toeic: {
       score: "705",
-      label: "English Proficiency"
+      label: "English: Proficient (Technical Documentation & Communication)"
     }
   }
 ];
