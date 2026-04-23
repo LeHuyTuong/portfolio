@@ -3,9 +3,9 @@
 
 export const personalInfo = {
   name: "Le Huy Tuong",
-  title: "Backend Engineer | Java & Spring Boot",
-  tagline: "Building reliable, secure, and industry-standard backend systems for banking and fintech",
-  subtitle: "Backend Engineer with a strong focus on transaction integrity, system reliability, and high-performance API engineering.",
+  title: "Software Engineer",
+  tagline: "Building Robust Backend Systems with Spring Boot & Microservices",
+  subtitle: "Software Engineer focused on architecting scalable backend solutions, high-performance APIs, and reliable distributed systems.",
   email: "lehuytuong2005@gmail.com",
   phone: "0372728768",
   location: "Ho Chi Minh City, Vietnam",
@@ -102,11 +102,9 @@ export const skills = {
 export const stats = {
   javaProjects: "8+",
   companies: "1+",
-  reliability: "100%",
   labels: {
     java: "Technical Projects",
-    companies: "Year Experience",
-    total: "Transaction Accuracy"
+    companies: "Year Experience"
   }
 };
 
@@ -190,7 +188,7 @@ export const projects = [
     categoryLabel: "⚙️ Distributed System",
     title: "S-Platform Engine",
     displayName: "Distributed Media Processing Platform",
-    role: "Lead Architect",
+    role: "Solo Developer",
     period: "2026",
     problem: "Orchestrating high-latency media processing tasks across multiple nodes while ensuring absolute data consistency and system reliability.",
     solution: "Architected a 'Micro-monolith' system using the Transactional Outbox pattern and Distributed Lease Management for reliable job execution.",
@@ -204,7 +202,7 @@ export const projects = [
       "Integrated encrypted Service Account management for secure multi-user Google Drive and Telegram bot integrations.",
       "Optimized real-time log streaming and job state transitions, achieving zero data loss during node failures."
     ],
-    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Framer Motion"],
+    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Framer Motion", "ChatGPT", "Cursor Prompting"],
     github: "https://github.com/LeHuyTuong/S-Platform-Engine",
     demo: null,
     featured: true

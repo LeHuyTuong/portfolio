@@ -35,11 +35,6 @@ const Hero = () => {
                             <span className="stat-number">{stats.companies}</span>
                             <span className="stat-label">{stats.labels.companies}</span>
                         </div>
-                        <div className="stat-divider"></div>
-                        <div className="stat-item">
-                            <span className="stat-number">{stats.reliability}</span>
-                            <span className="stat-label">{stats.labels.total}</span>
-                        </div>
                     </div>
 
                     <div className="hero-cta">
