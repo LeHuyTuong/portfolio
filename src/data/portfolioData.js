@@ -188,7 +188,7 @@ export const projects = [
     categoryLabel: "⚙️ Distributed System",
     title: "S-Platform Engine",
     displayName: "Distributed Media Processing Platform",
-    role: "Solo Developer",
+    role: "Full Stack Developer",
     period: "2026",
     problem: "Orchestrating high-latency media processing tasks across multiple nodes while ensuring absolute data consistency and system reliability.",
     solution: "Architected a 'Micro-monolith' system using the Transactional Outbox pattern and Distributed Lease Management for reliable job execution.",
@@ -202,7 +202,7 @@ export const projects = [
       "Integrated encrypted Service Account management for secure multi-user Google Drive and Telegram bot integrations.",
       "Optimized real-time log streaming and job state transitions, achieving zero data loss during node failures."
     ],
-    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Framer Motion", "ChatGPT", "Cursor Prompting"],
+    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Framer Motion", "ChatGPT", "Prompting"],
     github: "https://github.com/LeHuyTuong/S-Platform-Engine",
     demo: null,
     featured: true
@@ -307,7 +307,7 @@ export const education = [
       "Strong foundation in Data Structures, Algorithms, and Operating Systems."
     ],
     toeic: {
-      score: "705",
+      score: "735",
       label: "English: Proficient (Technical Documentation & Communication)"
     }
   }
