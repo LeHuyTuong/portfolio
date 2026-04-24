@@ -283,7 +283,7 @@ export const experiences = [
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built and optimized backend infrastructures for enterprise client platforms, focusing on performance and automation.",
     responsibilities: [
-      "Implemented Role-Based Access Control (RBAC) to secure administrative modules and manage multi-level user permissions.",
+      "Implemented Role-Based Access Control (RBAC) and route-level middleware to secure administrative APIs against unauthorized direct access and manage multi-level permissions.",
       "Optimized high-traffic backend APIs through response caching and payload refinement, reducing latency by 62% and database overhead.",
       "Developed an automated cost-estimation engine to streamline client quotation workflows, reducing manual sales overhead.",
       "Transitioned static configuration layers into database-driven administrative systems for enhanced operational flexibility.",
