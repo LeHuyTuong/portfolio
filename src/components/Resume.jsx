@@ -95,8 +95,9 @@ const Resume = () => {
                             <em>Software Engineer Trainee - Viettel Digital Talent | Part-time</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Selected for Viettel Digital Talent 2026, a competitive software engineering training program at Viettel Digital.</li>
-                            <li>Trained in backend engineering through technical coursework, mentoring, and project-based practice.</li>
+                            <li>Participating in intensive training modules covering enterprise architecture, system design, and production-oriented engineering.</li>
+                            <li>Collaborating in team-based delivery environments aligned with large-scale enterprise application standards.</li>
+                            <li>Engaging with industry mentors to refine backend engineering discipline and software quality assurance practices.</li>
                         </ul>
                     </div>
 
@@ -109,11 +110,11 @@ const Resume = () => {
                             <em>Backend Engineer | Internship</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li><strong>gRPC Migration:</strong> Migrated Order-to-Product communication from REST to gRPC, reducing inter-service latency and HTTP overhead for frequently called endpoints.</li>
-                            <li><strong>Concurrency:</strong> Solved duplicate payment processing from 2 payment gateways (VNPay, SePay) by implementing distributed locking and idempotency checks.</li>
-                            <li><strong>Architecture:</strong> Worked with CQRS in microservice modules, separating read/write logic to improve maintainability and testability as the codebase grew.</li>
-                            <li><strong>Order State Machine:</strong> Built an Order status state machine with 5 validated transitions, ensuring consistent tracking and preventing invalid state changes.</li>
-                            <li><strong>Validation & Error Handling:</strong> Added request validation and centralized error handling, reducing invalid requests and making debugging faster.</li>
+                            <li>Optimized service-to-service communication efficiency by migrating internal REST calls to gRPC, reducing latency and serialization overhead.</li>
+                            <li>Resolved critical race conditions and double-payment risks in high-concurrency loops by implementing Redis-based distributed locking (SETNX).</li>
+                            <li>Applied CQRS patterns using MediatR to separate read/write concerns, improving system maintainability and scalability.</li>
+                            <li>Developed a robust Order status state machine with strict validation to ensure consistent data transitions across the fulfillment lifecycle.</li>
+                            <li>Standardized request validation and centralized exception handling, reducing invalid data entry and accelerating debugging workflows.</li>
                         </ul>
                     </div>
 
@@ -126,11 +127,12 @@ const Resume = () => {
                             <em>Software Engineer | Freelance</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li><strong>Cost Estimator:</strong> Built the feature end-to-end (database design, CRUD APIs, frontend integration), delivering a client-facing quotation tool that reduced manual price estimation.</li>
-                            <li><strong>Admin System:</strong> Replaced hardcoded configs with a database-driven admin system, enabling non-technical staff to update settings directly without code deployments.</li>
-                            <li><strong>Optimization:</strong> Fixed N+1 query issues on listing pages using eager loading and selective column fetching, reducing query counts from 3 to 1 on key endpoints.</li>
-                            <li><strong>Caching:</strong> Reduced redundant database access on site-wide page views by caching tracking scripts (Google Analytics, Facebook Pixel).</li>
-                            <li><strong>SEO & Workflow:</strong> Integrated dynamic SEO metadata contributing to a Google Lighthouse SEO score of 90/100 and documented API endpoints to streamline team coordination.</li>
+                            <li>Implemented Role-Based Access Control (RBAC) and route-level middleware to secure administrative APIs against unauthorized direct access and manage multi-level permissions.</li>
+                            <li>Optimized high-traffic backend APIs through response caching and payload refinement, reducing latency by 62% and database overhead.</li>
+                            <li>Developed an automated cost-estimation engine to streamline client quotation workflows, reducing manual sales overhead.</li>
+                            <li>Transitioned static configuration layers into database-driven administrative systems for enhanced operational flexibility.</li>
+                            <li>Enhanced technical SEO implementations resulting in a Google Lighthouse SEO score of 90/100 for client sites.</li>
+                            <li>Documented clean RESTful APIs and coordinated delivery across cross-functional teams (UI/UX, Frontend).</li>
                         </ul>
                     </div>
                 </section>

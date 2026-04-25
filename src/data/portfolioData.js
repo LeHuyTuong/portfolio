@@ -199,10 +199,11 @@ export const projects = [
       "Implemented Transactional Outbox Pattern to guarantee message delivery consistency between DB and Telegram/Drive APIs.",
       "Engineered Distributed Lease Management to prevent worker contention and ensure high availability in task processing.",
       "Developed a session-aware React 19 frontend with Role-Based Access Control (RBAC) and dynamic workspace routing.",
-      "Integrated encrypted Service Account management for secure multi-user Google Drive and Telegram bot integrations.",
-      "Optimized real-time log streaming and job state transitions, achieving zero data loss during node failures."
+      "Built Storybook component library with accessibility (a11y) checks for UI isolation and visual regression testing.",
+      "Wrote Playwright E2E smoke tests covering auth flow, job submission, real-time state polling, and file download verification.",
+      "Leveraged AI-assisted development (ChatGPT, Cursor) to accelerate architecture decisions — maintaining full ownership of all design choices."
     ],
-    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Framer Motion", "ChatGPT", "Prompting"],
+    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Playwright", "Storybook", "ChatGPT"],
     github: "https://github.com/LeHuyTuong/S-Platform-Engine",
     demo: null,
     featured: true
