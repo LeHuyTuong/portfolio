@@ -14,7 +14,7 @@ const Footer = () => {
                             <span className="logo-dot">.</span>
                         </span>
                         <p className="footer-tagline">
-                            Backend Engineer | Transaction Integrity & Reliability
+                            Junior Backend Developer | Java & Spring Boot
                         </p>
                     </div>
 

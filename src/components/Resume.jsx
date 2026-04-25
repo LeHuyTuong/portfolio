@@ -190,7 +190,7 @@ const Resume = () => {
                             <em>Backend Developer (Solo) | Tech: Java 17, Spring Boot, Redis, MySQL, Docker, React</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Architected a Redis-backed URL redirection engine reducing database pressure by 80% and minimizing latency.</li>
+                            <li>Built a Redis-backed URL redirection engine reducing database pressure by 80% and minimizing latency.</li>
                             <li>Engineered database indexing strategies for efficient redirection lookups and collision-free code generation.</li>
                             <li>Resolved complex Cross-Origin Resource Sharing (CORS) issues for dynamic image generation.</li>
                         </ul>
@@ -205,7 +205,7 @@ const Resume = () => {
                             <em>Solo Developer | Tech: Java 17, Spring Boot 3, React 19, TailwindCSS, MySQL, Redis, Docker, Playwright, Storybook, Telegram API, Google Drive API</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Architected a 'Micro-monolith' distributed system using the <strong>Transactional Outbox pattern</strong> to guarantee message delivery consistency between DB and external APIs (Telegram/Drive).</li>
+                            <li>Designed and implemented a 'Micro-monolith' distributed system using the <strong>Transactional Outbox pattern</strong> to guarantee message delivery consistency between DB and external APIs (Telegram/Drive).</li>
                             <li>Engineered <strong>Distributed Lease Management</strong> to orchestrate task execution across multiple worker nodes, preventing resource contention and ensuring high availability.</li>
                             <li>Developed a session-aware React 19 frontend with <strong>Role-Based Access Control (RBAC)</strong>, dynamic workspace routing, and Framer Motion animations.</li>
                             <li>Built <strong>Storybook</strong> component library with accessibility (a11y) checks for UI isolation and visual regression testing.</li>
