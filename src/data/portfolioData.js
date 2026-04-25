@@ -8,7 +8,7 @@ export const personalInfo = {
   subtitle: "Software Engineer focused on architecting scalable backend solutions, high-performance APIs, and reliable distributed systems.",
   email: "lehuytuong2005@gmail.com",
   phone: "0372728768",
-  location: "Ho Chi Minh City, Vietnam",
+  location: "Ho Chi Minh",
   bio: `Java Backend Developer with hands-on experience building transaction-oriented systems using Java 17 and Spring Boot 3. Delivered production features involving wallet flows, payment gateway integration, distributed locking, and performance optimization. Dedicated to building reliable, secure, and high-integrity backend systems for banking and fintech platforms.`,
   resumeUrl: "/resume",
   lastUpdated: "2026-04-20",

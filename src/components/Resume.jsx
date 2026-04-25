@@ -89,28 +89,11 @@ const Resume = () => {
                             <span className="date-range">Apr 2026 – Present</span>
                         </div>
                         <div className="item-sub">
-                            <em>Software Engineer - Viettel Digital Talent | Part-time</em>
+                            <em>Software Engineer Trainee - Viettel Digital Talent | Part-time</em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Selected for Viettel Digital Talent 2026, a software engineering training program at Viettel Digital.</li>
+                            <li>Selected for Viettel Digital Talent 2026, a competitive software engineering training program at Viettel Digital.</li>
                             <li>Trained in backend engineering through technical coursework, mentoring, and project-based practice.</li>
-                        </ul>
-                    </div>
-
-                    <div className="experience-item" style={{ marginTop: '0.8rem' }}>
-                        <div className="item-header">
-                            <strong>TCH Company</strong>
-                            <span className="date-range">Oct 2025 – Present</span>
-                        </div>
-                        <div className="item-sub">
-                            <em>Software Engineer | Freelance</em>
-                        </div>
-                        <ul className="resume-bullets">
-                            <li><strong>Cost Estimator:</strong> Built the feature end-to-end (database design, CRUD APIs, frontend integration), delivering a client-facing quotation tool that reduced manual price estimation.</li>
-                            <li><strong>Admin System:</strong> Replaced hardcoded configs with a database-driven admin system, enabling non-technical staff to update settings directly without code deployments.</li>
-                            <li><strong>Optimization:</strong> Fixed N+1 query issues on listing pages using eager loading and selective column fetching, reducing query counts from 3 to 1 on key endpoints.</li>
-                            <li><strong>Caching:</strong> Reduced redundant database access on site-wide page views by caching tracking scripts (Google Analytics, Facebook Pixel).</li>
-                            <li><strong>SEO & Workflow:</strong> Integrated dynamic SEO metadata contributing to a Google Lighthouse SEO score of 90/100 and documented API endpoints to streamline team coordination.</li>
                         </ul>
                     </div>
 
@@ -128,6 +111,23 @@ const Resume = () => {
                             <li><strong>Architecture:</strong> Worked with CQRS in microservice modules, separating read/write logic to improve maintainability and testability as the codebase grew.</li>
                             <li><strong>Order State Machine:</strong> Built an Order status state machine with 5 validated transitions, ensuring consistent tracking and preventing invalid state changes.</li>
                             <li><strong>Validation & Error Handling:</strong> Added request validation and centralized error handling, reducing invalid requests and making debugging faster.</li>
+                        </ul>
+                    </div>
+
+                    <div className="experience-item" style={{ marginTop: '0.8rem' }}>
+                        <div className="item-header">
+                            <strong>TCH Company</strong>
+                            <span className="date-range">Oct 2025 – Present</span>
+                        </div>
+                        <div className="item-sub">
+                            <em>Software Engineer | Freelance</em>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li><strong>Cost Estimator:</strong> Built the feature end-to-end (database design, CRUD APIs, frontend integration), delivering a client-facing quotation tool that reduced manual price estimation.</li>
+                            <li><strong>Admin System:</strong> Replaced hardcoded configs with a database-driven admin system, enabling non-technical staff to update settings directly without code deployments.</li>
+                            <li><strong>Optimization:</strong> Fixed N+1 query issues on listing pages using eager loading and selective column fetching, reducing query counts from 3 to 1 on key endpoints.</li>
+                            <li><strong>Caching:</strong> Reduced redundant database access on site-wide page views by caching tracking scripts (Google Analytics, Facebook Pixel).</li>
+                            <li><strong>SEO & Workflow:</strong> Integrated dynamic SEO metadata contributing to a Google Lighthouse SEO score of 90/100 and documented API endpoints to streamline team coordination.</li>
                         </ul>
                     </div>
                 </section>
@@ -198,13 +198,15 @@ const Resume = () => {
                             <span className="date-range">[2026]</span>
                         </div>
                         <div className="item-sub">
-                            <em>Lead Architect (Solo) | Tech: Java 17, Spring Boot 3, React 19, MySQL, Redis, Docker, Telegram API, Google Drive API</em>
+                            <em>Solo Developer | Tech: Java 17, Spring Boot 3, React 19, TailwindCSS, MySQL, Redis, Docker, Playwright, Storybook, Telegram API, Google Drive API</em>
                         </div>
                         <ul className="resume-bullets">
                             <li>Architected a 'Micro-monolith' distributed system using the <strong>Transactional Outbox pattern</strong> to guarantee message delivery consistency between DB and external APIs (Telegram/Drive).</li>
                             <li>Engineered <strong>Distributed Lease Management</strong> to orchestrate task execution across multiple worker nodes, preventing resource contention and ensuring high availability.</li>
-                            <li>Developed a session-aware React 19 frontend with <strong>Role-Based Access Control (RBAC)</strong> and dynamic workspace routing for Admin and User roles.</li>
-                            <li>Integrated encrypted Service Account management for secure, multi-user integrations with Google Drive and Telegram bot notification systems.</li>
+                            <li>Developed a session-aware React 19 frontend with <strong>Role-Based Access Control (RBAC)</strong>, dynamic workspace routing, and Framer Motion animations.</li>
+                            <li>Built <strong>Storybook</strong> component library with accessibility (a11y) checks for UI isolation and visual regression testing.</li>
+                            <li>Wrote <strong>Playwright E2E smoke tests</strong> covering authentication, job submission, real-time state polling, and file download verification.</li>
+                            <li>Leveraged <strong>AI-assisted development</strong> (ChatGPT, Cursor) to accelerate architecture decisions and code review — maintaining full ownership and understanding of all design choices.</li>
                         </ul>
                         <p className="project-links">
                             GitHub: <a href="https://github.com/LeHuyTuong/S-Platform-Engine" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/S-Platform-Engine</a>
