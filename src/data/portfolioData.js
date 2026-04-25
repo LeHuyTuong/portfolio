@@ -292,7 +292,7 @@ export const experiences = [
       "Documented clean RESTful APIs and coordinated delivery across cross-functional teams (UI/UX, Frontend)."
     ],
     sectionLabel: "Key Impact:",
-    technologies: ["PHP", "Laravel", "MySQL", "Redis", "RBAC", "Performance Tuning"]
+    technologies: ["MySQL", "Redis", "RBAC", "Performance Tuning"]
   }
 ];
 
