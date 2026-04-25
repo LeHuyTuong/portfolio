@@ -77,7 +77,6 @@ const Resume = () => {
                             <li style={{ marginBottom: '2px' }}><strong>DevOps & Tools:</strong> Docker, Nginx, Git, Maven, GitHub Actions, Postman, Swagger.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Testing:</strong> JUnit 5, Mockito, Playwright (E2E), Storybook (Component/a11y), Vitest.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Domain Exposure:</strong> Payment Integration, Wallet & Transaction Flows, Webhook Handling, KYC & Compliance.</li>
-                            <li style={{ marginBottom: '0' }}><strong>AI-Assisted Development:</strong> ChatGPT, Cursor — used to accelerate architecture review and code quality; full ownership of all design decisions maintained.</li>
                         </ul>
                     </div>
                 </section>
@@ -112,7 +111,7 @@ const Resume = () => {
                         <ul className="resume-bullets">
                             <li>Optimized service-to-service communication efficiency by migrating internal REST calls to gRPC, reducing latency and serialization overhead.</li>
                             <li>Resolved critical race conditions and double-payment risks in high-concurrency loops by implementing Redis-based distributed locking (SETNX).</li>
-                            <li>Applied CQRS patterns using MediatR to separate read/write concerns, improving system maintainability and scalability.</li>
+                            <li>Applied CQRS principles to separate read/write concerns, improving system maintainability and scalability.</li>
                             <li>Developed a robust Order status state machine with strict validation to ensure consistent data transitions across the fulfillment lifecycle.</li>
                             <li>Standardized request validation and centralized exception handling, reducing invalid data entry and accelerating debugging workflows.</li>
                         </ul>

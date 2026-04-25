@@ -28,19 +28,19 @@ export const professionalSummary = {
       content: "Dedicated to the rigor of financial systems, ensuring every transaction is traceable and every edge case is strictly handled."
     },
     {
-      title: "Data Integrity Specialist",
+      title: "Data Integrity Focus",
       icon: "🏗️",
-      content: "Prioritizing structural quality and data consistency through strictly validated architectures and ACID compliance."
+      content: "Prioritizing structural quality and data consistency through validated architectures and ACID compliance."
     },
     {
       title: "Technical Discipline",
       icon: "📈",
-      content: "Applying enterprise-grade standards in system design, focusing on high availability and high-performance API engineering."
+      content: "Applying engineering best practices in system design, focusing on reliability and high-performance API development."
     },
     {
       title: "Full-Cycle Ownership",
       icon: "🚀",
-      content: "From database design to production monitoring, I own the lifecycle of business-critical backend modules."
+      content: "From database design to deployment, I take full ownership of the backend modules I build."
     }
   ]
 };
@@ -124,7 +124,7 @@ export const projects = [
     whatILearned: "Mastery of defensive programming, unit testing isolation, and building high-reliability services for financial domains.",
     highlights: [
       "Designed and implemented core backend logic for card management and transaction authorization.",
-      "Achieved 100% test coverage for mission-critical financial logic using JUnit 5 and Mockito.",
+      "Achieved high test coverage for core financial logic using JUnit 5 and Mockito.",
       "Caught and resolved 12+ critical edge cases (e.g., overdraft scenarios, expired card usage) before deployment.",
       "Integrated centralized exception handling to provide clear audit trails for failed transactions."
     ],
@@ -142,7 +142,7 @@ export const projects = [
     role: "Backend Lead",
     period: "2025",
     problem: "Developing a robust marketplace for carbon credits requiring secure wallet transactions and real-time payment processing.",
-    solution: "Built a production-grade wallet system with multi-gateway integration (PayPal, Stripe) and automated reconciliation.",
+    solution: "Built a wallet transaction system with multi-gateway integration (PayPal, Stripe) and automated reconciliation.",
     challenge: "Handling concurrent transaction flows and ensuring idempotency across distributed service calls.",
     architectureNote: "Utilized Redis-based distributed locking (Redlock) and Idempotency Key mechanisms to prevent redundant payment processing.",
     whatILearned: "Experienced in enterprise Git workflows, payment gateway deep-integration, and designing fault-tolerant transaction mechanisms.",
