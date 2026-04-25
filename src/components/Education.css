@@ -1,5 +1,5 @@
 .education-section {
-    background-color: var(--bg-color);
+    background-color: var(--bg-primary);
 }
 
 .education-grid {
@@ -31,24 +31,26 @@
 
 /* Education Card Style */
 .edu-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Darker border */
-    border-radius: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
     padding: 2rem;
     margin-bottom: 2rem;
     position: relative;
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .edu-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg), 0 0 24px rgba(37, 99, 235, 0.12);
 }
 
 .edu-period {
     display: inline-block;
     background: rgba(59, 130, 246, 0.1);
-    color: var(--primary-color);
+    color: var(--primary);
     padding: 0.25rem 0.75rem;
     border-radius: 99px;
     font-size: 0.875rem;
@@ -94,15 +96,15 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: var(--primary);
     font-weight: bold;
 }
 
 /* Certification Card Style */
 .cert-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Darker border */
-    border-radius: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
@@ -112,7 +114,7 @@
 
 .cert-card:hover {
     background: rgba(255, 255, 255, 0.05);
-    border-color: var(--primary-color);
+    border-color: var(--primary);
     transform: translateX(5px);
 }
 
@@ -140,7 +142,7 @@
 }
 
 .cert-issuer {
-    color: var(--primary-color);
+    color: var(--primary);
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 0.75rem;
@@ -180,7 +182,7 @@
 
 .toeic-highlight-card:hover {
     transform: scale(1.03) rotate(1deg);
-    border-color: var(--primary-color);
+    border-color: var(--primary);
     box-shadow: 0 15px 40px -12px rgba(59, 130, 246, 0.4);
 }
 
@@ -212,14 +214,14 @@
     font-size: 2.8rem;
     font-weight: 900;
     line-height: 1;
-    color: var(--primary-color);
+    color: var(--primary);
     text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .toeic-status {
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--primary);
     background: rgba(59, 130, 246, 0.1);
     padding: 0.25rem 0.75rem;
     border-radius: 99px;

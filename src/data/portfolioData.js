@@ -229,7 +229,7 @@ export const projects = [
     technologies: ["Java 17", "Spring Boot", "MS SQL Server", "VNPay"],
     github: "https://github.com/LeHuyTuong",
     demo: null,
-    featured: false
+    featured: true
   }
 ];
 

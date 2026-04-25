@@ -72,7 +72,7 @@ const Hero = () => {
                     <div className="hero-image-container">
                         <img
                             src="/profile.jpg"
-                            alt="Le Huy Tuong"
+                            alt="Lê Huy Tường"
                             className="hero-profile-image"
                         />
                     </div>

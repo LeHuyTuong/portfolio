@@ -44,6 +44,11 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+            <div
+                className={`navbar-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+                aria-hidden="true"
+            />
             <div className="navbar-container">
                 <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, 'home')}>
                     <span className="logo-text">{personalInfo.name.split(' ').pop()}</span>

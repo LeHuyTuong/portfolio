@@ -25,30 +25,29 @@ const Experience = () => {
                             <div className="timeline-content">
                                 <div className="exp-card">
                                     <div className="exp-header">
-                                        <h3>{exp.title}</h3>
-                                        {exp.companyUrl ? (
-                                            <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="exp-company">
-                                                {exp.company}
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                                                </svg>
-                                            </a>
-                                        ) : (
-                                            <span className="exp-company">{exp.company}</span>
-                                        )}
+                                        <div className="exp-title-group">
+                                            <h3>{exp.title}</h3>
+                                            {exp.companyUrl ? (
+                                                <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="exp-company">
+                                                    {exp.company}
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                                                    </svg>
+                                                </a>
+                                            ) : (
+                                                <span className="exp-company">{exp.company}</span>
+                                            )}
+                                        </div>
                                     </div>
 
                                     <p className="exp-description">{exp.description}</p>
 
                                     {exp.responsibilities && (
-                                        <div className="exp-details">
-                                            <span className="details-label">{exp.sectionLabel || "Key Responsibilities:"}</span>
-                                            <ul className="details-list">
-                                                {exp.responsibilities.map((resp, i) => (
-                                                    <li key={i}>{resp}</li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                        <ul className="details-list">
+                                            {exp.responsibilities.map((resp, i) => (
+                                                <li key={i}>{resp}</li>
+                                            ))}
+                                        </ul>
                                     )}
 
                                     <div className="exp-tech">
