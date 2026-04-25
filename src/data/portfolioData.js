@@ -178,7 +178,7 @@ export const projects = [
       "Enhanced system observability through structured logging and performance metrics."
     ],
     technologies: ["Java 17", "Spring Boot", "Redis", "MySQL", "Docker"],
-    github: "https://github.com/LeHuyTuong",
+    github: "https://github.com/LeHuyTuong/URL-Shortener",
     demo: "https://url-shortener-tuong.vercel.app/",
     featured: true
   },
