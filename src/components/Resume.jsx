@@ -73,8 +73,11 @@ const Resume = () => {
                             <li style={{ marginBottom: '2px' }}><strong>Backend & Frameworks:</strong> Spring Boot 3, Spring Security, Spring Data JPA, Hibernate, JUnit 5, gRPC.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Databases & Caching:</strong> PostgreSQL, Redis (Caching, Distributed Locking), MySQL, SQL Server.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Architecture & Engineering:</strong> Microservices, Clean Architecture, CQRS, Distributed Locking, SOLID, Design Patterns.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Frontend (Supporting):</strong> React 19, TailwindCSS, Framer Motion, React Router DOM.</li>
                             <li style={{ marginBottom: '2px' }}><strong>DevOps & Tools:</strong> Docker, Nginx, Git, Maven, GitHub Actions, Postman, Swagger.</li>
-                            <li style={{ marginBottom: '0' }}><strong>Domain Exposure:</strong> Payment Integration, Wallet & Transaction Flows, Webhook Handling, KYC & Compliance.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Testing:</strong> JUnit 5, Mockito, Playwright (E2E), Storybook (Component/a11y), Vitest.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Domain Exposure:</strong> Payment Integration, Wallet & Transaction Flows, Webhook Handling, KYC & Compliance.</li>
+                            <li style={{ marginBottom: '0' }}><strong>AI-Assisted Development:</strong> ChatGPT, Cursor — used to accelerate architecture review and code quality; full ownership of all design decisions maintained.</li>
                         </ul>
                     </div>
                 </section>
