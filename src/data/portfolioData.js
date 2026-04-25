@@ -201,9 +201,9 @@ export const projects = [
       "Developed a session-aware React 19 frontend with Role-Based Access Control (RBAC) and dynamic workspace routing.",
       "Built Storybook component library with accessibility (a11y) checks for UI isolation and visual regression testing.",
       "Wrote Playwright E2E smoke tests covering auth flow, job submission, real-time state polling, and file download verification.",
-      "Leveraged AI-assisted development (ChatGPT, Cursor) to accelerate architecture decisions — maintaining full ownership of all design choices."
+      "Used structured architecture and code review practices to improve design quality and implementation consistency."
     ],
-    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Playwright", "Storybook", "ChatGPT"],
+    technologies: ["Java 17", "Spring Boot 3", "React 19", "MySQL", "Redis", "Docker", "Playwright", "Storybook"],
     github: "https://github.com/LeHuyTuong/S-Platform-Engine",
     demo: null,
     featured: true
@@ -269,7 +269,7 @@ export const experiences = [
     responsibilities: [
       "Optimized service-to-service communication efficiency by migrating internal REST calls to gRPC, reducing latency and serialization overhead.",
       "Resolved critical race conditions and double-payment risks in high-concurrency loops by implementing Redis-based distributed locking (SETNX).",
-      "Applied CQRS patterns using MediatR to separate read/write concerns, improving system maintainability and scalability.",
+      "Applied CQRS principles to separate read/write concerns, improving system maintainability and scalability.",
       "Developed a robust Order status state machine with strict validation to ensure consistent data transitions across the fulfillment lifecycle.",
       "Standardized request validation and centralized exception handling, reducing invalid data entry and accelerating debugging workflows."
     ],

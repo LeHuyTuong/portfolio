@@ -210,7 +210,7 @@ const Resume = () => {
                             <li>Developed a session-aware React 19 frontend with <strong>Role-Based Access Control (RBAC)</strong>, dynamic workspace routing, and Framer Motion animations.</li>
                             <li>Built <strong>Storybook</strong> component library with accessibility (a11y) checks for UI isolation and visual regression testing.</li>
                             <li>Wrote <strong>Playwright E2E smoke tests</strong> covering authentication, job submission, real-time state polling, and file download verification.</li>
-                            <li>Leveraged <strong>AI-assisted development</strong> (ChatGPT, Cursor) to accelerate architecture decisions and code review — maintaining full ownership and understanding of all design choices.</li>
+                            <li>Used structured architecture and code review practices to improve design quality and implementation consistency.</li>
                         </ul>
                         <p className="project-links">
                             GitHub: <a href="https://github.com/LeHuyTuong/S-Platform-Engine" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/S-Platform-Engine</a>
