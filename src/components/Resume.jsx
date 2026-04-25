@@ -27,7 +27,7 @@ const Resume = () => {
             <div className="resume-container">
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
-                    <p className="resume-title">Backend Engineer | Java & Spring Boot Specialist</p>
+                    <p className="resume-title">Junior Backend Developer | Java & Spring Boot</p>
                     <div className="resume-contact">
                         <span>{personalInfo.phone}</span>
                         <span className="divider">|</span>
@@ -42,7 +42,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Backend Engineer with a 'Reliability-First' mindset and hands-on experience building mission-critical financial systems. Specialist in architecting secure wallet transaction flows, distributed state management, and high-integrity payment integrations. Dedicated to transaction integrity, system scalability, and technical discipline in enterprise environments.</p>
+                    <p className="summary-text">Junior Backend Developer with ~1 year of hands-on experience delivering production features in fintech and enterprise environments using Java 17 and Spring Boot 3. Contributed to real systems involving wallet transaction flows, payment gateway integrations, and distributed task processing. Eager to grow within a team, deepen system design knowledge, and write clean, reliable backend code that solves real business problems.</p>
                 </section>
 
                 <section className="resume-section">

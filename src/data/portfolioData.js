@@ -3,13 +3,13 @@
 
 export const personalInfo = {
   name: "Le Huy Tuong",
-  title: "Software Engineer",
-  tagline: "Building Robust Backend Systems with Spring Boot & Microservices",
-  subtitle: "Software Engineer focused on architecting scalable backend solutions, high-performance APIs, and reliable distributed systems.",
+  title: "Junior Backend Developer",
+  tagline: "Java & Spring Boot | Hands-On with Real Systems",
+  subtitle: "Junior Backend Developer with ~1 year of hands-on experience delivering production features in fintech and enterprise systems. Focused on writing clean, reliable backend code with a deep interest in system design.",
   email: "lehuytuong2005@gmail.com",
   phone: "0372728768",
   location: "Ho Chi Minh",
-  bio: `Java Backend Developer with hands-on experience building transaction-oriented systems using Java 17 and Spring Boot 3. Delivered production features involving wallet flows, payment gateway integration, distributed locking, and performance optimization. Dedicated to building reliable, secure, and high-integrity backend systems for banking and fintech platforms.`,
+  bio: `Junior Backend Developer with ~1 year of hands-on experience building production features using Java 17 and Spring Boot 3. Contributed to real systems handling wallet flows, payment integrations, and distributed task processing. Strong interest in system design and writing reliable, maintainable backend code.`,
   resumeUrl: "/resume",
   lastUpdated: "2026-04-20",
   social: {
