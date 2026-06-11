@@ -197,7 +197,7 @@
         width: 100%;
         max-width: none;
         box-shadow: none;
-        padding: 12mm 14mm; /* fake margins so content isn't glued to page edges */
+        padding: 0 14mm; /* side margins; top/bottom of every page come from the repeating .page-space rows */
         min-height: auto;
     }
     .experience-item,
@@ -222,4 +222,24 @@
 @page {
     size: A4;
     margin: 0; /* zero margin = browser has no room to draw its header (date/title) and footer (URL/page number) */
+}
+
+/* Table wrapper: browsers repeat thead/tfoot on every printed page,
+   so the empty .page-space row becomes a real top/bottom margin per page
+   while @page margin stays 0 (no browser header/footer). */
+.print-layout {
+    width: 100%;
+    border-collapse: collapse;
+}
+.print-layout td {
+    padding: 0;
+    vertical-align: top;
+}
+.page-space {
+    height: 0; /* invisible on screen */
+}
+@media print {
+    .page-space {
+        height: 10mm; /* top & bottom breathing room on every page */
+    }
 }
