@@ -195,8 +195,18 @@
         width: 100%;
         max-width: none;
         box-shadow: none;
-        padding: 0;
+        padding: 12mm 14mm; /* fake margins so content isn't glued to page edges */
         min-height: auto;
+    }
+    .experience-item,
+    .project-item,
+    .education-item {
+        break-inside: avoid;
+        page-break-inside: avoid; /* keep each job/project block on one page */
+    }
+    .resume-section h2 {
+        break-after: avoid;
+        page-break-after: avoid; /* never leave a heading alone at page bottom */
     }
     .no-print {
         display: none !important;
@@ -209,5 +219,5 @@
 
 @page {
     size: A4;
-    margin: 1.5cm;
+    margin: 0; /* zero margin = browser has no room to draw its header (date/title) and footer (URL/page number) */
 }
