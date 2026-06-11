@@ -166,7 +166,8 @@
     text-decoration: underline;
 }
 
-.project-links a {
+.project-links a,
+.cert-link {
     color: #2563eb;
 }
 
@@ -175,8 +176,9 @@
         text-decoration: none;
         color: #000; /* Keep it black but clickable in PDF */
     }
-    .project-links a {
-        color: #2563eb; /* Keep project links blue for visibility in PDF */
+    .project-links a,
+    .cert-link {
+        color: #2563eb; /* Keep links blue for visibility in PDF */
     }
 }
 
