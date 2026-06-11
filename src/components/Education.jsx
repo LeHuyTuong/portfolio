@@ -32,14 +32,21 @@ const Education = () => {
 
                             {edu.toeic && (
                                 <div className="edu-right">
-                                    <div className="toeic-highlight-card">
-                                        <div className="toeic-label">{edu.toeic.label}</div>
-                                        <div className="toeic-badge">
-                                            <span className="toeic-text">TOEIC</span>
-                                            <span className="toeic-score">{edu.toeic.score}</span>
+                                    <a
+                                        href="https://raw.githubusercontent.com/LeHuyTuong/portfolio/main/public/toeic/toeic-735.jpg"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ textDecoration: 'none' }}
+                                    >
+                                        <div className="toeic-highlight-card">
+                                            <div className="toeic-label">{edu.toeic.label}</div>
+                                            <div className="toeic-badge">
+                                                <span className="toeic-text">TOEIC</span>
+                                                <span className="toeic-score">{edu.toeic.score}</span>
+                                            </div>
+                                            <div className="toeic-status">Certified Proficiency</div>
                                         </div>
-                                        <div className="toeic-status">Certified Proficiency</div>
-                                    </div>
+                                    </a>
                                 </div>
                             )}
                         </div>

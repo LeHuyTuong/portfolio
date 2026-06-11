@@ -235,7 +235,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>LANGUAGE</h2>
                     <div className="section-line"></div>
-                    <p><strong>English:</strong> TOEIC 735 (ETS) — Good reading and writing proficiency for technical documentation and team communication.</p>
+                    <p><strong>English:</strong> TOEIC 735 (ETS) — Good reading and writing proficiency for technical documentation and team communication. <a href="https://raw.githubusercontent.com/LeHuyTuong/portfolio/main/public/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">[View Certificate]</a></p>
                 </section>
             </div>
         </div>
