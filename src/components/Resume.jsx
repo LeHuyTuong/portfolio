@@ -45,31 +45,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Java backend developer with ~1 year of combined internship and freelance experience building payment- and transaction-focused services on Java 17 and Spring Boot 3. Hands-on with REST/gRPC microservices, Redis caching and distributed locking, JWT/RBAC security, SQL indexing & query optimization, and JUnit 5/Mockito unit testing. Built and deployed a wallet platform (deposit/withdraw/payout, KYC status flows, sandbox payment gateways); currently prototyping a distributed-tracing library in the Viettel Digital Talent program.</p>
-                </section>
-
-                <section className="resume-section">
-                    <h2>TECHNICAL SKILLS</h2>
-                    <div className="section-line"></div>
-                    <div className="skills-content">
-                        <p style={{ margin: '0 0 2px 0' }}><strong>Hands-on</strong></p>
-                        <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '2px' }}><strong>Languages:</strong> Java 17, SQL.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring Core, Spring Security, Spring Data JPA, Hibernate.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>APIs & Architecture:</strong> RESTful APIs, gRPC, microservices (service-to-service), CQRS-style read/write separation, state machines, idempotency keys.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Databases & Caching:</strong> MySQL, PostgreSQL, SQL Server — indexing, query optimization, execution-plan analysis; Redis (caching, distributed locking — key-value NoSQL).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Security:</strong> JWT authentication, RBAC, password hashing (BCrypt/SHA-256), rate limiting, input validation, centralized exception handling.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Observability:</strong> Distributed tracing (W3C Trace Context, traceId/spanId), SLF4J/Logback, MDC log correlation.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Testing:</strong> JUnit 5, Mockito (service-layer unit tests); Playwright (E2E basics).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>DevOps & Tools:</strong> Docker, Docker Compose, Nginx, GitHub Actions (CI/CD), Git (GitFlow), Maven, Swagger/OpenAPI, Postman.</li>
-                        </ul>
-                        <p style={{ margin: '6px 0 2px 0' }}><strong>Familiar / Working Knowledge</strong></p>
-                        <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '2px' }}><strong>Messaging & Event-driven:</strong> RabbitMQ (queues, exchanges, acknowledgements); Kafka fundamentals (topics, partitions, consumer groups); Transactional Outbox pattern (applied in a side project).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Security concepts:</strong> OWASP API Security Top 10.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Tooling & Observability:</strong> GitLab CI concepts; OpenTelemetry, Micrometer, Spring Cloud Sleuth (researching for the tracing library).</li>
-                        </ul>
-                    </div>
+                    <p className="summary-text">Java backend developer with ~1 year of combined internship and freelance experience building payment- and transaction-focused services on Java 17 and Spring Boot 3. Hands-on with REST/gRPC microservices, Redis caching and distributed locking, JWT/RBAC security, SQL optimization, and JUnit 5/Mockito testing.</p>
                 </section>
 
                 <section className="resume-section">
@@ -78,102 +54,92 @@ const Resume = () => {
 
                     <div className="experience-item">
                         <div className="item-header">
-                            <strong>Viettel Digital</strong>
+                            <strong>Viettel Digital — Software Engineer Trainee (Viettel Digital Talent)</strong>
                             <span className="date-range">Apr 2026 – Present</span>
                         </div>
-                        <div className="item-sub">
-                            <em>Software Engineer Trainee - Viettel Digital Talent | Part-time</em>
-                        </div>
                         <ul className="resume-bullets">
-                            <li>Developing a plug-in <strong>observability library</strong> for Java/Spring Boot microservices under Viettel mentorship (<strong>prototype stage</strong>): traceId/spanId generation and W3C-style trace context propagation across the request lifecycle.</li>
-                            <li>Prototyping <strong>non-invasive instrumentation</strong> — Servlet Filter, Spring HandlerInterceptor, and AOP — so services gain tracing and request-lifecycle metadata without changes to business code.</li>
-                            <li>Packaging the library as a <strong>Spring Boot starter</strong> with auto-configuration, enabling tracing through a single dependency and a configuration toggle; validated end-to-end across two local demo services.</li>
-                            <li>Correlating logs via <strong>SLF4J MDC</strong> so each log line carries traceId/spanId; writing JUnit 5 tests for trace-context parsing and ID-generation edge cases.</li>
-                            <li>Researching <strong>OpenTelemetry, Micrometer, and Spring Cloud Sleuth</strong> with mentors to align the library design with industry tracing standards.</li>
+                            <li>Developing a plug-in <strong>observability library</strong> for Java/Spring Boot microservices (prototype stage).</li>
+                            <li>Prototyping non-invasive tracing (Servlet Filter, HandlerInterceptor, AOP) as a <strong>Spring Boot starter</strong>.</li>
+                            <li>Correlating logs via <strong>SLF4J MDC</strong> (traceId/spanId); validated across two local demo services.</li>
                         </ul>
                     </div>
 
-                    <div className="experience-item" style={{ marginTop: '0.8rem' }}>
+                    <div className="experience-item" style={{ marginTop: '0.6rem' }}>
                         <div className="item-header">
-                            <strong>FPT Software</strong>
+                            <strong>FPT Software — Backend Engineer Intern</strong>
                             <span className="date-range">Dec 2025 – Apr 2026</span>
                         </div>
-                        <div className="item-sub">
-                            <em>Backend Engineer | Internship</em>
-                        </div>
                         <ul className="resume-bullets">
-                            <li>Developed order- and payment-related backend features on a Java/Spring Boot microservices codebase.</li>
-                            <li>Mitigated race conditions and double-payment risk in concurrent payment flows by implementing Redis-based distributed locks.</li>
-                            <li>Migrated internal service-to-service calls from REST to gRPC, reducing serialization overhead on internal hot paths.</li>
-                            <li>Built an order-status state machine with strict transition validation, preventing invalid state changes across the fulfillment lifecycle.</li>
-                            <li>Standardized request validation and centralized exception handling; applied CQRS-style read/write separation between command and query paths.</li>
+                            <li>Mitigated race conditions and <strong>double-payment risk</strong> in payment flows via Redis distributed locks.</li>
+                            <li>Migrated internal service-to-service calls from <strong>REST to gRPC</strong>, cutting serialization overhead.</li>
+                            <li>Built an <strong>order-status state machine</strong> with strict validation; centralized exception handling.</li>
                         </ul>
                     </div>
 
-                    <div className="experience-item" style={{ marginTop: '0.8rem' }}>
+                    <div className="experience-item" style={{ marginTop: '0.6rem' }}>
                         <div className="item-header">
-                            <strong>TCH Company</strong>
+                            <strong>TCH Company — Software Engineer (Freelance)</strong>
                             <span className="date-range">Oct 2025 – Present</span>
                         </div>
-                        <div className="item-sub">
-                            <em>Software Engineer | Freelance</em>
-                        </div>
                         <ul className="resume-bullets">
-                            <li>Implemented role-based access control (RBAC) and route-level middleware to secure admin APIs and enforce multi-level permissions.</li>
-                            <li>Reduced API response time by ~60% on high-traffic endpoints through response caching and payload refinement.</li>
-                            <li>Replaced hard-coded configuration with a database-driven admin system, enabling content updates without redeployments.</li>
-                            <li>Built an automated cost-estimation API for client quotations; documented REST APIs for cross-functional delivery.</li>
+                            <li>Implemented <strong>RBAC</strong> and route-level middleware to secure admin APIs with multi-level permissions.</li>
+                            <li>Reduced API response time by <strong>~60%</strong> on high-traffic endpoints via caching and payload refinement.</li>
+                            <li>Replaced hard-coded configuration with a database-driven admin system (no-redeploy updates).</li>
                         </ul>
                     </div>
                 </section>
 
                 <section className="resume-section">
-                    <h2>SELECTED PROJECTS</h2>
+                    <h2>PROJECTS</h2>
                     <div className="section-line"></div>
 
                     <div className="project-item">
                         <div className="item-header">
                             <strong>CarbonX – Carbon Credit Marketplace</strong>
-                            <span className="date-range">[2025]</span>
+                            <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Team of 4 — 2 backend) | Tech: Java 17, Spring Boot 3, Spring Security, MySQL, Redis, Docker, Nginx, VNPay/PayPal/Stripe (sandbox)</em>
+                            <em>Backend Developer (Team of 4 — 2 BE) | Java 17, Spring Boot 3, MySQL, Redis, Docker, VNPay/PayPal/Stripe (sandbox) | <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">GitHub</a></em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Built <strong>wallet transaction flows</strong> — deposit, withdraw (with an admin-approval step), payout — for two user roles, with strict input validation and centralized exception handling to keep transaction records consistent.</li>
-                            <li>Integrated <strong>VNPay, PayPal, and Stripe (sandbox) payments</strong> into wallet top-up and payout flows.</li>
-                            <li>Implemented <strong>KYC user management with explicit status transitions</strong>, plus marketplace orders and profit-sharing logic.</li>
-                            <li>Cut database load on high-read endpoints with <strong>Redis caching</strong>; added <strong>SQL composite indexes</strong>, turning full-table scans into index-range queries (verified via execution plans).</li>
-                            <li>Added <strong>rate limiting</strong> on sensitive endpoints (authentication, payment) to protect against abuse.</li>
-                            <li>Deployed the full stack (Spring Boot, MySQL, Redis, Nginx) with <strong>Docker Compose</strong> on a Linux VPS with HTTPS.</li>
+                            <li>Built <strong>wallet flows</strong> — deposit, withdraw (admin-approval step), payout — with strict validation.</li>
+                            <li>Integrated <strong>VNPay/PayPal/Stripe (sandbox)</strong>; built KYC status flows, orders, and profit-sharing.</li>
+                            <li>Cut DB load via <strong>Redis caching</strong> and composite indexes; deployed with Docker Compose over HTTPS.</li>
                         </ul>
-                        <p className="project-links">
-                            GitHub: <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a>
-                        </p>
                     </div>
 
-                    <div className="project-item" style={{ marginTop: '0.8rem' }}>
+                    <div className="project-item" style={{ marginTop: '0.6rem' }}>
                         <div className="item-header">
                             <strong>Card Issuing & Ledger Core System</strong>
-                            <span className="date-range">[2025]</span>
+                            <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Self-directed banking-domain lab (Solo) | Tech: Java 17, Spring Boot 3, Spring Data JPA, JUnit 5, Mockito</em>
+                            <em>Self-directed banking-domain lab (Solo) | Java 17, Spring Boot 3, Spring Data JPA, JUnit 5, Mockito | <a href="https://github.com/LeHuyTuong/Card-Issuing-System" target="_blank" rel="noopener noreferrer">GitHub</a></em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Designed an <strong>append-only ledger</strong>: updates/deletes blocked at the entity level via JPA lifecycle events; balances derived through SQL aggregation instead of stored mutable fields.</li>
-                            <li>Implemented <strong>idempotency keys</strong> so duplicate requests (e.g., a double card-issue submission) are processed exactly once and return the cached response.</li>
-                            <li>Enforced <strong>card-lifecycle state machines</strong> (CREATED → ACTIVE → BLOCKED) with KYC-gated issuance; covered domain invariants and error paths with JUnit 5/Mockito unit tests.</li>
+                            <li>Designed an <strong>append-only ledger</strong> (JPA lifecycle guards); balances derived via SQL aggregation.</li>
+                            <li>Implemented <strong>idempotency keys</strong> — duplicate requests run once and return the cached response.</li>
+                            <li>Enforced card <strong>state machines</strong> with KYC-gated issuance; unit-tested invariants (JUnit 5, Mockito).</li>
                         </ul>
-                        <p className="project-links">
-                            GitHub: <a href="https://github.com/LeHuyTuong/Card-Issuing-System" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Card-Issuing-System</a>
-                        </p>
                     </div>
-
                 </section>
 
                 <section className="resume-section">
-                    <h2>EDUCATION</h2>
+                    <h2>TECHNICAL SKILLS</h2>
+                    <div className="section-line"></div>
+                    <div className="skills-content">
+                        <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
+                            <li style={{ marginBottom: '2px' }}><strong>Languages & Core:</strong> Java 17 (OOP, Collections, Exception Handling), SQL.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring Core, Spring Security, Spring Data JPA, Hibernate.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Architecture & Data:</strong> RESTful API, gRPC, microservices, CQRS-style, idempotency keys; MySQL, PostgreSQL — indexing, query optimization; Redis (caching, distributed locking — key-value NoSQL).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Security & Testing:</strong> JWT, RBAC, BCrypt/SHA-256 hashing, rate limiting, OWASP Top 10 (familiar); JUnit 5, Mockito; distributed tracing (W3C Trace Context, MDC).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>DevOps & Messaging:</strong> Docker, Docker Compose, GitHub Actions (CI/CD), Git (GitFlow), GitLab CI (concepts); RabbitMQ & Kafka (fundamentals); Transactional Outbox (side project).</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section className="resume-section">
+                    <h2>EDUCATION & LANGUAGE</h2>
                     <div className="section-line"></div>
                     {education.map(edu => (
                         <div key={edu.id} className="education-item">
@@ -184,17 +150,9 @@ const Resume = () => {
                             <div className="item-sub">
                                 <em>{edu.degree} | GPA: 3.2</em>
                             </div>
-                            <p className="coursework">
-                                <strong>Relevant Coursework:</strong> Data Structures & Algorithms · Database Systems · Object-Oriented Design · Software Architecture · Computer Networking
-                            </p>
                         </div>
                     ))}
-                </section>
-
-                <section className="resume-section">
-                    <h2>LANGUAGE</h2>
-                    <div className="section-line"></div>
-                    <p><strong>English:</strong> <a className="cert-link" href="https://lehuytuong.vercel.app/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS) — comfortable reading technical documentation and writing project documents.</p>
+                    <p style={{ margin: '4px 0 0 0' }}><strong>English:</strong> <a className="cert-link" href="https://lehuytuong.vercel.app/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS) — comfortable reading technical documentation.</p>
                 </section>
                     </td></tr></tbody>
                     <tfoot><tr><td><div className="page-space"></div></td></tr></tfoot>
