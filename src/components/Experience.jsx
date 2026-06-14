@@ -1,5 +1,49 @@
+import useScrollReveal from '../hooks/useScrollReveal';
+import { ExternalLink } from './Icons';
 import { experiences } from '../data/portfolioData';
 import './Experience.css';
+
+const TimelineItem = ({ exp, index }) => {
+    const ref = useScrollReveal();
+    return (
+        <div ref={ref} className="timeline-item reveal" style={{ transitionDelay: `${index * 0.15}s` }}>
+            <div className="timeline-dot"></div>
+            <div className="timeline-date">
+                <span>{exp.date}</span>
+            </div>
+            <div className="timeline-content">
+                <div className="exp-card">
+                    <div className="exp-header">
+                        <div className="exp-title-group">
+                            <h3>{exp.title}</h3>
+                            {exp.companyUrl ? (
+                                <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="exp-company">
+                                    {exp.company}
+                                    <ExternalLink />
+                                </a>
+                            ) : (
+                                <span className="exp-company">{exp.company}</span>
+                            )}
+                        </div>
+                    </div>
+                    <p className="exp-description">{exp.description}</p>
+                    {exp.responsibilities && (
+                        <ul className="details-list">
+                            {exp.responsibilities.map((resp, i) => (
+                                <li key={i} dangerouslySetInnerHTML={{ __html: resp }} />
+                            ))}
+                        </ul>
+                    )}
+                    <div className="exp-tech">
+                        {exp.technologies.map((tech, i) => (
+                            <span key={i} className="tech-badge">{tech}</span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 const Experience = () => {
     return (
@@ -13,51 +57,8 @@ const Experience = () => {
 
                 <div className="timeline">
                     <div className="timeline-line"></div>
-
                     {experiences.map((exp, index) => (
-                        <div key={exp.id} className="timeline-item">
-                            <div className="timeline-dot"></div>
-
-                            <div className="timeline-date">
-                                <span>{exp.date}</span>
-                            </div>
-
-                            <div className="timeline-content">
-                                <div className="exp-card">
-                                    <div className="exp-header">
-                                        <div className="exp-title-group">
-                                            <h3>{exp.title}</h3>
-                                            {exp.companyUrl ? (
-                                                <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className="exp-company">
-                                                    {exp.company}
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
-                                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
-                                                    </svg>
-                                                </a>
-                                            ) : (
-                                                <span className="exp-company">{exp.company}</span>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    <p className="exp-description">{exp.description}</p>
-
-                                    {exp.responsibilities && (
-                                        <ul className="details-list">
-                                            {exp.responsibilities.map((resp, i) => (
-                                                <li key={i}>{resp}</li>
-                                            ))}
-                                        </ul>
-                                    )}
-
-                                    <div className="exp-tech">
-                                        {exp.technologies.map((tech, i) => (
-                                            <span key={i} className="tech-badge">{tech}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <TimelineItem key={exp.id} exp={exp} index={index} />
                     ))}
                 </div>
             </div>

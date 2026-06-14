@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { personalInfo, navLinks } from '../data/portfolioData';
 import './Navbar.css';
-
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -10,28 +9,51 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+    const logoName = personalInfo.name.split(' ').pop();
 
-            // Update active section based on scroll position
-            const sections = navLinks.map(link => document.getElementById(link.id));
-            const scrollPosition = window.scrollY + 100;
+    // Throttled scroll handler with requestAnimationFrame
+    const handleScroll = useCallback(() => {
+        setIsScrolled(window.scrollY > 50);
 
-            sections.forEach((section, index) => {
-                if (section) {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        setActiveSection(navLinks[index].id);
-                    }
+        const scrollPosition = window.scrollY + 100;
+        const sections = navLinks.map(link => document.getElementById(link.id));
+
+        sections.forEach((section, index) => {
+            if (section) {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    setActiveSection(navLinks[index].id);
                 }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+            }
+        });
     }, []);
+
+    useEffect(() => {
+        let ticking = false;
+        const onScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [handleScroll]);
+
+    // Close mobile menu on Escape
+    useEffect(() => {
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape' && isMobileMenuOpen) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+        document.addEventListener('keydown', onKeyDown);
+        return () => document.removeEventListener('keydown', onKeyDown);
+    }, [isMobileMenuOpen]);
 
     const handleNavClick = (e, id) => {
         e.preventDefault();
@@ -43,7 +65,9 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} aria-label="Main navigation">
+            <a href="#main-content" className="skip-link">Skip to main content</a>
+
             <div
                 className={`navbar-overlay ${isMobileMenuOpen ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -51,11 +75,11 @@ const Navbar = () => {
             />
             <div className="navbar-container">
                 <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, 'home')}>
-                    <span className="logo-text">{personalInfo.name.split(' ').pop()}</span>
+                    <span className="logo-text">{logoName}</span>
                     <span className="logo-dot">.</span>
                 </a>
 
-                <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+                <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`} role="navigation">
                     {navLinks.map(link => (
                         <a
                             key={link.id}
@@ -77,6 +101,7 @@ const Navbar = () => {
                         className={`navbar-toggle ${isMobileMenuOpen ? 'active' : ''}`}
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
+                        aria-expanded={isMobileMenuOpen}
                     >
                         <span></span>
                         <span></span>

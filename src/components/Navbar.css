@@ -10,11 +10,9 @@
 
 .navbar.scrolled {
     background: var(--bg-primary);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
     padding: 12px 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    opacity: 0.98;
+    box-shadow: var(--shadow-sm);
 }
 
 .navbar-container {
@@ -45,14 +43,14 @@
 }
 
 .logo-dot {
-    color: var(--primary);
+    color: var(--accent-gold);
     font-size: 2rem;
 }
 
 .navbar-menu {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .navbar-link {
@@ -62,7 +60,6 @@
     font-size: 0.95rem;
     color: var(--text-secondary);
     transition: all var(--transition-fast);
-    position: relative;
 }
 
 .navbar-link:hover {
@@ -71,19 +68,21 @@
 }
 
 .navbar-link.active {
-    color: var(--text-primary);
-    background: var(--gradient-primary);
+    color: white;
+    background: var(--primary);
 }
 
 .resume-btn {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     cursor: pointer;
     font-family: inherit;
 }
 
 .resume-btn:hover {
-    background: var(--gradient-primary);
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
 }
 
 .navbar-toggle {
@@ -126,7 +125,7 @@
         display: block;
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(15, 23, 42, 0.5);
         z-index: 999;
         opacity: 0;
         pointer-events: none;
@@ -144,14 +143,15 @@
         right: -100%;
         width: 280px;
         height: 100vh;
-        background: var(--bg-secondary);
+        background: var(--bg-card);
         flex-direction: column;
         align-items: flex-start;
         padding: 100px 30px 30px;
         gap: 8px;
         transition: right var(--transition-normal);
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
         z-index: 1000;
+        border-left: 1px solid var(--border-color);
     }
 
     .navbar-menu.active {

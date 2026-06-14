@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './styles/index.css';
 import Navbar from './components/Navbar';
@@ -6,35 +7,49 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
+import Architecture from './components/Architecture';
 import Contact from './components/Contact';
 import About from './components/About';
 import Footer from './components/Footer';
-import Resume from './components/Resume';
+import ErrorBoundary from './components/ErrorBoundary';
+
+const Resume = lazy(() => import('./components/Resume'));
 
 const LandingPage = () => {
   return (
-    <div className="app">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Education />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="app">
+        <Navbar />
+        <main id="main-content">
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Education />
+          <Projects />
+          <Architecture />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 };
 
 function App() {
-  
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/resume" element={<Resume />} />
+      <Route
+        path="/resume"
+        element={
+          <ErrorBoundary>
+            <Suspense fallback={<div style={{ padding: '2rem', textAlign: 'center' }}>Loading resume...</div>}>
+              <Resume />
+            </Suspense>
+          </ErrorBoundary>
+        }
+      />
     </Routes>
   );
 }

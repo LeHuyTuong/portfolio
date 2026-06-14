@@ -1,7 +1,11 @@
+import useScrollReveal from '../hooks/useScrollReveal';
 import { education } from '../data/portfolioData';
 import './Education.css';
 
 const Education = () => {
+    const leftRef = useScrollReveal();
+    const rightRef = useScrollReveal();
+
     return (
         <section id="education" className="section education-section">
             <div className="container">
@@ -14,7 +18,7 @@ const Education = () => {
                 <div className="education-grid">
                     {education.map(edu => (
                         <div key={edu.id} className="edu-layout">
-                            <div className="edu-left">
+                            <div ref={leftRef} className="edu-left reveal" style={{ transitionDelay: '0.1s' }}>
                                 <div className="edu-card">
                                     <div className="edu-period">{edu.period}</div>
                                     <h4 className="edu-school">{edu.school}</h4>
@@ -31,9 +35,9 @@ const Education = () => {
                             </div>
 
                             {edu.toeic && (
-                                <div className="edu-right">
+                                <div ref={rightRef} className="edu-right reveal" style={{ transitionDelay: '0.2s' }}>
                                     <a
-                                        href="https://raw.githubusercontent.com/LeHuyTuong/portfolio/main/public/toeic/toeic-735.jpg"
+                                        href="/toeic/toeic-735.jpg"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ textDecoration: 'none' }}

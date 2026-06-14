@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ArrowLeft, ArrowDown } from './Icons';
 import './Resume.css';
 import { personalInfo, education, skills, projects, experiences } from '../data/portfolioData';
 
@@ -11,15 +12,11 @@ const Resume = () => {
         <div className="resume-page">
             <div className="resume-controls no-print">
                 <Link to="/" className="btn-back">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7" />
-                    </svg>
+                    <ArrowLeft />
                     Back to Portfolio
                 </Link>
                 <button onClick={handlePrint} className="btn-download">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3" />
-                    </svg>
+                    <ArrowDown />
                     Download PDF
                 </button>
             </div>
@@ -84,7 +81,7 @@ const Resume = () => {
                         <ul className="resume-bullets">
                             <li>Implemented <strong>RBAC</strong> and route-level middleware to secure admin APIs with multi-level permissions.</li>
                             <li>Reduced API response time by <strong>~60%</strong> on high-traffic endpoints via caching and payload refinement.</li>
-                            <li>Replaced hard-coded configuration with a database-driven admin system (no-redeploy updates).</li>
+                            <li>Built an <strong>end-to-end cost estimation module</strong>, automating client quotation workflows.</li>
                         </ul>
                     </div>
                 </section>

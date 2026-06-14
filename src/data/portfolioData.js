@@ -240,6 +240,7 @@ export const navLinks = [
   { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "architecture", label: "Architecture" },
   { id: "contact", label: "Contact" }
 ];
 
@@ -247,51 +248,43 @@ export const experiences = [
   {
     id: 1,
     date: "Apr 2026 - Present",
-    title: "Software Engineer Trainee - Viettel Digital Talent",
+    title: "Software Engineer Trainee — Viettel Digital Talent",
     company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",
     description: "Selected for Viettel’s competitive digital talent program focused on enterprise-scale web engineering and digital transformation.",
     responsibilities: [
-      "Participating in intensive training modules covering enterprise architecture, system design, and production-oriented engineering.",
-      "Collaborating in team-based delivery environments aligned with large-scale enterprise application standards.",
-      "Engaging with industry mentors to refine backend engineering discipline and software quality assurance practices."
+      "Developing a plug-in <strong>observability library</strong> for Java/Spring Boot microservices (prototype stage).",
+      "Prototyping non-invasive tracing (Servlet Filter, HandlerInterceptor, AOP) as a <strong>Spring Boot starter</strong>.",
+      "Correlating logs via <strong>SLF4J MDC</strong> (traceId/spanId); validated across two local demo services."
     ],
-    sectionLabel: "Core Focus:",
     technologies: ["Java", "Spring Boot", "Enterprise Architecture", "System Design"]
   },
   {
     id: 2,
     date: "Dec 2025 - Apr 2026",
-    title: "Backend Engineer Intern",
+    title: "Backend Engineer Intern — FPT Software",
     company: "FPT Software",
     companyUrl: "https://fptsoftware.com",
-    description: "Contributed to the development of a microservices-based franchise management platform handling thousands of daily transactions.",
+    description: "Contributed to a microservices-based franchise management platform handling thousands of daily transactions.",
     responsibilities: [
-      "Optimized service-to-service communication efficiency by migrating internal REST calls to gRPC, reducing latency and serialization overhead.",
-      "Resolved critical race conditions and double-payment risks in high-concurrency loops by implementing Redis-based distributed locking (SETNX).",
-      "Applied CQRS principles to separate read/write concerns, improving system maintainability and scalability.",
-      "Developed a robust Order status state machine with strict validation to ensure consistent data transitions across the fulfillment lifecycle.",
-      "Standardized request validation and centralized exception handling, reducing invalid data entry and accelerating debugging workflows."
+      "Mitigated race conditions and <strong>double-payment risk</strong> in payment flows via Redis distributed locks.",
+      "Migrated internal service-to-service calls from <strong>REST to gRPC</strong>, cutting serialization overhead.",
+      "Built an <strong>order-status state machine</strong> with strict validation; centralized exception handling."
     ],
-    sectionLabel: "Key Impact:",
-    technologies: ["Microservices", "CQRS", "gRPC", "Redis Locking", "FluentValidation"]
+    technologies: ["Microservices", "CQRS", "gRPC", "Redis Locking"]
   },
   {
     id: 3,
     date: "Oct 2025 - Present",
-    title: "Software Engineer (Freelance)",
+    title: "Software Engineer (Freelance) — TCH Company",
     company: "TCH Company",
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built and optimized backend infrastructures for enterprise client platforms, focusing on performance and automation.",
     responsibilities: [
-      "Implemented Role-Based Access Control (RBAC) and route-level middleware to secure administrative APIs against unauthorized direct access and manage multi-level permissions.",
-      "Optimized high-traffic backend APIs through response caching and payload refinement, reducing latency by 62% and database overhead.",
-      "Developed an automated cost-estimation engine to streamline client quotation workflows, reducing manual sales overhead.",
-      "Transitioned static configuration layers into database-driven administrative systems for enhanced operational flexibility.",
-      "Enhanced technical SEO implementations resulting in a Google Lighthouse SEO score of 90/100 for client sites.",
-      "Documented clean RESTful APIs and coordinated delivery across cross-functional teams (UI/UX, Frontend)."
+      "Implemented <strong>RBAC</strong> and route-level middleware to secure admin APIs with multi-level permissions.",
+      "Reduced API response time by <strong>~60%</strong> on high-traffic endpoints via caching and payload refinement.",
+      "Built an <strong>end-to-end cost estimation module</strong> for the system, automating client quotation workflows."
     ],
-    sectionLabel: "Key Impact:",
     technologies: ["MySQL", "Redis", "RBAC", "Performance Tuning"]
   }
 ];
