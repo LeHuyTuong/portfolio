@@ -63,7 +63,17 @@ export const skills = {
     { name: "Spring Data JPA", tier: "primary" },
     { name: "Hibernate", tier: "primary" },
     { name: "REST API", tier: "primary" },
-    { name: "gRPC", tier: "primary" }
+    { name: "gRPC", tier: "primary" },
+    { name: "Spring AOP / AspectJ", tier: "normal" },
+    { name: "Spring WebSocket", tier: "low" }
+  ],
+  "Observability": [
+    { name: "Prometheus", tier: "normal" },
+    { name: "Grafana", tier: "normal" },
+    { name: "Zipkin", tier: "normal" },
+    { name: "Micrometer / Spring Actuator", tier: "normal" },
+    { name: "Distributed Tracing", tier: "primary" },
+    { name: "SLF4J MDC", tier: "normal" }
   ],
   "Databases & Caching": [
     { name: "PostgreSQL", tier: "primary" },
@@ -251,13 +261,13 @@ export const experiences = [
     title: "Software Engineer Trainee — Viettel Digital Talent",
     company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",
-    description: "Selected for Viettel’s competitive digital talent program focused on enterprise-scale web engineering and digital transformation.",
+    description: "Selected for Viettel’s competitive digital talent program. Building a plug-in observability library for Spring Boot microservices — prototype stage, targeting banking/fintech use cases.",
     responsibilities: [
-      "Developing a plug-in <strong>observability library</strong> for Java/Spring Boot microservices (prototype stage).",
-      "Prototyping non-invasive tracing (Servlet Filter, HandlerInterceptor, AOP) as a <strong>Spring Boot starter</strong>.",
-      "Correlating logs via <strong>SLF4J MDC</strong> (traceId/spanId); validated across two local demo services."
+      "Building a <strong>plug-in observability library</strong> (Spring Boot starter; core + starter modules) that adds metrics and distributed tracing to Spring Boot services with no business-code changes.",
+      "Auto-instrumenting methods across all layers via <strong>Spring AOP <code>within()</code> pointcuts</strong> (no per-bean annotation); exporting 8 metrics to Prometheus/Grafana and request traces to Zipkin to pinpoint the exact method/service behind latency or errors.",
+      "Correlating logs via <strong>SLF4J MDC</strong> (traceId/spanId), validated across two demo services; benchmarked agent overhead and scoped <strong>WebSocket trace-context propagation</strong> as the next problem."
     ],
-    technologies: ["Java", "Spring Boot", "Enterprise Architecture", "System Design"]
+    technologies: ["Java", "Spring Boot", "Spring AOP / AspectJ", "Prometheus", "Grafana", "Zipkin", "Micrometer", "SLF4J MDC"]
   },
   {
     id: 2,
