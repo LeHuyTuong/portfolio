@@ -184,11 +184,23 @@
 
 /* Print Overrides */
 @media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
     body * {
         visibility: hidden;
     }
     .resume-container, .resume-container * {
         visibility: visible;
+    }
+    .resume-page {
+        display: block; /* Fix flex layout issues in print */
+        padding: 0;
+        margin: 0;
+        background: white;
     }
     .resume-container {
         position: absolute;
@@ -197,7 +209,7 @@
         width: 100%;
         max-width: none;
         box-shadow: none;
-        padding: 0 14mm; /* side margins; top/bottom of every page come from the repeating .page-space rows */
+        padding: 0; 
         min-height: auto;
     }
     .experience-item,
@@ -213,33 +225,9 @@
     .no-print {
         display: none !important;
     }
-    .resume-page {
-        padding: 0;
-        background: white;
-    }
 }
 
 @page {
     size: A4;
-    margin: 0; /* zero margin = browser has no room to draw its header (date/title) and footer (URL/page number) */
-}
-
-/* Table wrapper: browsers repeat thead/tfoot on every printed page,
-   so the empty .page-space row becomes a real top/bottom margin per page
-   while @page margin stays 0 (no browser header/footer). */
-.print-layout {
-    width: 100%;
-    border-collapse: collapse;
-}
-.print-layout td {
-    padding: 0;
-    vertical-align: top;
-}
-.page-space {
-    height: 0; /* invisible on screen */
-}
-@media print {
-    .page-space {
-        height: 3mm; /* top & bottom breathing room on every page */
-    }
+    margin: 12mm 15mm; /* Give standard margins so the browser prints correctly without clipping */
 }

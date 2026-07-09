@@ -22,9 +22,6 @@ const Resume = () => {
             </div>
 
             <div className="resume-container">
-                <table className="print-layout">
-                    <thead><tr><td><div className="page-space"></div></td></tr></thead>
-                    <tbody><tr><td>
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
                     <p className="resume-title">Java Backend Developer</p>
@@ -152,9 +149,6 @@ const Resume = () => {
                     ))}
                     <p style={{ margin: '4px 0 0 0' }}><strong>English:</strong> <a className="cert-link" href="https://lehuytuong.vercel.app/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS) — comfortable reading technical documentation.</p>
                 </section>
-                    </td></tr></tbody>
-                    <tfoot><tr><td><div className="page-space"></div></td></tr></tfoot>
-                </table>
             </div>
         </div>
     );
