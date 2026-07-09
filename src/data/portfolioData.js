@@ -70,7 +70,8 @@ export const skills = {
   "Observability": [
     { name: "Prometheus", tier: "normal" },
     { name: "Grafana", tier: "normal" },
-    { name: "Zipkin", tier: "normal" },
+    { name: "Tempo", tier: "normal" },
+    { name: "Loki", tier: "normal" },
     { name: "Micrometer / Spring Actuator", tier: "normal" },
     { name: "Distributed Tracing", tier: "primary" },
     { name: "SLF4J MDC", tier: "normal" }
@@ -261,13 +262,13 @@ export const experiences = [
     title: "Software Engineer Trainee — Viettel Digital Talent",
     company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",
-    description: "Selected for Viettel’s competitive digital talent program. Building a plug-in observability library for Spring Boot microservices — prototype stage, targeting banking/fintech use cases.",
+    description: "Selected for Viettel's competitive digital talent program. Building a non-invasive Spring Boot observability starter targeting banking/fintech microservices, with distributed tracing extended into WebSocket.",
     responsibilities: [
-      "Building a <strong>plug-in observability library</strong> (Spring Boot starter; core + starter modules) that adds metrics and distributed tracing to Spring Boot services with no business-code changes.",
-      "Auto-instrumenting methods across all layers via <strong>Spring AOP <code>within()</code> pointcuts</strong> (no per-bean annotation); exporting 8 metrics to Prometheus/Grafana and request traces to Zipkin to pinpoint the exact method/service behind latency or errors.",
-      "Correlating logs via <strong>SLF4J MDC</strong> (traceId/spanId), validated across two demo services; benchmarked agent overhead and scoped <strong>WebSocket trace-context propagation</strong> as the next problem."
+      "Building a <strong>non-invasive Spring Boot observability starter</strong> that auto-instruments <strong>HTTP/JDBC/method-level tracing</strong> with zero business-code change, correlating Metrics–Traces–Logs by a single traceId on Grafana (Prometheus/Tempo/Loki).",
+      "Extending distributed tracing to <strong>WebSocket at the message level</strong> via a JSON trace-context envelope — keeping one traceId across HTTP↔WebSocket↔JDBC, a gap default APM/OpenTelemetry agents miss.",
+      "Benchmarking overhead with <strong>k6</strong> (+0.1–1 ms/request; ~0% for WebSocket); validated end-to-end on two demo services (wallet↔ledger), including deadlock and error traces."
     ],
-    technologies: ["Java", "Spring Boot", "Spring AOP / AspectJ", "Prometheus", "Grafana", "Zipkin", "Micrometer", "SLF4J MDC"]
+    technologies: ["Java", "Spring Boot", "Spring AOP / AspectJ", "Prometheus", "Grafana", "Tempo", "Loki", "WebSocket", "k6"]
   },
   {
     id: 2,

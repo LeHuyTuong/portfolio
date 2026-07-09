@@ -55,9 +55,9 @@ const Resume = () => {
                             <span className="date-range">Apr 2026 – Present</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Developing a plug-in <strong>observability library</strong> for Java/Spring Boot microservices (prototype stage).</li>
-                            <li>Prototyping non-invasive tracing (Servlet Filter, HandlerInterceptor, AOP) as a <strong>Spring Boot starter</strong>.</li>
-                            <li>Correlating logs via <strong>SLF4J MDC</strong> (traceId/spanId); validated across two local demo services.</li>
+                            <li>Built a <strong>non-invasive Spring Boot observability starter</strong> (HTTP/JDBC/method tracing) correlating Metrics–Traces–Logs by one traceId on Grafana (Prometheus/Tempo/Loki).</li>
+                            <li>Extended tracing to <strong>WebSocket at message level</strong> via a JSON trace-context envelope, keeping one traceId across HTTP↔WebSocket↔JDBC.</li>
+                            <li>Benchmarked overhead with <strong>k6</strong> (+0.1–1 ms/request; ~0% WebSocket); validated end-to-end on two demo services (wallet↔ledger), incl. deadlock/error traces.</li>
                         </ul>
                     </div>
 
