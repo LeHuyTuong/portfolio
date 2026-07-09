@@ -104,31 +104,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Geometric banking pattern — subtle ledger lines + diamond grid */
+/* Modern dotted grid + ambient glow */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background:
-    /* Vertical ledger rules — banking aesthetic */
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 199px,
-      var(--border-color) 199px,
-      var(--border-color) 200px
-    ),
-    /* Subtle diamond grid */
-    linear-gradient(45deg, var(--border-color) 1px, transparent 1px),
-    linear-gradient(-45deg, var(--border-color) 1px, transparent 1px);
-  background-size:
-    200px 100%,
-    40px 40px,
-    40px 40px;
-  mask-image: radial-gradient(ellipse at 50% 0%, black 15%, transparent 65%);
+  background-image: 
+    radial-gradient(circle at 15% 0%, rgba(30, 58, 138, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(13, 148, 136, 0.06), transparent 40%),
+    radial-gradient(rgba(100, 116, 139, 0.15) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px;
+  background-position: 0 0, 0 0, center center;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.18;
+}
+
+[data-theme='dark'] body::before {
+  background-image: 
+    radial-gradient(circle at 15% 0%, rgba(59, 130, 246, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(45, 212, 191, 0.10), transparent 40%),
+    radial-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px);
 }
 
 a {
