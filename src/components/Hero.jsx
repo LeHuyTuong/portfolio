@@ -7,10 +7,6 @@ import './HeroStats.css';
 const Hero = () => {
     return (
         <section id="home" className="hero">
-            <div className="hero-bg">
-                <div className="hero-gradient-1"></div>
-                <div className="hero-gradient-2"></div>
-            </div>
 
             <div className="hero-container">
                 <div className="hero-content">
