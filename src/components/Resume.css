@@ -89,7 +89,7 @@
 }
 
 .resume-section {
-    margin-bottom: 11px;
+    margin-bottom: 9px;
 }
 
 .resume-section h2 {
@@ -240,6 +240,6 @@
 }
 @media print {
     .page-space {
-        height: 5mm; /* top & bottom breathing room on every page */
+        height: 3mm; /* top & bottom breathing room on every page */
     }
 }

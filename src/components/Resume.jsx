@@ -129,8 +129,9 @@ const Resume = () => {
                             <li style={{ marginBottom: '2px' }}><strong>Languages & Core:</strong> Java 17 (OOP, Collections, Exception Handling), SQL.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring Core, Spring Security, Spring Data JPA, Hibernate.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Architecture & Data:</strong> RESTful API, gRPC, microservices, CQRS-style, idempotency keys; MySQL, PostgreSQL — indexing, query optimization; Redis (caching, distributed locking — key-value NoSQL).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Security & Testing:</strong> JWT, RBAC, BCrypt/SHA-256 hashing, rate limiting, OWASP Top 10 (familiar); JUnit 5, Mockito; distributed tracing (W3C Trace Context, MDC).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>DevOps & Messaging:</strong> Docker, Docker Compose, GitHub Actions (CI/CD), Git (GitFlow), GitLab CI (concepts); RabbitMQ & Kafka (fundamentals); Transactional Outbox (side project).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Security & Testing:</strong> JWT, RBAC, BCrypt/SHA-256 hashing, rate limiting, OWASP Top 10; JUnit 5, Mockito, k6 (load testing).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Observability:</strong> Prometheus, Grafana, Tempo, Loki, Micrometer/Spring Actuator, Spring AOP/AspectJ; distributed tracing (W3C Trace Context, SLF4J MDC).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>DevOps & Messaging:</strong> Docker, Docker Compose, GitHub Actions (CI/CD), Git (GitFlow), GitLab CI; RabbitMQ & Kafka (fundamentals); Transactional Outbox (side project).</li>
                         </ul>
                     </div>
                 </section>
