@@ -48,7 +48,6 @@ export const professionalSummary = {
 export const softSkills = [
   { name: "Team Collaboration", icon: "👥", description: "Effective communication within Agile teams and cross-functional syncs with BA/QA." },
   { name: "Technical Documentation", icon: "📝", description: "Producing clear API documentation and architecture diagrams for maintainability." },
-  { name: "Problem Solving", icon: "🔍", description: "Analytical approach to debugging complex race conditions and performance bottlenecks." },
   { name: "Adaptability", icon: "🚀", description: "Rapidly learning and applying new technologies to meet business-critical requirements." }
 ];
 
