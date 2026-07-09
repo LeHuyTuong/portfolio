@@ -27,7 +27,7 @@ const Resume = () => {
                     <tbody><tr><td>
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
-                    <p className="resume-title">Java Backend Developer | Spring Boot · Microservices · Payment Systems</p>
+                    <p className="resume-title">Java Backend Developer</p>
                     <div className="resume-contact">
                         <span>{personalInfo.phone}</span>
                         <span className="divider">|</span>
