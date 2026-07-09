@@ -145,6 +145,31 @@ export const projects = [
     featured: true
   },
   {
+    id: 6,
+    category: "enterprise",
+    categoryLabel: "🧠 AI / RAG System",
+    title: "Vietnamese History RAG Platform",
+    displayName: "Hybrid Retrieval-Augmented Generation Platform",
+    role: "Backend Engineer",
+    period: "2026",
+    problem: "Answering open-ended Vietnamese history questions grounded in 15 volumes of source books — with citations, and without hallucinating relationships between historical figures.",
+    solution: "Built a polyglot microservices platform: a Spring Boot gateway fronting a Python FastAPI RAG service, combining vector search (Qdrant) with a Neo4j knowledge graph for relationship-aware answers.",
+    challenge: "Vector search alone misses entity relationships (lineage, succession, factions), and naive re-ingestion duplicates chunks in the vector store.",
+    architectureNote: "Ingestion pipeline extract→chunk→embed→upsert with delete-before-upsert re-ingest dedup and sourceId namespacing (books vs articles). A question router keeps vector search always-on and auto-enables graph retrieval for relationship queries; chunk metadata is denormalized into the Qdrant payload so filtering needs no MySQL JOIN.",
+    whatILearned: "Designing cross-language service boundaries (Java↔Python), hybrid vector/graph retrieval, and grounding LLM answers with verifiable citations and web fallback.",
+    highlights: [
+      "Architected a polyglot system — React SPA → Spring Boot gateway (JWT, Flyway, MySQL) → Python FastAPI RAG service.",
+      "Built the full ingestion pipeline (extract → chunk with overlap → embed → upsert to Qdrant) with re-ingest deduplication.",
+      "Implemented hybrid retrieval: a question router runs semantic vector search by default and auto-triggers Neo4j graph search for relationship questions.",
+      "Denormalized chunk metadata into Qdrant payloads to enable filtered search without cross-database JOINs.",
+      "Added grounded answers with citations, FAQ caching, and web-search fallback when local context is insufficient."
+    ],
+    technologies: ["Java 17", "Spring Boot 3", "Python", "FastAPI", "Qdrant", "Neo4j", "React", "Docker", "Gemini"],
+    github: "https://github.com/LeHuyTuong/RAG-history",
+    demo: null,
+    featured: true
+  },
+  {
     id: 2,
     category: "fintech",
     categoryLabel: "⭐ Core Team Project",
