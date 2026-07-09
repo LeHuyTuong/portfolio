@@ -58,7 +58,7 @@ const Resume = () => {
                         </ul>
                     </div>
 
-                    <div className="experience-item" style={{ marginTop: '0.6rem' }}>
+                    <div className="experience-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
                             <strong>FPT Software — Backend Engineer Intern</strong>
                             <span className="date-range">Dec 2025 – Apr 2026</span>
@@ -70,7 +70,7 @@ const Resume = () => {
                         </ul>
                     </div>
 
-                    <div className="experience-item" style={{ marginTop: '0.6rem' }}>
+                    <div className="experience-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
                             <strong>TCH Company — Software Engineer (Freelance)</strong>
                             <span className="date-range">Oct 2025 – Present</span>
@@ -102,7 +102,7 @@ const Resume = () => {
                         </ul>
                     </div>
 
-                    <div className="project-item" style={{ marginTop: '0.6rem' }}>
+                    <div className="project-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
                             <strong>Card Issuing & Ledger Core System</strong>
                             <span className="date-range">2025</span>
