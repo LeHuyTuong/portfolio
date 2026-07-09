@@ -1,12 +1,29 @@
 import useScrollReveal from '../hooks/useScrollReveal';
 import { skills } from '../data/portfolioData';
+import { CodeIcon, ServerIcon, MonitorIcon, DatabaseIcon, BuildingIcon, ToolIcon, BankIcon } from './Icons';
 import './Skills.css';
+
+const getCategoryIcon = (category) => {
+    switch (category) {
+        case "Languages": return <CodeIcon size={22} />;
+        case "Backend & Frameworks": return <ServerIcon size={22} />;
+        case "Observability": return <MonitorIcon size={22} />;
+        case "Databases & Caching": return <DatabaseIcon size={22} />;
+        case "Architecture & Engineering": return <BuildingIcon size={22} />;
+        case "DevOps & Tools": return <ToolIcon size={22} />;
+        case "Domain Exposure": return <BankIcon size={22} />;
+        default: return <CodeIcon size={22} />;
+    }
+};
 
 const SkillCategory = ({ category, skillList, index }) => {
     const ref = useScrollReveal();
     return (
         <div ref={ref} className="skill-category reveal" style={{ transitionDelay: `${index * 0.1}s` }}>
             <div className="category-header">
+                <div className="category-icon-wrapper">
+                    {getCategoryIcon(category)}
+                </div>
                 <h3>{category}</h3>
             </div>
             <div className="skills-tags">
