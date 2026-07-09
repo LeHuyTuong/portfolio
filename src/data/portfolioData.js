@@ -55,58 +55,68 @@ export const softSkills = [
 export const skills = {
   "Languages": [
     { name: "Java 17/21", tier: "primary" },
-    { name: "SQL", tier: "primary" }
+    { name: "Python", tier: "normal" },
+    { name: "SQL", tier: "primary" },
+    { name: "JavaScript / TypeScript", tier: "normal" }
   ],
   "Backend & Frameworks": [
-    { name: "Spring Boot", tier: "primary" },
-    { name: "Spring Security", tier: "normal" },
+    { name: "Spring Boot 3.x", tier: "primary" },
+    { name: "Spring Security / JWT", tier: "primary" },
     { name: "Spring Data JPA", tier: "primary" },
     { name: "Hibernate", tier: "primary" },
-    { name: "REST API", tier: "primary" },
+    { name: "RESTful API", tier: "primary" },
     { name: "gRPC", tier: "primary" },
+    { name: "FastAPI", tier: "normal" },
+    { name: "Spring Cloud", tier: "normal" },
     { name: "Spring AOP / AspectJ", tier: "normal" },
-    { name: "Spring WebSocket", tier: "low" }
+    { name: "WebSocket", tier: "normal" }
   ],
-  "Observability": [
-    { name: "Prometheus", tier: "normal" },
-    { name: "Grafana", tier: "normal" },
-    { name: "Tempo", tier: "normal" },
-    { name: "Loki", tier: "normal" },
-    { name: "Micrometer / Spring Actuator", tier: "normal" },
-    { name: "Distributed Tracing", tier: "primary" },
-    { name: "SLF4J MDC", tier: "normal" }
+  "Architecture & Engineering": [
+    { name: "Microservices", tier: "primary" },
+    { name: "Clean Architecture", tier: "primary" },
+    { name: "CQRS", tier: "primary" },
+    { name: "Event-Driven", tier: "primary" },
+    { name: "Distributed Locking", tier: "primary" },
+    { name: "Transactional Outbox", tier: "primary" },
+    { name: "SOLID Principles", tier: "normal" },
+    { name: "Design Patterns", tier: "normal" },
+    { name: "Multithreading", tier: "normal" }
   ],
   "Databases & Caching": [
     { name: "PostgreSQL", tier: "primary" },
-    { name: "Redis", tier: "normal" },
-    { name: "MySQL", tier: "normal" },
-    { name: "SQL Server", tier: "normal" }
+    { name: "MySQL", tier: "primary" },
+    { name: "Redis", tier: "primary" },
+    { name: "MS SQL Server", tier: "normal" },
+    { name: "Neo4j (GraphDB)", tier: "normal" },
+    { name: "Qdrant (VectorDB)", tier: "normal" }
   ],
-  "Architecture & Engineering": [
-    { name: "Monolith (Module)", tier: "primary" },
-    { name: "Microservices", tier: "normal" },
-    { name: "Clean Architecture", tier: "primary" },
-    { name: "CQRS", tier: "normal" },
-    { name: "Distributed Locking", tier: "low" },
-    { name: "Multithreading", tier: "low-white" },
-    { name: "SOLID", tier: "low" },
-    { name: "Design Patterns", tier: "normal" }
+  "Observability": [
+    { name: "Prometheus", tier: "primary" },
+    { name: "Grafana", tier: "primary" },
+    { name: "Tempo", tier: "primary" },
+    { name: "Loki", tier: "normal" },
+    { name: "Distributed Tracing", tier: "primary" },
+    { name: "SLF4J MDC", tier: "normal" },
+    { name: "Micrometer", tier: "normal" }
   ],
   "DevOps & Tools": [
-    { name: "Docker", tier: "primary" },
+    { name: "Docker & Compose", tier: "primary" },
+    { name: "GitHub Actions (CI/CD)", tier: "primary" },
+    { name: "GitLab CI", tier: "normal" },
     { name: "Nginx", tier: "normal" },
-    { name: "Git", tier: "normal" },
-    { name: "Maven", tier: "normal" },
-    { name: "GitHub Actions", tier: "primary" },
     { name: "Postman", tier: "primary" },
-    { name: "Swagger", tier: "primary" }
+    { name: "Swagger / OpenAPI", tier: "primary" },
+    { name: "Playwright", tier: "normal" },
+    { name: "k6 (Load Testing)", tier: "normal" },
+    { name: "JUnit 5 & Mockito", tier: "primary" }
   ],
   "Domain Exposure": [
-    { name: "Payment Integration", tier: "primary" },
+    { name: "FinTech & Banking", tier: "primary" },
+    { name: "Payment Gateway (VNPay, Stripe)", tier: "primary" },
     { name: "Wallet Transactions", tier: "primary" },
-    { name: "Webhook Handling", tier: "primary" },
-    { name: "KYC Flow", tier: "low-white" },
-    { name: "Reporting APIs", tier: "primary" }
+    { name: "RAG / AI Systems", tier: "primary" },
+    { name: "Webhook Handling", tier: "normal" },
+    { name: "Idempotency", tier: "normal" }
   ]
 };
 
