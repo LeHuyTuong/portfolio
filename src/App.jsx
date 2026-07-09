@@ -23,8 +23,8 @@ const LandingPage = () => {
         <main id="main-content">
           <Hero />
           <About />
-          <Skills />
           <Experience />
+          <Skills />
           <Education />
           <Projects />
           <Architecture />
