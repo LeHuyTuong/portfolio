@@ -120,7 +120,7 @@ export const skills = {
 };
 
 export const stats = {
-  javaProjects: "8+",
+  javaProjects: "20+",
   companies: "1+",
   labels: {
     java: "Technical Projects",
