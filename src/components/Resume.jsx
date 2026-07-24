@@ -72,7 +72,7 @@ const Resume = () => {
 
                     <div className="experience-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
-                            <strong>TCH Company — Software Engineer (Freelance)</strong>
+                            <strong>TCH Solutions — Software Engineer (Freelance)</strong>
                             <span className="date-range">Oct 2025 – Present</span>
                         </div>
                         <ul className="resume-bullets">

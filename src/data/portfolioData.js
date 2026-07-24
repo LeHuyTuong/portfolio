@@ -321,8 +321,8 @@ export const experiences = [
   {
     id: 3,
     date: "Oct 2025 - Present",
-    title: "Software Engineer (Freelance) — TCH Company",
-    company: "TCH Company",
+    title: "Software Engineer (Freelance) — TCH Solutions",
+    company: "TCH Solutions",
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built and optimized backend infrastructures for enterprise client platforms, focusing on performance and automation.",
     responsibilities: [
