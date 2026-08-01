@@ -39,7 +39,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Java backend developer with ~1 year of combined internship and freelance experience building payment- and transaction-focused services on Java 17 and Spring Boot 3. Hands-on with REST/gRPC microservices, Redis caching and distributed locking, JWT/RBAC security, SQL optimization, and JUnit 5/Mockito testing.</p>
+                    <p className="summary-text">Java backend developer with ~1 year of combined internship and contract experience building payment- and transaction-focused services on Java 17 and Spring Boot 3. Hands-on with REST/gRPC microservices, Redis caching and distributed locking, JWT/RBAC security, SQL optimization, and JUnit 5/Mockito testing.</p>
                 </section>
 
                 <section className="resume-section">
@@ -48,7 +48,7 @@ const Resume = () => {
 
                     <div className="experience-item">
                         <div className="item-header">
-                            <strong>Viettel Digital — Software Engineer Trainee (Viettel Digital Talent)</strong>
+                            <strong>Viettel Digital — Java Backend Developer</strong>
                             <span className="date-range">Apr 2026 – Present</span>
                         </div>
                         <ul className="resume-bullets">
@@ -72,7 +72,7 @@ const Resume = () => {
 
                     <div className="experience-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
-                            <strong>TCH Solutions — Software Engineer (Freelance)</strong>
+                            <strong>NeoTCH Website Services — Freelancer</strong>
                             <span className="date-range">Oct 2025 – Present</span>
                         </div>
                         <ul className="resume-bullets">

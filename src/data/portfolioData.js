@@ -293,7 +293,7 @@ export const experiences = [
   {
     id: 1,
     date: "Apr 2026 - Present",
-    title: "Software Engineer Trainee — Viettel Digital Talent",
+    title: "Java Backend Developer — Viettel Digital",
     company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",
     description: "Selected for Viettel's competitive digital talent program. Building a non-invasive Spring Boot observability starter targeting banking/fintech microservices, with distributed tracing extended into WebSocket.",
@@ -321,8 +321,8 @@ export const experiences = [
   {
     id: 3,
     date: "Oct 2025 - Present",
-    title: "Software Engineer (Freelance) — TCH Solutions",
-    company: "TCH Solutions",
+    title: "Backend Developer — NeoTCH Website Services",
+    company: "NeoTCH Website Services",
     companyUrl: "https://dichvuwebsitetch.com/",
     description: "Built and optimized backend infrastructures for enterprise client platforms, focusing on performance and automation.",
     responsibilities: [
