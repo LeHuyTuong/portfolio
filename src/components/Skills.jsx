@@ -1,6 +1,6 @@
 import useScrollReveal from '../hooks/useScrollReveal';
 import { skills } from '../data/portfolioData';
-import { CodeIcon, ServerIcon, MonitorIcon, DatabaseIcon, BuildingIcon, ToolIcon, BankIcon } from './Icons';
+import { CodeIcon, ServerIcon, MonitorIcon, DatabaseIcon, BuildingIcon, ToolIcon, BankIcon, SparklesIcon } from './Icons';
 import './Skills.css';
 
 const getCategoryIcon = (category) => {
@@ -11,6 +11,7 @@ const getCategoryIcon = (category) => {
         case "Databases & Caching": return <DatabaseIcon size={22} />;
         case "Architecture & Engineering": return <BuildingIcon size={22} />;
         case "DevOps & Tools": return <ToolIcon size={22} />;
+        case "AI-Assisted Development": return <SparklesIcon size={22} />;
         case "Domain Exposure": return <BankIcon size={22} />;
         default: return <CodeIcon size={22} />;
     }

@@ -109,6 +109,14 @@ export const skills = {
     { name: "k6 (Load Testing)", tier: "normal" },
     { name: "JUnit 5 & Mockito", tier: "primary" }
   ],
+  "AI-Assisted Development": [
+    { name: "Reviewing & verifying AI output", tier: "primary" },
+    { name: "Scaffolding controller/service/repository", tier: "primary" },
+    { name: "Refactoring & optimization", tier: "primary" },
+    { name: "Unit & Integration test generation", tier: "primary" },
+    { name: "Prompt design for code tasks", tier: "normal" },
+    { name: "Playwright-driven UI verification", tier: "normal" }
+  ],
   "Domain Exposure": [
     { name: "FinTech & Banking", tier: "primary" },
     { name: "Payment Gateway (VNPay, Stripe)", tier: "primary" },
