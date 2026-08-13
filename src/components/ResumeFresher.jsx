@@ -149,7 +149,6 @@ const ResumeFresher = () => {
                             <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring Core, Spring Security, Spring Data JPA, Hibernate.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Architecture & Data:</strong> RESTful API, gRPC, microservices, idempotency keys; MySQL, PostgreSQL — indexing, query optimization; Redis (caching, distributed locking).</li>
                             <li style={{ marginBottom: '2px' }}><strong>Security & Testing:</strong> JWT, RBAC, BCrypt (password hashing), SHA-256 (integrity/checksum), rate limiting; JUnit 5, Mockito, k6 (load testing).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>AI-Assisted Development:</strong> code scaffolding, refactoring, Unit/Integration test generation — reviewing and verifying AI output before it ships.</li>
                             <li style={{ marginBottom: '2px' }}><strong>Observability & DevOps:</strong> Prometheus, Grafana, Tempo, Loki, Micrometer/Actuator, Spring AOP; distributed tracing (W3C Trace Context, SLF4J MDC); Docker, Docker Compose, GitHub Actions (CI/CD), Git (GitFlow).</li>
                         </ul>
                     </div>
