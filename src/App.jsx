@@ -14,6 +14,11 @@ import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
 
 const Resume = lazy(() => import('./components/Resume'));
+const ResumeFresher = lazy(() => import('./components/ResumeFresher'));
+
+const ResumeFallback = () => (
+  <div style={{ padding: '2rem', textAlign: 'center' }}>Loading resume...</div>
+);
 
 const LandingPage = () => {
   return (
@@ -44,8 +49,19 @@ function App() {
         path="/resume"
         element={
           <ErrorBoundary>
-            <Suspense fallback={<div style={{ padding: '2rem', textAlign: 'center' }}>Loading resume...</div>}>
+            <Suspense fallback={<ResumeFallback />}>
               <Resume />
+            </Suspense>
+          </ErrorBoundary>
+        }
+      />
+      {/* Tailored variants — one sublink per role/company, not linked from the nav */}
+      <Route
+        path="/resume/fresher"
+        element={
+          <ErrorBoundary>
+            <Suspense fallback={<ResumeFallback />}>
+              <ResumeFresher />
             </Suspense>
           </ErrorBoundary>
         }

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowDown } from './Icons';
+import ResumeVariantTabs from './ResumeVariantTabs';
 import './Resume.css';
-import { personalInfo, education, skills, projects, experiences } from '../data/portfolioData';
+import { personalInfo, education } from '../data/portfolioData';
 
 const Resume = () => {
     const handlePrint = () => {
@@ -19,6 +20,7 @@ const Resume = () => {
                     <ArrowDown />
                     Download PDF
                 </button>
+                <ResumeVariantTabs active="junior" />
             </div>
 
             <div className="resume-container">
