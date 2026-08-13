@@ -30,6 +30,25 @@ const ProjectCard = ({ project, index }) => {
             </div>
 
             <h3 className="project-title">{project.title}</h3>
+
+            {/* Shipped products lead with a screenshot of the running deployment —
+                the whole point is that it is live, not described. */}
+            {project.image && project.demo && (
+                <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-preview"
+                    aria-label={`Open the live ${project.title} deployment`}
+                >
+                    <img src={project.image} alt={project.imageAlt || `${project.title} screenshot`} loading="lazy" />
+                    <span className="project-preview-cta">
+                        Visit live site
+                        <ExternalLink size={14} />
+                    </span>
+                </a>
+            )}
+
             <p className="project-summary">{project.solution}</p>
 
             <ul className="project-highlights">
@@ -38,10 +57,30 @@ const ProjectCard = ({ project, index }) => {
                 ))}
             </ul>
 
+            {project.evidence && (
+                <figure className="project-evidence">
+                    <a href={project.evidence.url} target="_blank" rel="noopener noreferrer">
+                        <img src={project.evidence.image} alt={project.evidence.alt} loading="lazy" />
+                    </a>
+                    <figcaption>{project.evidence.caption}</figcaption>
+                </figure>
+            )}
+
             <div className="project-tech">
                 {project.technologies.map((tech, i) => (
                     <span key={i} className="tech-tag">{tech}</span>
                 ))}
+                {project.productPage && (
+                    <a
+                        href={project.productPage.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="tech-tag tech-tag-link"
+                    >
+                        {project.productPage.label}
+                        <ExternalLink size={12} />
+                    </a>
+                )}
             </div>
         </article>
     );
@@ -53,7 +92,8 @@ const Projects = () => {
     const categories = [
         { key: 'all', label: 'All Projects' },
         { key: 'fintech', label: '🏦 Fintech' },
-        { key: 'enterprise', label: '⚡ Enterprise' }
+        { key: 'enterprise', label: '⚡ Enterprise' },
+        { key: 'product', label: '🎨 Product' }
     ];
 
     const filteredProjects = filter === 'all'
