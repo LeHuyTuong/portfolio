@@ -94,6 +94,151 @@
     font-weight: 500;
 }
 
+/* ===== LIVE GALLERY ===== */
+.project-gallery {
+    margin: 12px 0 16px;
+}
+
+.gallery-stage {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-secondary);
+    outline: none;
+}
+
+.gallery-stage:focus-visible {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.gallery-frame {
+    position: relative;
+    display: block;
+    /* Reserve the slot so swapping slides never shifts the card height */
+    aspect-ratio: 16 / 10;
+    line-height: 0;
+}
+
+.gallery-frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.gallery-frame img.is-current {
+    opacity: 1;
+}
+
+.gallery-cta {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(17, 24, 39, 0.82);
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.gallery-stage:hover .gallery-cta,
+.gallery-stage:focus-within .gallery-cta {
+    opacity: 1;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 3px;
+    border: none;
+    border-radius: var(--radius-full);
+    background: rgba(17, 24, 39, 0.62);
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity var(--transition-normal), background var(--transition-normal);
+}
+
+.gallery-nav.prev { left: 10px; }
+.gallery-nav.next { right: 10px; }
+
+.gallery-nav:hover { background: rgba(17, 24, 39, 0.85); }
+
+.gallery-stage:hover .gallery-nav,
+.gallery-stage:focus-within .gallery-nav {
+    opacity: 1;
+}
+
+.gallery-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    padding: 3px 9px;
+    border-radius: var(--radius-full);
+    background: rgba(17, 24, 39, 0.62);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.gallery-caption {
+    margin: 8px 0 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.gallery-dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.gallery-dot {
+    width: 22px;
+    height: 4px;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-full);
+    background: var(--border-color);
+    cursor: pointer;
+    transition: background var(--transition-normal);
+}
+
+.gallery-dot:hover { background: var(--text-muted); }
+.gallery-dot.is-active { background: var(--primary); }
+
+/* No hover on touch — keep the controls reachable */
+@media (hover: none) {
+    .gallery-nav,
+    .gallery-cta {
+        opacity: 1;
+    }
+}
+
 /* ===== LIVE PREVIEW ===== */
 .project-preview {
     position: relative;

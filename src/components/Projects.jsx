@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import { GitHub, ExternalLink } from './Icons';
+import ProjectGallery from './ProjectGallery';
 import { projects } from '../data/portfolioData';
 import './Projects.css';
 
@@ -31,9 +32,13 @@ const ProjectCard = ({ project, index }) => {
 
             <h3 className="project-title">{project.title}</h3>
 
-            {/* Shipped products lead with a screenshot of the running deployment —
+            {/* Shipped products lead with real screens from the running deployment —
                 the whole point is that it is live, not described. */}
-            {project.image && project.demo && (
+            {project.gallery && project.demo && (
+                <ProjectGallery slides={project.gallery} href={project.demo} title={project.title} />
+            )}
+
+            {!project.gallery && project.image && project.demo && (
                 <a
                     href={project.demo}
                     target="_blank"

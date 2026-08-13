@@ -288,13 +288,13 @@ export const projects = [
     role: "Product Owner & Full-stack",
     period: "2026",
     problem: "Buying a laptop in Vietnam means hundreds of SKUs, specs nobody can read, and reviews that contradict each other — people burn weeks on the decision and still aren't sure they got it right.",
-    solution: "A 7-question quiz that scores stated needs against a curated catalogue and returns the top 3 matches with a match score and a plain-language reason, plus price links across 7 Vietnamese retailers.",
+    solution: "A 9-question quiz that scores stated needs against a curated catalogue and returns the top 3 matches with a match score and a plain-language reason, plus price links across 7 Vietnamese retailers.",
     challenge: "Staying vendor-neutral. The product doesn't sell hardware, so rankings can't be driven by margin — which means the scoring function has to be defensible on its own terms.",
-    architectureNote: "Next.js App Router on Vercel. Quiz answers map to weighted requirement vectors, ranked against a curated 200+ laptop catalogue; only matches at or above 70% are surfaced, each with the reason it scored.",
+    architectureNote: "Next.js App Router on Vercel, with email/password accounts that persist quiz history. Answers map to weighted requirement vectors scored against the laptop catalogue across CPU/GPU benchmarks, 3–5 year durability and budget fit; the top 3 come back with a match score, a budget breakdown, and an AI note on where the picks fall short.",
     whatILearned: "Owning a product end to end — framing the problem, pitching it, shipping it, then reading real feedback. Also where my gaps are: the business and marketing side, not the build.",
     highlights: [
       "Owned the product end to end — idea, problem framing, implementation, and fixing what broke after launch.",
-      "Built a 7-question quiz that ranks a curated 200+ laptop catalogue and returns the top 3 matches at ≥70% with a plain-language reason for each.",
+      "Built a 9-question quiz that ranks the laptop catalogue and returns the top 3 matches with a match score and a plain-language reason for each.",
       "Kept recommendations vendor-neutral by aggregating prices across 7 Vietnamese retailers instead of selling hardware.",
       "Shipped a separate PC valuation tool and a new-vs-used comparison that states the tradeoffs explicitly.",
       "Pitched into the Top 20 of FPT University's EXE startup competition; reached #4 on the Unikorn.vn product leaderboard."
@@ -304,7 +304,13 @@ export const projects = [
     demo: "https://wisetechlap.vercel.app/",
     productPage: { url: "https://unikorn.vn/p/wisetech", label: "Unikorn" },
     image: "/projects/wisetech.jpg",
-    imageAlt: "WiseTech landing page — a 7-question quiz that returns the top 3 matching laptops with match scores",
+    imageAlt: "WiseTech landing page — a quiz that returns the top 3 matching laptops with match scores",
+    gallery: [
+      { src: "/projects/wisetech.jpg", alt: "WiseTech landing page", caption: "Landing — the pitch, in one screen" },
+      { src: "/projects/wisetech-quiz.jpg", alt: "A quiz question with five weighted options", caption: "Quiz — 9 questions, each answer weighted" },
+      { src: "/projects/wisetech-results.jpg", alt: "Top 3 laptop results with match scores and prices", caption: "Results — top 3 with match score, price and budget fit" },
+      { src: "/projects/wisetech-estimate.jpg", alt: "PC valuation tool with simple and technical input modes", caption: "PC valuation — simple or technical spec entry" }
+    ],
     evidence: {
       image: "/projects/wisetech-unikorn-rank.jpg",
       alt: "Unikorn.vn product leaderboard showing WiseTech ranked #4 with 9 points",
@@ -322,21 +328,29 @@ export const projects = [
     role: "Solo Developer",
     period: "2026",
     problem: "Industrial history usually arrives as disconnected dates, so the causal thread — how Watt's steam engine leads to the Intel 4004 and then to neural networks — never gets drawn.",
-    solution: "A single-page 3D museum you walk through: four industrial eras, 17 artifacts, and cross-era threads that connect one invention to what it made possible.",
-    challenge: "Carrying a guided narrative inside a WebGL scene that has to stay smooth and readable — the 3D can't win over the story it exists to tell.",
-    architectureNote: "Next.js with a Three.js WebGL canvas. Four rooms spanning 1760–1840, 1870–1914, 1969–2010 and 2011–now, a day/night mode that relights the whole scene, and a roughly 6-minute guided path.",
-    whatILearned: "Pacing a narrative in 3D space, and keeping a WebGL scene performant while it carries real content.",
+    solution: "A museum you walk through as a visitor: four era rooms, 17 curated artifacts you can rotate in 3D, and cross-era threads that connect one invention to what it made possible.",
+    challenge: "Making a web page behave like a visit rather than an article — rooms, a route, and a sense of progress, with each exhibit an object you handle instead of a paragraph you skim.",
+    architectureNote: "Next.js with Three.js. Each artifact opens a WebGL viewer on a lit pedestal — drag to rotate, scroll to zoom, expand to fullscreen — beside its story, stats and sourced historical photo. Four rooms span 1760–1840, 1870–1914, 1969–2010 and 2011–now; visitors pick a guided ~6-minute route or free roam while a HUD tracks artifacts seen, badges and time in the museum.",
+    whatILearned: "Pacing a narrative across a route instead of a page, and building visit mechanics — 3D exhibits, progress, badges, a guestbook — that give a static subject a sense of movement.",
     highlights: [
-      "Built a single-page 3D museum in Three.js spanning four industrial eras and 17 artifacts.",
-      "Structured the content as a ~6-minute guided walk through 4 rooms rather than a scrollable list of dates.",
+      "Built an interactive 3D viewer for each artifact in Three.js — drag to rotate, scroll to zoom, expand to fullscreen on a lit pedestal.",
+      "Curated 17 artifacts across four era rooms, each credited to inventor, place and year, with a sourced historical photo alongside the model.",
+      "Paired every exhibit with its story, hard numbers, and a plain-language \"why it matters\" so the object carries an argument, not just a date.",
       "Linked artifacts across eras with cross-time threads so each invention shows what it enabled downstream.",
-      "Added a day/night mode that relights the entire scene and changes its mood."
+      "Offered a guided ~6-minute route or free roam on entry, with visit mechanics: artifacts-seen counter, badges, per-room stats, guestbook, and a build-your-own-tour tool."
     ],
     technologies: ["Next.js", "React", "Three.js", "WebGL", "Vercel"],
     github: null,
     demo: "https://atrium-delta-nine.vercel.app/",
     image: "/projects/atrium.jpg",
-    imageAlt: "Atrium landing page — a 3D industrial history museum spanning four eras from steam to silicon",
+    imageAlt: "Atrium landing page — an industrial history museum spanning four eras from steam to silicon",
+    gallery: [
+      { src: "/projects/atrium.jpg", alt: "Atrium landing page asking how we went from steam to silicon", caption: "Entrance — the framing question" },
+      { src: "/projects/atrium-map.jpg", alt: "Museum map showing four industrial era rooms", caption: "Museum map — four eras, pick your room" },
+      { src: "/projects/atrium-room.jpg", alt: "Industry 1.0 room showing curated artifacts with attribution", caption: "Industry 1.0 — artifacts credited to inventor, place and year" },
+      { src: "/projects/atrium-artifact.jpg", alt: "Clermont steamship artifact with 3D viewer, stats and sourced historical photo", caption: "Artifact — 3D model beside its story, stats and sourced photo" },
+      { src: "/projects/atrium-3d.jpg", alt: "Fullscreen WebGL viewer showing the Clermont steamship model on a lit pedestal", caption: "Fullscreen 3D — drag to rotate, scroll to zoom" }
+    ],
     featured: true
   }
 ];
