@@ -28,7 +28,7 @@ const ResumeGeneral = () => {
                 <ResumeVariantTabs active="general" />
             </div>
 
-            <div className="resume-container">
+            <div className="resume-container resume-roomy">
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
                     <p className="resume-title">Software Engineering Intern — Java Backend & Web</p>
@@ -76,13 +76,32 @@ const ResumeGeneral = () => {
                             <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Team of 4 — 2 BE) | Java 17, Spring Boot 3, MySQL, SSE, Docker, VNPay/PayPal/Stripe (sandbox) | <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">GitHub</a></em>
+                            <em>Backend Developer (Team of 4 — 2 BE) | Java 17, Spring Boot 3, MySQL, SSE, Docker, VNPay/PayPal/Stripe (sandbox) | GitHub: <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a></em>
                         </div>
                         <ul className="resume-bullets">
                             <li>Built deposit, withdrawal, wallet-to-wallet transfer, refund, and payout flows with strict validation.</li>
                             <li>Recorded every transaction with before/after balance snapshots to support auditability across 11 transaction types.</li>
                             <li>Integrated and verified VNPay, PayPal, and Stripe payments (sandbox); built KYC status flows and marketplace listing, buying, and reselling flows.</li>
                             <li>Implemented real-time user notifications using Server-Sent Events (SSE).</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section className="resume-section">
+                    <h2>RESEARCH</h2>
+                    <div className="section-line"></div>
+
+                    <div className="project-item">
+                        <div className="item-header">
+                            <strong>Protocol-Aware Observability for AI Chat Streaming: Tracing and Metrics for SSE and WebSocket</strong>
+                            <span className="date-range">Jun 2026</span>
+                        </div>
+                        <div className="item-sub">
+                            <em>First author; led the study and built the Spring Boot prototype (course research project, team of 5) | GitHub: <a href="https://github.com/LeHuyTuong/RAG-history/blob/main/paper/Group3_Protocol%20Aware%20Observability%20for%20AI%20Chat%20Streaming.pdf" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/RAG-history</a></em>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li>Conducted a PRISMA-guided literature review and built a Spring Boot prototype comparing token-level tracing overhead between SSE and WebSocket.</li>
+                            <li>Measured asymmetric overhead under transport-bound stress: +21% for SSE vs +47% for WebSocket.</li>
                         </ul>
                     </div>
                 </section>
