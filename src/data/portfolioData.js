@@ -360,6 +360,65 @@ export const projects = [
       { src: "/projects/atrium-3d.jpg", alt: "Fullscreen WebGL viewer showing the Clermont steamship model on a lit pedestal", caption: "Fullscreen 3D — drag to rotate, scroll to zoom" }
     ],
     featured: true
+  },
+  {
+    id: 9,
+    category: "product",
+    categoryLabel: "🛍️ E-commerce Frontend",
+    title: "Weloris",
+    displayName: "Watch Store E-commerce UI",
+    role: "Frontend Developer",
+    period: "2026",
+    problem: "Practicing a full e-commerce storefront beyond a basic product list — categories, filtering, and the pre-checkout flow a real watch retailer needs.",
+    solution: "A complete storefront UI: category and brand navigation, wishlist, product comparison, cart, and an editorial section for buying-guide articles.",
+    challenge: "Structuring nested category/brand navigation (men's/women's/couple watches × strap type × brand) without the mega-menu becoming unmanageable.",
+    architectureNote: "Category mega-menus driven by nested route data, with wishlist/cart/compare state kept client-side across the product catalogue.",
+    whatILearned: "Modeling real-world retail navigation (multi-axis category × brand × material filtering) and building the supporting cart/wishlist/comparison UI.",
+    highlights: [
+      "Built category mega-menus spanning men's, women's, couple and sport watches, each cross-filterable by strap material and brand.",
+      "Implemented wishlist, side-by-side product comparison, and cart flows.",
+      "Added an editorial/blog section for buying guides (sizing, water resistance, usage tips).",
+      "Built product listing with promotional pricing (strikethrough + discount badges) across the full catalogue."
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    github: null,
+    demo: "https://weloris.vercel.app/",
+    image: "/projects/weloris.jpg",
+    imageAlt: "Weloris landing page — a watch store storefront with category navigation and product grid",
+    gallery: [
+      { src: "/projects/weloris.jpg", alt: "Weloris landing page with hero banner and navigation", caption: "Landing — hero banner and category nav" },
+      { src: "/projects/weloris-flashsale.jpg", alt: "Flash sale coupon cards with countdown timer", caption: "Flash sale — coupon cards with a live countdown" },
+      { src: "/projects/weloris-bestseller.jpg", alt: "Bestseller product grid with discount badges and compare checkboxes", caption: "Bestsellers — pricing, discount badges, compare" },
+      { src: "/projects/weloris-men.jpg", alt: "Men's watches category banner and product grid", caption: "Men's watches — category banner and grid" },
+      { src: "/projects/weloris-women.jpg", alt: "Women's watches product grid", caption: "Women's watches — product grid" }
+    ],
+    featured: true
+  },
+  {
+    id: 10,
+    category: "product",
+    categoryLabel: "🛍️ E-commerce Frontend",
+    title: "Cellona",
+    displayName: "CellphoneS-style Electronics Storefront Clone",
+    role: "Frontend Developer",
+    period: "2026",
+    problem: "Cloning a large-scale Vietnamese electronics retailer's UI (CellphoneS) to practice building a storefront with real retail complexity: multi-category catalogue, membership perks, and trade-in flows.",
+    solution: "A multi-category storefront (phones, laptops, tablets, smartwatches, headphones, monitors/PCs) with location-based pricing, a membership signup flow, trade-in and B2B sections, and installment/promo messaging.",
+    challenge: "Reproducing the dense information architecture of a real retail homepage — sidebar categories, rotating promo banners, membership/trade-in/B2B panels — while keeping the layout responsive.",
+    architectureNote: "Sidebar category navigation driving route-based product listing pages, with a location-aware pricing header and modular promo panels (student deals, trade-in, B2B) composed independently of the main catalogue.",
+    whatILearned: "Reading and reproducing a production retailer's information architecture, and structuring a large component tree (category sidebar, promo carousel, membership panels) that stays maintainable.",
+    highlights: [
+      "Rebuilt a 6-category electronics catalogue (phones, laptops, tablets, smartwatches, headphones, monitors/PC) with sidebar navigation.",
+      "Implemented location-aware price display and a rotating weekly promo carousel.",
+      "Built membership (Smember), trade-in (thu cũ đổi mới), and B2B panels as independent homepage modules.",
+      "Added cart, login/register, and search flows matching the original site's UX."
+    ],
+    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    github: null,
+    demo: "https://cellphones-clone-mu.vercel.app/",
+    image: "/projects/cellphones-clone.jpg",
+    imageAlt: "Cellona landing page — an electronics storefront clone of CellphoneS with category sidebar and promo banners",
+    featured: true
   }
 ];
 
