@@ -6,7 +6,7 @@ export const personalInfo = {
   title: "Junior Backend Developer",
   tagline: "Java & Spring Boot | Hands-On with Real Systems",
   subtitle: "Junior Backend Developer with ~1 year of hands-on experience delivering production features in fintech and enterprise systems. Focused on writing clean, reliable backend code with a deep interest in system design.",
-  email: "lehuytuong2005@gmail.com",
+  email: "lehuytuong.work@gmail.com",
   phone: "0372728768",
   location: "Ho Chi Minh",
   bio: `Junior Backend Developer with ~1 year of hands-on experience building production features using Java 17 and Spring Boot 3. Contributed to real systems handling wallet flows, payment integrations, and distributed task processing. Strong interest in system design and writing reliable, maintainable backend code.`,
@@ -15,7 +15,7 @@ export const personalInfo = {
   social: {
     github: "https://github.com/LeHuyTuong",
     linkedin: "https://linkedin.com/in/lehuytuong",
-    email: "lehuytuong2005@gmail.com"
+    email: "lehuytuong.work@gmail.com"
   }
 };
 
