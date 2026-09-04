@@ -16,6 +16,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 const Resume = lazy(() => import('./components/Resume'));
 const ResumeFresher = lazy(() => import('./components/ResumeFresher'));
 const ResumeGeneral = lazy(() => import('./components/ResumeGeneral'));
+const ResumeMeitec = lazy(() => import('./components/ResumeMeitec'));
 
 const ResumeFallback = () => (
   <div style={{ padding: '2rem', textAlign: 'center' }}>Loading resume...</div>
@@ -73,6 +74,16 @@ function App() {
           <ErrorBoundary>
             <Suspense fallback={<ResumeFallback />}>
               <ResumeGeneral />
+            </Suspense>
+          </ErrorBoundary>
+        }
+      />
+      <Route
+        path="/resume/meitec"
+        element={
+          <ErrorBoundary>
+            <Suspense fallback={<ResumeFallback />}>
+              <ResumeMeitec />
             </Suspense>
           </ErrorBoundary>
         }
