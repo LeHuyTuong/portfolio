@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Agent/tooling scratch dirs
+.claude/
+.commandcode/
+.playwright-mcp/
+
+# Private CV material — drafts, interview notes and claim audits.
+# Keep these out of git history: one of them quotes a real admin password.
+*.docx
+*.pdf
+cv-audit-claims.md
+cv-review-sacombank.md
+cv-sacombank-final.md
+interview-prep-sacombank.md
+hehe.md
