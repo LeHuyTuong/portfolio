@@ -376,9 +376,9 @@ export const projects = [
     whatILearned: "Modeling real-world retail navigation (multi-axis category × brand × material filtering) and building the supporting cart/wishlist/comparison UI.",
     highlights: [
       "Built category mega-menus spanning men's, women's, couple and sport watches, each cross-filterable by strap material and brand.",
-      "Implemented wishlist, side-by-side product comparison, and cart flows.",
-      "Added an editorial/blog section for buying guides (sizing, water resistance, usage tips).",
-      "Built product listing with promotional pricing (strikethrough + discount badges) across the full catalogue."
+      "Built a 3-step guided product finder (gender → style → budget) that narrows the catalogue instead of leaving customers to filter manually.",
+      "Implemented wishlist, and a side-by-side product comparison page (up to 3 items) that diffs every spec and highlights the ones that differ.",
+      "Added an editorial/blog section for buying guides (sizing, water resistance, usage tips)."
     ],
     technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     github: null,
@@ -388,9 +388,9 @@ export const projects = [
     gallery: [
       { src: "/projects/weloris.jpg", alt: "Weloris landing page with hero banner and navigation", caption: "Landing — hero banner and category nav" },
       { src: "/projects/weloris-flashsale.jpg", alt: "Flash sale coupon cards with countdown timer", caption: "Flash sale — coupon cards with a live countdown" },
-      { src: "/projects/weloris-bestseller.jpg", alt: "Bestseller product grid with discount badges and compare checkboxes", caption: "Bestsellers — pricing, discount badges, compare" },
-      { src: "/projects/weloris-men.jpg", alt: "Men's watches category banner and product grid", caption: "Men's watches — category banner and grid" },
-      { src: "/projects/weloris-women.jpg", alt: "Women's watches product grid", caption: "Women's watches — product grid" }
+      { src: "/projects/weloris-finder.jpg", alt: "Guided product finder asking who the watch is for, step 1 of 3", caption: "Guided finder — gender → style → budget, step 1/3" },
+      { src: "/projects/weloris-compare.jpg", alt: "Side-by-side comparison table for three watches with differing specs highlighted", caption: "Compare — side-by-side specs, differences highlighted" },
+      { src: "/projects/weloris-bestseller.jpg", alt: "Bestseller product grid with discount badges and compare checkboxes", caption: "Bestsellers — pricing, discount badges, compare" }
     ],
     featured: true
   },
@@ -418,6 +418,11 @@ export const projects = [
     demo: "https://cellphones-clone-mu.vercel.app/",
     image: "/projects/cellphones-clone.jpg",
     imageAlt: "Cellona landing page — an electronics storefront clone of CellphoneS with category sidebar and promo banners",
+    gallery: [
+      { src: "/projects/cellphones-clone.jpg", alt: "Cellona landing page with category sidebar and promo banners", caption: "Landing — category sidebar and promo carousel" },
+      { src: "/projects/cellona-services.jpg", alt: "Sidebar panel listing Smember, student, trade-in and B2B offers as independent modules", caption: "Services panel — Smember, student, trade-in, B2B" },
+      { src: "/projects/cellona-membership.jpg", alt: "Smember membership signup form with tiered benefits for student, teacher and business accounts", caption: "Smember signup — tiered benefits, form validation" }
+    ],
     featured: true
   }
 ];
