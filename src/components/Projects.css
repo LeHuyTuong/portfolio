@@ -121,7 +121,8 @@
     line-height: 0;
 }
 
-.gallery-frame img {
+.gallery-frame img,
+.gallery-frame video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -132,7 +133,8 @@
     transition: opacity var(--transition-normal);
 }
 
-.gallery-frame img.is-current {
+.gallery-frame img.is-current,
+.gallery-frame video.is-current {
     opacity: 1;
 }
 

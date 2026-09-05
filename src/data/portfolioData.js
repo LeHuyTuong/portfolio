@@ -389,7 +389,7 @@ export const projects = [
       { src: "/projects/weloris.jpg", alt: "Weloris landing page with hero banner and navigation", caption: "Landing — hero banner and category nav" },
       { src: "/projects/weloris-flashsale.jpg", alt: "Flash sale coupon cards with countdown timer", caption: "Flash sale — coupon cards with a live countdown" },
       { src: "/projects/weloris-finder.jpg", alt: "Guided product finder asking who the watch is for, step 1 of 3", caption: "Guided finder — gender → style → budget, step 1/3" },
-      { src: "/projects/weloris-compare.jpg", alt: "Side-by-side comparison table for three watches with differing specs highlighted", caption: "Compare — side-by-side specs, differences highlighted" },
+      { src: "/projects/weloris-compare-demo.mp4", alt: "Adding three watches to compare, then viewing the side-by-side spec table with differences highlighted", caption: "Compare — adding 3 watches, then the diffed spec table" },
       { src: "/projects/weloris-bestseller.jpg", alt: "Bestseller product grid with discount badges and compare checkboxes", caption: "Bestsellers — pricing, discount badges, compare" }
     ],
     featured: true
