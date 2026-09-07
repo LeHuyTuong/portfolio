@@ -410,8 +410,8 @@ export const projects = [
     highlights: [
       "Rebuilt a 6-category electronics catalogue (phones, laptops, tablets, smartwatches, headphones, monitors/PC) with sidebar navigation.",
       "Implemented location-aware price display and a rotating weekly promo carousel.",
-      "Built membership (Smember), trade-in (thu cũ đổi mới), and B2B panels as independent homepage modules.",
-      "Added cart, login/register, and search flows matching the original site's UX."
+      "Built a full Smember account system — tiered ranks (Blue/Silver/Gold), vouchers, saved addresses, and a trade-in (thu cũ đổi mới) quote form.",
+      "Wired a real 3-step checkout (address → payment → review) and cart, on top of login/register flows matching the original site's UX."
     ],
     technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     github: null,
@@ -421,7 +421,10 @@ export const projects = [
     gallery: [
       { src: "/projects/cellphones-clone.jpg", alt: "Cellona landing page with category sidebar and promo banners", caption: "Landing — category sidebar and promo carousel" },
       { src: "/projects/cellona-services.jpg", alt: "Sidebar panel listing Smember, student, trade-in and B2B offers as independent modules", caption: "Services panel — Smember, student, trade-in, B2B" },
-      { src: "/projects/cellona-membership.jpg", alt: "Smember membership signup form with tiered benefits for student, teacher and business accounts", caption: "Smember signup — tiered benefits, form validation" }
+      { src: "/projects/cellona-smember-overview.jpg", alt: "Smember account dashboard showing tier status, spend progress and active vouchers", caption: "Smember dashboard — tier status, vouchers, order history" },
+      { src: "/projects/cellona-smember-tiers.jpg", alt: "Membership tier ladder showing Blue, Silver and Gold ranks with their perks", caption: "Membership ranks — Blue → Silver → Gold, perks per tier" },
+      { src: "/projects/cellona-checkout.jpg", alt: "Three-step checkout review page showing shipping address, payment method and order total", caption: "Checkout — address, COD payment, order review" },
+      { src: "/projects/cellona-tradein.jpg", alt: "Trade-in quote request form for devices being upgraded", caption: "Thu cũ đổi mới — trade-in quote request form" }
     ],
     featured: true
   }
