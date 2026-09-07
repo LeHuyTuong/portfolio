@@ -420,7 +420,6 @@ export const projects = [
     imageAlt: "Cellona landing page — an electronics storefront clone of CellphoneS with category sidebar and promo banners",
     gallery: [
       { src: "/projects/cellphones-clone.jpg", alt: "Cellona landing page with category sidebar and promo banners", caption: "Landing — category sidebar and promo carousel" },
-      { src: "/projects/cellona-services.jpg", alt: "Sidebar panel listing Smember, student, trade-in and B2B offers as independent modules", caption: "Services panel — Smember, student, trade-in, B2B" },
       { src: "/projects/cellona-smember-overview.jpg", alt: "Smember account dashboard showing tier status, spend progress and active vouchers", caption: "Smember dashboard — tier status, vouchers, order history" },
       { src: "/projects/cellona-smember-tiers.jpg", alt: "Membership tier ladder showing Blue, Silver and Gold ranks with their perks", caption: "Membership ranks — Blue → Silver → Gold, perks per tier" },
       { src: "/projects/cellona-checkout.jpg", alt: "Three-step checkout review page showing shipping address, payment method and order total", caption: "Checkout — address, COD payment, order review" },
