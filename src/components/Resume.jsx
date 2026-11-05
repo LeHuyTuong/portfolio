@@ -103,21 +103,6 @@ const Resume = () => {
                             <li>Unified <strong>VNPay, PayPal, and Stripe</strong> via Strategy/Facade patterns with two-phase verification outside <code>@Transactional</code>, and fixed Hibernate N+1 queries via <code>LEFT JOIN FETCH</code> (<strong>3,802 → 2 queries</strong>, <strong>4.91 s → 226 ms</strong>).</li>
                         </ul>
                     </div>
-
-                    <div className="project-item" style={{ marginTop: '0.3rem' }}>
-                        <div className="item-header">
-                            <strong>Card Issuing &amp; Ledger Core System</strong>
-                            <span className="date-range">2025</span>
-                        </div>
-                        <div className="item-sub">
-                            <em>Self-directed banking-domain lab (Solo) | Java 17, Spring Boot 3, Spring Data JPA, JUnit 5, Mockito | <a href="https://github.com/LeHuyTuong/Card-Issuing-System" target="_blank" rel="noopener noreferrer">GitHub</a></em>
-                        </div>
-                        <ul className="resume-bullets">
-                            <li>Designed an <strong>append-only ledger</strong> (JPA lifecycle guards); balances derived via SQL aggregation.</li>
-                            <li>Implemented <strong>idempotency keys</strong> — duplicate requests run once and return the cached response.</li>
-                            <li>Enforced card <strong>state machines</strong> with KYC-gated issuance; unit-tested invariants (JUnit 5, Mockito).</li>
-                        </ul>
-                    </div>
                 </section>
 
                 <section className="resume-section">
