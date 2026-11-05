@@ -441,7 +441,7 @@ export const navLinks = [
 export const experiences = [
   {
     id: 1,
-    date: "Apr 2026 - Present",
+    date: "Apr 2026 - Oct 2026",
     title: "Java Backend Developer — Viettel Digital",
     company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",

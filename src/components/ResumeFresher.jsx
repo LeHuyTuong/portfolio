@@ -64,7 +64,7 @@ const ResumeFresher = () => {
                     <div className="experience-item">
                         <div className="item-header">
                             <strong>Viettel Digital Talent Program — Backend Engineer (Intern)</strong>
-                            <span className="date-range">Apr 2026 – Aug 2026</span>
+                            <span className="date-range">Apr 2026 – Oct 2026</span>
                         </div>
                         <ul className="resume-bullets">
                             <li>Built a zero-agent <strong>Spring Boot observability starter</strong> (Filter, OpenFeign interceptor, JDBC proxy, AOP, and WebSocket Decorator) propagating one traceId across HTTP↔OpenFeign↔JDBC↔WebSocket to Grafana (Prometheus/Tempo/Loki).</li>
