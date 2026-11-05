@@ -41,7 +41,7 @@ const Resume = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Java backend developer with ~1 year of combined internship and contract experience building payment- and transaction-focused services on Java 17 and Spring Boot 3. Hands-on with REST/gRPC microservices, Redis caching and distributed locking, JWT/RBAC security, SQL optimization, and JUnit 5/Mockito testing.</p>
+                    <p className="summary-text">Java Backend Developer experienced in building payment, transaction-processing, and enterprise services on Java 17 and Spring Boot 3. Hands-on with REST/gRPC microservices, OOP/SOLID design patterns (Strategy, Facade, Factory, Singleton, Decorator), MySQL query optimization and pessimistic locking, Redis distributed locking, JUnit 5/Mockito/Testcontainers testing, and end-to-end observability (Prometheus, Grafana, Tempo, Loki).</p>
                 </section>
 
                 <section className="resume-section">
@@ -50,13 +50,13 @@ const Resume = () => {
 
                     <div className="experience-item">
                         <div className="item-header">
-                            <strong>Viettel Digital — Java Backend Developer</strong>
+                            <strong>Viettel Digital — Java Backend Developer (Trainee)</strong>
                             <span className="date-range">Apr 2026 – Present</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Built a <strong>non-invasive Spring Boot observability starter</strong> (HTTP/JDBC/method tracing) correlating Metrics–Traces–Logs by one traceId on Grafana (Prometheus/Tempo/Loki).</li>
-                            <li>Extended tracing to <strong>WebSocket at message level</strong> via a JSON trace-context envelope, keeping one traceId across HTTP↔WebSocket↔JDBC.</li>
-                            <li>Benchmarked overhead with <strong>k6</strong> (+0.1–1 ms/request; ~0% WebSocket); validated end-to-end on two demo services (wallet↔ledger), incl. deadlock/error traces.</li>
+                            <li>Built a zero-agent <strong>Spring Boot observability starter</strong> (Filter, OpenFeign interceptor, JDBC proxy, AOP, and WebSocket Decorator) propagating one traceId across HTTP↔OpenFeign↔JDBC↔WebSocket to Grafana (Prometheus/Tempo/Loki).</li>
+                            <li>Added <strong>span-tree root-cause diagnostics</strong> and an <strong>AI-context exporter</strong> to auto-classify DB deadlocks, slow SQL, and partner timeouts for LLM incident triage.</li>
+                            <li>Benchmarked with <strong>k6</strong> across 36,000 HTTP requests, 9,000 transfer flows, and 36,000 WebSocket messages per run (up to 2,500 req/s), keeping p95 overhead <strong>&lt; 1 ms</strong>.</li>
                         </ul>
                     </div>
 
@@ -66,21 +66,21 @@ const Resume = () => {
                             <span className="date-range">Dec 2025 – Apr 2026</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Mitigated race conditions and <strong>double-payment risk</strong> in payment flows via Redis distributed locks.</li>
-                            <li>Migrated internal service-to-service calls from <strong>REST to gRPC</strong>, cutting serialization overhead.</li>
-                            <li>Built an <strong>order-status state machine</strong> with strict validation; centralized exception handling.</li>
+                            <li>Prevented duplicate charges on payment retries using <strong>idempotency keys</strong> and <strong>Redis distributed locks</strong> across concurrent client requests.</li>
+                            <li>Migrated internal order-to-payment calls from <strong>REST to gRPC</strong> with versioned proto contracts to catch breaking schema changes at build time.</li>
+                            <li>Built an <strong>order-status state machine</strong> with strict transition validation and centralized exception handling, tested with JUnit 5 and Mockito.</li>
                         </ul>
                     </div>
 
                     <div className="experience-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
-                            <strong>NeoTCH Website Services — Freelancer</strong>
+                            <strong>NeoTCH Website Services — Backend Developer (Contract)</strong>
                             <span className="date-range">Oct 2025 – Present</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Implemented <strong>RBAC</strong> and route-level middleware to secure admin APIs with multi-level permissions.</li>
-                            <li>Reduced API response time by <strong>~60%</strong> on high-traffic endpoints via caching and payload refinement.</li>
-                            <li>Built an <strong>end-to-end cost estimation module</strong>, automating client quotation workflows.</li>
+                            <li>Built core LMS/ERP modules—tuition billing, tax invoices, transactional Excel import, and a 5-rule timetable—replacing a manual <strong>21-sheet Excel</strong> workflow.</li>
+                            <li>Prevented duplicate tuition receipts during concurrent cashier collection using <strong>idempotency keys</strong>, <strong>pessimistic row locking</strong>, and unique receipt numbering.</li>
+                            <li>Implemented a database-driven <strong>RBAC matrix for 5 roles</strong> with server-side branch isolation so staff cannot access other centers&apos; records.</li>
                         </ul>
                     </div>
                 </section>
@@ -95,18 +95,18 @@ const Resume = () => {
                             <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Team of 4 — 2 BE) | Java 17, Spring Boot 3, MySQL, Redis, Docker, VNPay/PayPal/Stripe (sandbox) | <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">GitHub</a></em>
+                            <em>Backend Developer (Team of 4 — owned wallet, ledger, profit sharing, payments &amp; settlement) | Java 17, Spring Boot 3, MySQL 8, Redis, Docker, Testcontainers, k6 | <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">GitHub</a></em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Built <strong>wallet flows</strong> — deposit, withdraw (admin-approval step), payout — with strict validation.</li>
-                            <li>Integrated <strong>VNPay/PayPal/Stripe (sandbox)</strong>; built KYC status flows, orders, and profit-sharing.</li>
-                            <li>Cut DB load via <strong>Redis caching</strong> and composite indexes; deployed with Docker Compose over HTTPS.</li>
+                            <li>Built a <strong>double-entry wallet ledger</strong> with before/after balance snapshots across 11 transaction types and ascending ID lock ordering to prevent transfer deadlocks (93 JUnit/Testcontainers tests).</li>
+                            <li>Engineered <strong>async batch profit-sharing payouts</strong> on a custom thread pool with per-owner <code>REQUIRES_NEW</code> transactions so single-wallet failures never roll back completed payouts.</li>
+                            <li>Unified <strong>VNPay, PayPal, and Stripe</strong> via Strategy/Facade patterns with two-phase verification outside <code>@Transactional</code>, and fixed Hibernate N+1 queries via <code>LEFT JOIN FETCH</code> (<strong>3,802 → 2 queries</strong>, <strong>4.91 s → 226 ms</strong>).</li>
                         </ul>
                     </div>
 
                     <div className="project-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
-                            <strong>Card Issuing & Ledger Core System</strong>
+                            <strong>Card Issuing &amp; Ledger Core System</strong>
                             <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
@@ -125,12 +125,11 @@ const Resume = () => {
                     <div className="section-line"></div>
                     <div className="skills-content">
                         <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '2px' }}><strong>Languages & Core:</strong> Java 17 (OOP, Collections, Exception Handling), SQL.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring Core, Spring Security, Spring Data JPA, Hibernate.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Architecture & Data:</strong> RESTful API, gRPC, microservices, CQRS-style, idempotency keys; MySQL, PostgreSQL — indexing, query optimization; Redis (caching, distributed locking — key-value NoSQL).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Security & Testing:</strong> JWT, RBAC, BCrypt/SHA-256 hashing, rate limiting, OWASP Top 10; JUnit 5, Mockito, k6 (load testing).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Observability:</strong> Prometheus, Grafana, Tempo, Loki, Micrometer/Spring Actuator, Spring AOP/AspectJ; distributed tracing (W3C Trace Context, SLF4J MDC).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>DevOps & Messaging:</strong> Docker, Docker Compose, GitHub Actions (CI/CD), Git (GitFlow), GitLab CI; RabbitMQ & Kafka (fundamentals); Transactional Outbox (side project).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Languages &amp; Core:</strong> Java 17 (OOP, SOLID, Design Patterns: Strategy, Facade, Factory, Singleton, Decorator, Proxy; Multithreading, Collections), SQL.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring MVC, Spring Security, Spring Data JPA, Hibernate, OpenFeign.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Architecture &amp; Data:</strong> RESTful API (JSON/XML), gRPC, microservices, idempotency keys, state machines; MySQL, PostgreSQL — indexing, N+1 optimization (P6Spy), pessimistic locking; Redis (distributed locking, caching/TTL).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Security &amp; Testing:</strong> JWT, RBAC, HMAC-SHA512 / BCrypt, Bucket4j rate limiting; JUnit 5, Mockito, Testcontainers (integration testing), k6 (load testing).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Observability &amp; DevOps:</strong> Prometheus, Grafana, Tempo, Loki, Spring AOP, distributed tracing (W3C Trace Context, SLF4J MDC); Docker, Docker Compose, GitHub Actions (CI/CD), Git (GitFlow).</li>
                         </ul>
                     </div>
                 </section>

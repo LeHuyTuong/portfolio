@@ -31,7 +31,7 @@ const ResumeGeneral = () => {
             <div className="resume-container resume-roomy">
                 <header className="resume-header">
                     <h1>{personalInfo.name.toUpperCase()}</h1>
-                    <p className="resume-title">Software Engineering Intern — Java Backend & Web</p>
+                    <p className="resume-title">Software Engineering Intern — Java Backend &amp; Web</p>
                     <div className="resume-contact">
                         <span>{personalInfo.phone}</span>
                         <span className="divider">|</span>
@@ -46,7 +46,7 @@ const ResumeGeneral = () => {
                 <section className="resume-section">
                     <h2>SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Final-year Software Engineering student at FPT University with internship experience building Java/Spring Boot backend systems, REST APIs, and real-time features using SSE/WebSocket. Comfortable with basic front-end development in React. Quick to pick up new technologies and interested in applying software engineering skills to financial technology and securities systems.</p>
+                    <p className="summary-text">Software Engineering Intern targeting Java Backend &amp; Web roles, final-year student at FPT University with internship experience on Java 17 and Spring Boot 3. Delivers REST APIs and real-time features with SSE/WebSocket, with working React knowledge for front-end API integration and an interest in fintech and enterprise systems.</p>
                 </section>
 
                 <section className="resume-section">
@@ -59,9 +59,32 @@ const ResumeGeneral = () => {
                             <span className="date-range">Apr 2026 – Aug 2026</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Developed a Spring Boot observability starter that correlates metrics, traces, and logs using a single traceId across Grafana, Prometheus, Tempo, and Loki, under mentorship from senior engineers.</li>
-                            <li>Extended tracing to WebSocket messages, maintaining a single traceId across HTTP → WebSocket → JDBC.</li>
-                            <li>Load-tested with k6 and validated end-to-end tracing across wallet and ledger demo services.</li>
+                            <li>Built a zero-agent <strong>Spring Boot observability starter</strong> (Filter, OpenFeign interceptor, JDBC proxy, AOP, and WebSocket Decorator) propagating one traceId across HTTP↔OpenFeign↔JDBC↔WebSocket to Grafana (Prometheus/Tempo/Loki).</li>
+                            <li>Added <strong>span-tree root-cause diagnostics</strong> and an <strong>AI-context exporter</strong> to auto-classify DB deadlocks, slow SQL, and partner timeouts for LLM incident triage.</li>
+                            <li>Benchmarked with <strong>k6</strong> across 36,000 HTTP requests, 9,000 transfer flows, and 36,000 WebSocket messages per run (up to 2,500 req/s), keeping p95 overhead <strong>&lt; 1 ms</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <div className="experience-item" style={{ marginTop: '0.3rem' }}>
+                        <div className="item-header">
+                            <strong>FPT Software — Backend Engineer Intern</strong>
+                            <span className="date-range">Dec 2025 – Apr 2026</span>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li>Prevented duplicate charges on payment retries using <strong>idempotency keys</strong> and <strong>Redis distributed locks</strong>; migrated internal REST calls to <strong>gRPC</strong> with versioned proto contracts.</li>
+                            <li>Built an <strong>order-status state machine</strong> with strict transition validation and centralized exception handling, tested with JUnit 5 and Mockito.</li>
+                        </ul>
+                    </div>
+
+                    <div className="experience-item" style={{ marginTop: '0.3rem' }}>
+                        <div className="item-header">
+                            <strong>NeoTCH Website Services (OneWorld LMS/ERP) — Backend Developer (Contract)</strong>
+                            <span className="date-range">Oct 2025 – Present</span>
+                        </div>
+                        <ul className="resume-bullets">
+                            <li>Built core LMS/ERP modules—tuition billing, tax invoices, transactional Excel import, and a 5-rule timetable—replacing a manual <strong>21-sheet Excel</strong> workflow.</li>
+                            <li>Prevented duplicate tuition receipts during concurrent cashier collection using <strong>idempotency keys</strong>, <strong>pessimistic row locking</strong>, and unique receipt numbering.</li>
+                            <li>Implemented a database-driven <strong>RBAC matrix for 5 roles</strong> with server-side branch isolation so staff cannot access other centers&apos; records.</li>
                         </ul>
                     </div>
                 </section>
@@ -76,32 +99,12 @@ const ResumeGeneral = () => {
                             <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Team of 4 — 2 BE) | Java 17, Spring Boot 3, MySQL, SSE, Docker, VNPay/PayPal/Stripe (sandbox) | GitHub: <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a></em>
+                            <em>Backend Developer (Team of 4 — owned wallet, ledger, profit sharing, payments &amp; settlement) | Java 17, Spring Boot 3, MySQL 8, Redis, Docker, Testcontainers, k6 | GitHub: <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a></em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Built deposit, withdrawal, wallet-to-wallet transfer, refund, and payout flows with strict validation.</li>
-                            <li>Recorded every transaction with before/after balance snapshots to support auditability across 11 transaction types.</li>
-                            <li>Integrated and verified VNPay, PayPal, and Stripe payments (sandbox); built KYC status flows and marketplace listing, buying, and reselling flows.</li>
-                            <li>Implemented real-time user notifications using Server-Sent Events (SSE).</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section className="resume-section">
-                    <h2>RESEARCH</h2>
-                    <div className="section-line"></div>
-
-                    <div className="project-item">
-                        <div className="item-header">
-                            <strong>Protocol-Aware Observability for AI Chat Streaming: Tracing and Metrics for SSE and WebSocket</strong>
-                            <span className="date-range">Jun 2026</span>
-                        </div>
-                        <div className="item-sub">
-                            <em>First author; led the study and built the Spring Boot prototype (course research project, team of 5) | GitHub: <a href="https://github.com/LeHuyTuong/RAG-history/blob/main/paper/Group3_Protocol%20Aware%20Observability%20for%20AI%20Chat%20Streaming.pdf" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/RAG-history</a></em>
-                        </div>
-                        <ul className="resume-bullets">
-                            <li>Conducted a PRISMA-guided literature review and built a Spring Boot prototype comparing token-level tracing overhead between SSE and WebSocket.</li>
-                            <li>Measured asymmetric overhead under transport-bound stress: +21% for SSE vs +47% for WebSocket.</li>
+                            <li>Built a <strong>double-entry wallet ledger</strong> with before/after balance snapshots across 11 transaction types and ascending ID lock ordering to prevent transfer deadlocks (93 JUnit/Testcontainers tests).</li>
+                            <li>Engineered <strong>async batch profit-sharing payouts</strong> on a custom thread pool with per-owner <code>REQUIRES_NEW</code> transactions so single-wallet failures never roll back completed payouts.</li>
+                            <li>Unified <strong>VNPay, PayPal, and Stripe</strong> via Strategy/Facade patterns with two-phase verification outside <code>@Transactional</code>, and fixed Hibernate N+1 queries via <code>LEFT JOIN FETCH</code> (<strong>3,802 → 2 queries</strong>, <strong>4.91 s → 226 ms</strong>).</li>
                         </ul>
                     </div>
                 </section>
@@ -111,12 +114,11 @@ const ResumeGeneral = () => {
                     <div className="section-line"></div>
                     <div className="skills-content">
                         <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '2px' }}><strong>Languages & Core:</strong> Java 17 (OOP, Collections, Exception Handling), SQL, JavaScript (basic).</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Web:</strong> HTML, CSS, REST API integration (Fetch API); React — basic CRUD applications; SSE/WebSocket fundamentals.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring Security, Spring Data JPA, Hibernate.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Database:</strong> MySQL, PostgreSQL — indexing, basic query optimization.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Security & Testing:</strong> JWT, RBAC, BCrypt; JUnit 5, Mockito.</li>
-                            <li style={{ marginBottom: '2px' }}><strong>Tools:</strong> Git (GitFlow), GitHub Actions.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Languages &amp; Core:</strong> Java 17 (OOP, SOLID, Design Patterns: Strategy, Facade, Factory, Singleton, Decorator, Proxy; Multithreading, Collections), SQL, JavaScript.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Frameworks:</strong> Spring Boot 3, Spring MVC, Spring Security, Spring Data JPA, Hibernate, OpenFeign; React (basic CRUD / API integration).</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Database &amp; Architecture:</strong> MySQL, PostgreSQL — indexing, N+1 optimization (P6Spy), pessimistic locking; Redis (distributed locking, TTL); RESTful API, gRPC, SSE/WebSocket.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Security &amp; Testing:</strong> JWT, RBAC, HMAC-SHA512 / BCrypt; JUnit 5, Mockito, Testcontainers, k6.</li>
+                            <li style={{ marginBottom: '2px' }}><strong>Observability &amp; DevOps:</strong> Prometheus, Grafana, Tempo, Loki, Docker, Git (GitFlow), GitHub Actions.</li>
                         </ul>
                     </div>
                 </section>

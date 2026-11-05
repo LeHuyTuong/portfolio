@@ -77,8 +77,8 @@ export const skills = {
     { name: "Event-Driven", tier: "primary" },
     { name: "Distributed Locking", tier: "primary" },
     { name: "Transactional Outbox", tier: "primary" },
-    { name: "SOLID Principles", tier: "normal" },
-    { name: "Design Patterns", tier: "normal" },
+    { name: "SOLID Principles", tier: "primary" },
+    { name: "Design Patterns (Strategy, Facade, Factory, Singleton)", tier: "primary" },
     { name: "Multithreading", tier: "normal" }
   ],
   "Databases & Caching": [
@@ -194,19 +194,18 @@ export const projects = [
     displayName: "Carbon Credit Marketplace",
     role: "Backend Lead",
     period: "2025",
-    problem: "Developing a robust marketplace for carbon credits requiring secure wallet transactions and real-time payment processing.",
-    solution: "Built a wallet transaction system with multi-gateway integration (PayPal, Stripe) and automated reconciliation.",
-    challenge: "Handling concurrent transaction flows and ensuring idempotency across distributed service calls.",
-    architectureNote: "Utilized Redis-based distributed locking (Redlock) and Idempotency Key mechanisms to prevent redundant payment processing.",
-    whatILearned: "Experienced in enterprise Git workflows, payment gateway deep-integration, and designing fault-tolerant transaction mechanisms.",
+    problem: "Developing a robust marketplace for carbon credits requiring an immutable financial ledger, multi-gateway payment processing, and concurrent batch profit-sharing payouts.",
+    solution: "Built a double-entry wallet ledger across 11 transaction types, two-phase payment gateway integration (VNPay, PayPal, Stripe), and an async batch profit-sharing payout engine.",
+    challenge: "Preventing deadlocks during concurrent order settlements, isolating batch payout failures across EV owners, and eliminating Hibernate 6 N+1 query bottlenecks.",
+    architectureNote: "Applied Strategy and Facade patterns for two-phase payment gateway verification outside @Transactional boundaries, ascending wallet-ID pessimistic locking (PESSIMISTIC_WRITE) to prevent deadlocks, and @Async ThreadPoolTaskExecutor with per-owner REQUIRES_NEW transactions via Spring AOP Proxy.",
+    whatILearned: "Designing immutable financial ledgers, deadlock-free lock ordering, async multithreaded batch processing with Spring Security context propagation, and query profiling with P6Spy and k6.",
     highlights: [
-      "Designed and implemented Order Lifecycle management systems using Clean Architecture and SOLID principles.",
-      "Implemented Idempotency mechanisms to eliminate duplicate charge risks during high-concurrency payment events.",
-      "Managed complex financial states using DB-level Locking and Redis for high-speed secondary validation.",
-      "Integrated PayPal & Stripe webhook handlers with reliable state updates and automatic retry logic.",
-      "Containerized the entire infrastructure using Docker for consistent environment parity."
+      "Engineered a double-entry wallet ledger recording before/after balances across 11 transaction types, enforcing ascending wallet-ID pessimistic locking to prevent deadlocks during order settlement.",
+      "Built an async batch profit-sharing engine using Spring @Async ThreadPoolTaskExecutor with security-context Decorator and per-owner REQUIRES_NEW transactions via AOP Proxy to isolate failures.",
+      "Unified two-phase deposit verification for VNPay (HMAC-SHA512), PayPal, and Stripe behind Strategy and Facade interfaces outside @Transactional, eliminating connection starvation and replay attacks.",
+      "Eliminated Hibernate 6 N+1 bottlenecks via P6Spy profiling and LEFT JOIN FETCH (3,802 → 2 queries; 4.91 s → 226 ms), backed by 93 JUnit 5 and Testcontainers MySQL tests."
     ],
-    technologies: ["Java 17", "Spring Boot", "MySQL", "Docker", "Redis", "Jira"],
+    technologies: ["Java 21", "Spring Boot 3.5", "Spring Security", "Hibernate 6", "MySQL", "Redis", "Docker", "Testcontainers", "k6"],
     github: "https://github.com/LeHuyTuong",
     demo: "https://carbonx.io.vn/home",
     featured: true
@@ -446,13 +445,13 @@ export const experiences = [
     title: "Java Backend Developer — Viettel Digital",
     company: "Viettel Digital",
     companyUrl: "https://tuyendung.viettel.vn/",
-    description: "Selected for Viettel's competitive digital talent program. Building a non-invasive Spring Boot observability starter targeting banking/fintech microservices, with distributed tracing extended into WebSocket.",
+    description: "Selected for Viettel's competitive digital talent program. Building a zero-agent Spring Boot observability starter targeting banking/fintech microservices, with distributed tracing extended into WebSocket.",
     responsibilities: [
-      "Building a <strong>non-invasive Spring Boot observability starter</strong> that auto-instruments <strong>HTTP/JDBC/method-level tracing</strong> with zero business-code change, correlating Metrics–Traces–Logs by a single traceId on Grafana (Prometheus/Tempo/Loki).",
-      "Extending distributed tracing to <strong>WebSocket at the message level</strong> via a JSON trace-context envelope — keeping one traceId across HTTP↔WebSocket↔JDBC, a gap default APM/OpenTelemetry agents miss.",
-      "Benchmarking overhead with <strong>k6</strong> (+0.1–1 ms/request; ~0% for WebSocket); validated end-to-end on two demo services (wallet↔ledger), including deadlock and error traces."
+      "Built a <strong>zero-agent Spring Boot starter</strong> using <strong>Proxy, Decorator, and Singleton patterns</strong> across HTTP Filters, OpenFeign, JDBC DataSources, and WebSockets to propagate one <code>traceId</code> into Grafana.",
+      "Developed a <strong>diagnostics engine</strong> that reconstructs <strong>call-tree depth</strong> to pinpoint root-cause spans and auto-classifies <strong>SQL deadlocks (<code>sqlstate=40001</code>)</strong>, slow queries, and partner timeouts for incident triage.",
+      "Benchmarked <strong>36,000 HTTP requests</strong> and <strong>36,000 WebSocket messages</strong> in <strong>k6</strong> across wallet-to-ledger microservices (up to <strong>2,500 req/s</strong> on PostgreSQL), adding <strong>&lt;1 ms p95 latency overhead</strong>."
     ],
-    technologies: ["Java", "Spring Boot", "Spring AOP / AspectJ", "Prometheus", "Grafana", "Tempo", "Loki", "WebSocket", "k6"]
+    technologies: ["Java 17", "Spring Boot 3", "Spring AOP", "OpenFeign", "WebSocket", "Prometheus", "Grafana", "Tempo", "Loki", "k6"]
   },
   {
     id: 2,
@@ -460,13 +459,13 @@ export const experiences = [
     title: "Backend Engineer Intern — FPT Software",
     company: "FPT Software",
     companyUrl: "https://fptsoftware.com",
-    description: "Contributed to a microservices-based franchise management platform handling thousands of daily transactions.",
+    description: "Contributed to a multi-service franchise management platform across Order, Payment, and Inventory services.",
     responsibilities: [
-      "Mitigated race conditions and <strong>double-payment risk</strong> in payment flows via Redis distributed locks.",
-      "Migrated internal service-to-service calls from <strong>REST to gRPC</strong>, cutting serialization overhead.",
-      "Built an <strong>order-status state machine</strong> with strict validation; centralized exception handling."
+      "Prevented <strong>duplicate order charges</strong> during concurrent checkout retries by enforcing <strong>Redis distributed locks</strong> and <strong>idempotency keys</strong> before payment execution across franchise order flows.",
+      "Migrated internal <strong>Order-to-Inventory service calls</strong> from <strong>REST to gRPC</strong> with Protobuf contracts, reducing payload serialization overhead on synchronous stock-check requests.",
+      "Implemented an <strong>order-lifecycle state machine</strong> using <strong>Strategy and Factory patterns</strong> to guard status transitions, paired with centralized <code>@ControllerAdvice</code> error responses."
     ],
-    technologies: ["Microservices", "CQRS", "gRPC", "Redis Locking"]
+    technologies: ["Java 17", "Spring Boot 3", "Microservices", "CQRS", "gRPC", "Redis", "PostgreSQL", "Docker"]
   },
   {
     id: 3,
@@ -474,13 +473,13 @@ export const experiences = [
     title: "Backend Developer — NeoTCH Website Services",
     company: "NeoTCH Website Services",
     companyUrl: "https://dichvuwebsitetch.com/",
-    description: "Built and optimized backend infrastructures for enterprise client platforms, focusing on performance and automation.",
+    description: "Built and maintained backend systems for multi-branch education and enterprise client operations.",
     responsibilities: [
-      "Implemented <strong>RBAC</strong> and route-level middleware to secure admin APIs with multi-level permissions.",
-      "Reduced API response time by <strong>~60%</strong> on high-traffic endpoints via caching and payload refinement.",
-      "Built an <strong>end-to-end cost estimation module</strong> for the system, automating client quotation workflows."
+      "Engineered a <strong>multi-branch tuition billing and attendance backend</strong> replacing a <strong>21-sheet Excel workflow</strong>, handling partial payments, pro-rata fee calculation, and wallet credit.",
+      "Enforced <strong>pessimistic row locking</strong> and <strong>idempotency keys</strong> on payment and receipt generation, preventing duplicate tuition charges and receipt-number collisions under concurrent cashier submissions.",
+      "Designed a <strong>5-role RBAC permission matrix</strong> and server-side <strong>branch data isolation</strong>, blocking cross-branch record access across admin, accountant, teacher, and student portals."
     ],
-    technologies: ["MySQL", "Redis", "RBAC", "Performance Tuning"]
+    technologies: ["MySQL", "Redis", "RBAC", "RESTful API", "Docker", "Transactional Locking"]
   }
 ];
 

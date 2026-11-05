@@ -62,7 +62,7 @@ const ResumeMeitec = () => {
                 <section className="resume-section">
                     <h2>RESUME SUMMARY</h2>
                     <div className="section-line"></div>
-                    <p className="summary-text">Backend developer with ~1 year of combined internship and freelance experience building RESTful APIs and transaction-heavy services on Java 17 and Spring Boot 3. Hands-on with MySQL schema design and query optimization, Redis caching, JWT/RBAC security, JUnit 5/Mockito unit testing, and Docker delivery — working in a normal team flow of Git branching, code review, and coordination with BA, front-end and QA.</p>
+                    <p className="summary-text">Backend developer experienced in building RESTful APIs and transaction-heavy services on Java 17 and Spring Boot 3. Hands-on with OOP/SOLID design patterns (Strategy, Facade, Factory, Singleton, Decorator), MySQL query optimization and pessimistic locking, Redis distributed locking, JWT/RBAC security, JUnit 5/Mockito/Testcontainers testing, and Docker delivery — working in a standard team flow of Git branching, code review, and coordination with BA, front-end, and QA.</p>
                 </section>
 
                 <section className="resume-section">
@@ -71,12 +71,12 @@ const ResumeMeitec = () => {
 
                     <div className="experience-item">
                         <div className="item-header">
-                            <strong>Viettel Digital — Java Backend Developer</strong>
+                            <strong>Viettel Digital — Java Backend Developer (Trainee)</strong>
                             <span className="date-range">Apr 2026 – Present</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Built a <strong>non-invasive Spring Boot observability starter</strong> (HTTP/JDBC/method tracing) correlating metrics, traces and logs by one traceId on Grafana (Prometheus/Tempo/Loki) — cutting the time to locate a failing request.</li>
-                            <li>Extended tracing to <strong>WebSocket at message level</strong>, keeping one traceId across HTTP↔WebSocket↔JDBC; benchmarked overhead with <strong>k6</strong> (+0.1–1 ms/request) and validated it end to end on two local demo services (wallet↔ledger), including deadlock and error traces.</li>
+                            <li>Built a zero-agent <strong>Spring Boot observability starter</strong> (Filter, OpenFeign interceptor, JDBC proxy, AOP, and WebSocket Decorator) propagating one traceId across HTTP↔OpenFeign↔JDBC↔WebSocket to Grafana (Prometheus/Tempo/Loki).</li>
+                            <li>Added <strong>span-tree root-cause diagnostics</strong> and an <strong>AI-context exporter</strong> to classify DB deadlocks, slow SQL, and partner timeouts; benchmarked with <strong>k6</strong> across 36,000 HTTP requests, 9,000 transfers, and 36,000 WS messages per run (<strong>&lt; 1 ms</strong> p95 overhead).</li>
                         </ul>
                     </div>
 
@@ -87,19 +87,19 @@ const ResumeMeitec = () => {
                         </div>
                         <ul className="resume-bullets">
                             <li>Developed and maintained REST endpoints on a Spring Boot multi-service backend, following the team&apos;s technical specs and Git/code-review process.</li>
-                            <li>Debugged and fixed <strong>race conditions causing double-payment risk</strong> in payment flows using Redis distributed locks; migrated internal service-to-service calls from <strong>REST to gRPC</strong>.</li>
-                            <li>Built an <strong>order-status state machine</strong> with strict validation and centralized exception handling.</li>
+                            <li>Prevented duplicate charges on payment retries using <strong>idempotency keys</strong> and <strong>Redis distributed locks</strong>; migrated internal calls from <strong>REST to gRPC</strong> with versioned proto contracts.</li>
+                            <li>Built an <strong>order-status state machine</strong> with strict transition validation and centralized exception handling, tested with JUnit 5 and Mockito.</li>
                         </ul>
                     </div>
 
                     <div className="experience-item" style={{ marginTop: '0.3rem' }}>
                         <div className="item-header">
-                            <strong>NeoTCH Website Services — Freelancer</strong>
+                            <strong>NeoTCH Website Services — Backend Developer (Contract)</strong>
                             <span className="date-range">Oct 2025 – Present</span>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Implemented <strong>RBAC</strong> and route-level middleware to secure admin APIs with multi-level permissions; reduced API response time by <strong>~60%</strong> on high-traffic endpoints via caching and payload refinement.</li>
-                            <li>Built an <strong>end-to-end cost estimation module</strong> from the client&apos;s business requirements, automating their quotation workflow.</li>
+                            <li>Built core LMS/ERP modules (tuition billing, tax invoices, transactional Excel import, 5-rule timetable) replacing a <strong>21-sheet Excel</strong> workflow; prevented duplicate receipts via <strong>idempotency keys</strong> and <strong>pessimistic row locking</strong>.</li>
+                            <li>Implemented a database-driven <strong>RBAC matrix for 5 roles</strong> with server-side branch isolation so staff cannot access other centers&apos; records.</li>
                         </ul>
                     </div>
                 </section>
@@ -114,13 +114,13 @@ const ResumeMeitec = () => {
                             <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer | Java 17, Spring Boot 3, MySQL, Redis, Docker, VNPay/PayPal/Stripe (sandbox)<br />
+                            <em>Backend Developer (Team of 4 — owned wallet, ledger, profit sharing, payments &amp; settlement) | Java 17, Spring Boot 3, MySQL 8, Redis, Docker, Testcontainers, k6<br />
                             <a className="cert-link" href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a></em>
                         </div>
                         <ul className="resume-bullets">
-                            <li>Designed and built the <strong>wallet REST APIs</strong> — deposit, withdraw (admin-approval step), payout — with strict request validation and a shared error response format.</li>
-                            <li>Integrated <strong>VNPay/PayPal/Stripe (sandbox)</strong> behind one payment interface (Strategy pattern); built KYC status flows, orders and profit-sharing.</li>
-                            <li>Cut DB load via <strong>Redis caching</strong> and composite indexes; shipped the stack with Docker Compose over HTTPS.</li>
+                            <li>Built a <strong>double-entry wallet ledger</strong> with before/after balance snapshots across 11 transaction types and ascending ID lock ordering to prevent transfer deadlocks (93 JUnit/Testcontainers tests).</li>
+                            <li>Engineered <strong>async batch profit-sharing payouts</strong> on a custom thread pool with per-owner <code>REQUIRES_NEW</code> transactions so single-wallet failures never roll back completed payouts.</li>
+                            <li>Unified <strong>VNPay, PayPal, and Stripe</strong> via Strategy/Facade patterns with two-phase verification outside <code>@Transactional</code>, and fixed Hibernate N+1 queries via <code>LEFT JOIN FETCH</code> (<strong>3,802 → 2 queries</strong>, <strong>4.91 s → 226 ms</strong>).</li>
                         </ul>
                     </div>
 
@@ -145,12 +145,12 @@ const ResumeMeitec = () => {
                     <div className="section-line"></div>
                     <div className="skills-content">
                         <ul className="resume-bullets" style={{ marginTop: '0', listStyleType: 'disc', paddingLeft: '20px' }}>
-                            <li><strong>Languages &amp; Core:</strong> Java 17 (OOP, Collections, Exception Handling), SQL; JavaScript/TypeScript (React front-end, REST integration).</li>
-                            <li><strong>Frameworks:</strong> Spring Boot 3, Spring MVC, Spring Security, Spring Data JPA, Hibernate.</li>
-                            <li><strong>API &amp; Architecture:</strong> RESTful API design, gRPC, microservices (service-to-service); OOP and design patterns (Strategy, Factory, Builder, Singleton); idempotency keys, state machines.</li>
-                            <li><strong>Database:</strong> MySQL, PostgreSQL — schema design, indexing, query optimization (EXPLAIN); Redis (caching, distributed locking — key-value NoSQL).</li>
-                            <li><strong>Testing, Security &amp; Quality:</strong> JUnit 5, Mockito, k6; input validation, centralized exception handling, code review; JWT, RBAC.</li>
-                            <li><strong>DevOps &amp; Tools:</strong> Docker, Docker Compose, Git (GitFlow), Jira; Prometheus/Grafana, distributed tracing.</li>
+                            <li><strong>Languages &amp; Core:</strong> Java 17 (OOP, SOLID, Multithreading, Collections, Exception Handling), SQL; JavaScript/TypeScript (React front-end, REST integration).</li>
+                            <li><strong>Frameworks:</strong> Spring Boot 3, Spring MVC, Spring Security, Spring Data JPA, Hibernate, OpenFeign.</li>
+                            <li><strong>API &amp; Architecture:</strong> RESTful API (JSON/XML), gRPC, microservices; Design Patterns (Strategy, Facade, Factory, Singleton, Decorator, Proxy, Builder); idempotency keys, state machines.</li>
+                            <li><strong>Database:</strong> MySQL, PostgreSQL — schema design, indexing, N+1 optimization (P6Spy, EXPLAIN), pessimistic locking; Redis (distributed locking, caching/TTL).</li>
+                            <li><strong>Testing, Security &amp; Quality:</strong> JUnit 5, Mockito, Testcontainers, k6; input validation, centralized exception handling, code review; JWT, RBAC, HMAC-SHA512 / BCrypt.</li>
+                            <li><strong>DevOps &amp; Tools:</strong> Docker, Docker Compose, Git (GitFlow), GitHub Actions; Prometheus, Grafana, Tempo, Loki, distributed tracing.</li>
                         </ul>
                     </div>
                 </section>
