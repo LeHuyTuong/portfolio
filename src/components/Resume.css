@@ -225,129 +225,6 @@ html:has(.resume-page) {
     color: #2563eb;
 }
 
-@media print {
-    .resume-container a {
-        text-decoration: none;
-        color: #000; /* Keep it black but clickable in PDF */
-    }
-    .resume-container .project-links a,
-    .resume-container .cert-link {
-        color: #2563eb; /* Keep links blue for visibility in PDF */
-    }
-}
-
-/* Print Overrides */
-@media print {
-    body {
-        margin: 0;
-        padding: 0;
-        background: white;
-    }
-
-    body * {
-        visibility: hidden;
-    }
-    .resume-container, .resume-container * {
-        visibility: visible;
-    }
-    .resume-page {
-        display: block; /* Fix flex layout issues in print */
-        padding: 0;
-        margin: 0;
-        background: white;
-    }
-    .resume-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        max-width: none;
-        box-shadow: none;
-        padding: 0; 
-        min-height: auto;
-        font-size: 12.6px;
-        line-height: 1.36;
-    }
-    .resume-header {
-        margin-bottom: 9px;
-    }
-    .resume-header h1 {
-        font-size: 29px;
-        margin-bottom: 2px;
-        letter-spacing: 0.5px;
-    }
-    .resume-title {
-        font-size: 15px;
-        margin-bottom: 4px;
-        font-weight: 500;
-    }
-    .resume-contact {
-        font-size: 12px;
-        gap: 12px;
-    }
-    .resume-section {
-        margin-bottom: 8px;
-    }
-    .resume-section h2 {
-        font-size: 14px;
-        margin: 0 0 3px 0;
-        letter-spacing: 0.5px;
-    }
-    .section-line {
-        height: 1.5px;
-        margin-bottom: 5px;
-    }
-    .summary-text {
-        font-size: 12.2px;
-        line-height: 1.45;
-    }
-    .item-header {
-        margin-bottom: 2px;
-        font-size: 12.8px;
-    }
-    .date-range {
-        font-size: 12px;
-    }
-    .item-sub {
-        font-size: 11.8px;
-        margin-bottom: 3px;
-        line-height: 1.35;
-    }
-    .resume-bullets {
-        margin: 3px 0;
-        padding-left: 18px;
-    }
-    .resume-bullets li {
-        margin-bottom: 2.8px;
-        font-size: 12.2px;
-        line-height: 1.36;
-    }
-    .skills-content ul.resume-bullets li {
-        margin-bottom: 2.8px;
-        font-size: 12.2px;
-        line-height: 1.36;
-    }
-    .experience-item,
-    .project-item,
-    .education-item {
-        break-inside: avoid;
-        page-break-inside: avoid; /* keep each job/project block on one page */
-        margin-bottom: 6px;
-    }
-    .resume-section h2 {
-        break-after: avoid;
-        page-break-after: avoid; /* never leave a heading alone at page bottom */
-    }
-    .no-print {
-        display: none !important;
-    }
-}
-
-@page {
-    size: A4;
-    margin: 8mm 13mm 7mm; /* Fills A4 beautifully from top to bottom on 1 single page */
-}
-
 /* Roomy variant — for shorter CVs (fewer entries) that still need to fill
    one full A4 page. Scoped so it never affects the other resume routes. */
 .resume-roomy {
@@ -484,13 +361,144 @@ html:has(.resume-page) {
     line-height: 1.32;
 }
 
+/* ==========================================================================
+   PRINT / PDF STYLES
+   Calibrated to guarantee EXACTLY 1 A4 page with proportional typography,
+   zero spillover, and balanced bottom margins across all resume routes.
+   ========================================================================== */
+@page {
+    size: A4;
+    margin: 6mm 12mm 5mm;
+}
+
 @media print {
-    /* The compact sheet must use the @page margins alone. Its on-screen padding
-       sits later in this file than the generic .resume-container print reset, so
-       without this rule it wins the cascade and stacks on top of those margins —
-       stealing ~1.5 lines at the bottom, which a page-break-inside:avoid block
-       then turns into a whole second page. */
-    .resume-compact {
+    body {
+        margin: 0;
         padding: 0;
+        background: white;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .resume-container,
+    .resume-container * {
+        visibility: visible;
+    }
+
+    .resume-page {
+        display: block;
+        padding: 0;
+        margin: 0;
+        background: white;
+    }
+
+    .resume-container,
+    .resume-roomy,
+    .resume-compact {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        padding: 0 !important;
+        min-height: auto;
+        font-size: 12.3px !important;
+        line-height: 1.34 !important;
+    }
+
+    .resume-container a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .resume-container .project-links a,
+    .resume-container .cert-link {
+        color: #2563eb;
+    }
+
+    .resume-header {
+        margin-bottom: 7px !important;
+    }
+
+    .resume-header h1 {
+        font-size: 28px !important;
+        margin-bottom: 2px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .resume-title {
+        font-size: 15px !important;
+        margin-bottom: 3px !important;
+        font-weight: 500 !important;
+    }
+
+    .resume-contact {
+        font-size: 11.8px !important;
+        gap: 11px !important;
+    }
+
+    .resume-section {
+        margin-bottom: 6px !important;
+    }
+
+    .resume-section h2 {
+        font-size: 13.8px !important;
+        margin: 0 0 2px 0 !important;
+        letter-spacing: 0.5px !important;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .section-line {
+        height: 1.5px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .summary-text {
+        font-size: 12.0px !important;
+        line-height: 1.42 !important;
+    }
+
+    .item-header {
+        margin-bottom: 1.5px !important;
+        font-size: 12.5px !important;
+    }
+
+    .date-range {
+        font-size: 11.6px !important;
+    }
+
+    .item-sub {
+        font-size: 11.5px !important;
+        margin-bottom: 2px !important;
+        line-height: 1.32 !important;
+    }
+
+    .resume-bullets {
+        margin: 2px 0 !important;
+        padding-left: 17px !important;
+    }
+
+    .resume-bullets li,
+    .skills-content ul.resume-bullets li {
+        margin-bottom: 2.4px !important;
+        font-size: 12.0px !important;
+        line-height: 1.34 !important;
+    }
+
+    .experience-item,
+    .project-item,
+    .education-item {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        margin-top: 0 !important;
+        margin-bottom: 4.5px !important;
+    }
+
+    .no-print {
+        display: none !important;
     }
 }
