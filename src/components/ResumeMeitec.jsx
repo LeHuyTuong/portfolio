@@ -150,7 +150,7 @@ const ResumeMeitec = () => {
                                 <span className="date-range">Oct 2023 – 2027 (Expected)</span>
                             </div>
                             <div className="item-sub">
-                                <em>{edu.degree} | GPA: 3.2 | English: <a className="cert-link" href="https://lehuytuong.vercel.app/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS)</em>
+                                <em>{edu.degree} | GPA: 3.2 | English: <a className="cert-link" href="https://lehuytuong.github.io/portfolio/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS)</em>
                             </div>
                         </div>
                     ))}

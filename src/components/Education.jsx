@@ -1,5 +1,6 @@
 import useScrollReveal from '../hooks/useScrollReveal';
 import { education } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assets';
 import './Education.css';
 
 const Education = () => {
@@ -37,7 +38,7 @@ const Education = () => {
                             {edu.toeic && (
                                 <div ref={rightRef} className="edu-right reveal" style={{ transitionDelay: '0.2s' }}>
                                     <a
-                                        href="/toeic/toeic-735.jpg"
+                                        href={getAssetUrl('/toeic/toeic-735.jpg')}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ textDecoration: 'none' }}

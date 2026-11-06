@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ExternalLink } from './Icons';
+import { getAssetUrl } from '../utils/assets';
 
 /**
  * Slideshow of real screens captured from a deployed project.
@@ -68,7 +69,7 @@ const ProjectGallery = ({ slides, href, title }) => {
                             <video
                                 key={s.src}
                                 ref={(el) => { videoRefs.current[s.src] = el; }}
-                                src={s.src}
+                                src={getAssetUrl(s.src)}
                                 aria-label={s.alt}
                                 muted
                                 loop
@@ -80,7 +81,7 @@ const ProjectGallery = ({ slides, href, title }) => {
                         ) : (
                             <img
                                 key={s.src}
-                                src={s.src}
+                                src={getAssetUrl(s.src)}
                                 alt={s.alt}
                                 loading={i === 0 ? 'eager' : 'lazy'}
                                 className={i === index ? 'is-current' : ''}

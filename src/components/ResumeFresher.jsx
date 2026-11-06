@@ -147,7 +147,7 @@ const ResumeFresher = () => {
                             </div>
                         </div>
                     ))}
-                    <p style={{ margin: '4px 0 0 0' }}><strong>English:</strong> <a className="cert-link" href="https://lehuytuong.vercel.app/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS). Comfortable with technical documentation; actively practising spoken English.</p>
+                    <p style={{ margin: '4px 0 0 0' }}><strong>English:</strong> <a className="cert-link" href="https://lehuytuong.github.io/portfolio/toeic/toeic-735.jpg" target="_blank" rel="noopener noreferrer">TOEIC 735</a> (ETS). Comfortable with technical documentation; actively practising spoken English.</p>
                 </section>
             </div>
         </div>

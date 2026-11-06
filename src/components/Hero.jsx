@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { personalInfo, stats } from '../data/portfolioData';
 import { GitHub, LinkedIn, Email, ArrowRight } from './Icons';
+import { getAssetUrl } from '../utils/assets';
 import './Hero.css';
 import './HeroStats.css';
 
@@ -57,7 +58,7 @@ const Hero = () => {
                 <div className="hero-visual">
                     <div className="hero-image-container">
                         <img
-                            src="/profile.jpg"
+                            src={getAssetUrl('/profile.jpg')}
                             alt="Lê Huy Tường - Backend Developer"
                             className="hero-profile-image"
                             loading="lazy"

@@ -3,6 +3,7 @@ import useScrollReveal from '../hooks/useScrollReveal';
 import { GitHub, ExternalLink } from './Icons';
 import ProjectGallery from './ProjectGallery';
 import { projects } from '../data/portfolioData';
+import { getAssetUrl } from '../utils/assets';
 import './Projects.css';
 
 const ProjectCard = ({ project, index }) => {
@@ -46,7 +47,7 @@ const ProjectCard = ({ project, index }) => {
                     className="project-preview"
                     aria-label={`Open the live ${project.title} deployment`}
                 >
-                    <img src={project.image} alt={project.imageAlt || `${project.title} screenshot`} loading="lazy" />
+                    <img src={getAssetUrl(project.image)} alt={project.imageAlt || `${project.title} screenshot`} loading="lazy" />
                     <span className="project-preview-cta">
                         Visit live site
                         <ExternalLink size={14} />
@@ -65,7 +66,7 @@ const ProjectCard = ({ project, index }) => {
             {project.evidence && (
                 <figure className="project-evidence">
                     <a href={project.evidence.url} target="_blank" rel="noopener noreferrer">
-                        <img src={project.evidence.image} alt={project.evidence.alt} loading="lazy" />
+                        <img src={getAssetUrl(project.evidence.image)} alt={project.evidence.alt} loading="lazy" />
                     </a>
                     <figcaption>{project.evidence.caption}</figcaption>
                 </figure>
