@@ -99,12 +99,13 @@ const ResumeGeneral = () => {
                             <span className="date-range">2025</span>
                         </div>
                         <div className="item-sub">
-                            <em>Backend Developer (Team of 4 — owned wallet, ledger, profit sharing, payments &amp; settlement) | Java 17, Spring Boot 3, MySQL 8, Redis, Docker, Testcontainers, k6 | GitHub: <a href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">github.com/LeHuyTuong/Carbon-Credit-Marketplace</a></em>
+                            <em>Backend Developer (Team of 4 — owned wallet, ledger, profit sharing, payments &amp; settlement) | Java 17, Spring Boot 3, MySQL 8, Redis, Docker, Testcontainers, k6 | <a className="cert-link" href="https://github.com/LeHuyTuong/Carbon-Credit-Marketplace" target="_blank" rel="noopener noreferrer">https://github.com/LeHuyTuong/Carbon-Credit-Marketplace</a></em>
                         </div>
                         <ul className="resume-bullets">
                             <li>Built a <strong>double-entry wallet ledger</strong> with before/after balance snapshots across 11 transaction types and ascending ID lock ordering to prevent transfer deadlocks (93 JUnit/Testcontainers tests).</li>
                             <li>Engineered <strong>async batch profit-sharing payouts</strong> on a custom thread pool with per-owner <code>REQUIRES_NEW</code> transactions so single-wallet failures never roll back completed payouts.</li>
-                            <li>Unified <strong>VNPay, PayPal, and Stripe</strong> via Strategy/Facade patterns with two-phase verification outside <code>@Transactional</code>, and fixed Hibernate N+1 queries via <code>LEFT JOIN FETCH</code> (<strong>3,802 → 2 queries</strong>, <strong>4.91 s → 226 ms</strong>).</li>
+                            <li>Unified <strong>VNPay, PayPal, Stripe</strong> via Strategy/Facade with two-phase verification outside <code>@Transactional</code>.</li>
+                            <li>Fixed Hibernate N+1 queries via <code>LEFT JOIN FETCH</code> (<strong>3,802 → 2 queries</strong>, <strong>4.91 s → 226 ms</strong>).</li>
                         </ul>
                     </div>
                 </section>
